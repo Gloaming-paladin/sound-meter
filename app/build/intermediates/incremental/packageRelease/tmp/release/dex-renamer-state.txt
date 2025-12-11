@@ -1,0 +1,4 @@
+#Sun Dec 07 17:46:01 CST 2025
+base.0=D\:\\androidcode\\Sound-Meter\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_texture.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/texture.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/layout_dialog_info.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/layout/dialog_info.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_noise_index.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/noise_index.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-xhdpi_question.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-xhdpi/question.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable_bg_dialog.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable/bg_dialog.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/layout_activity_main.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_noise_disc.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/noise_disc.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable_bg_page.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable/bg_page.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_question.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/question.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-xhdpi_refresh.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-xhdpi/refresh.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_logo.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/logo.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-mdpi_refresh.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-mdpi/refresh.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-hdpi_question.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-hdpi/question.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-hdpi_refresh.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-hdpi/refresh.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/anim_cycle.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/anim/cycle.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-mdpi_question.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-mdpi/question.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_refresh.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/refresh.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-21:/drawable-nodpi_egg.png.flat",
+        "source": "com.bodekjan.soundmeter.app-main-23:/drawable-nodpi/egg.png"
+    }
+]

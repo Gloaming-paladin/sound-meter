@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.bodekjan.soundmeter.app-mergeDebugResources-19:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\41b8df5d56613c89f0c2c3d7d1e190f1\\transformed\\appcompat-1.5.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}
