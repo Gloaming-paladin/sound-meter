@@ -24,6 +24,15 @@
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:id="@+id/playbutton"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/play"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:id="@+id/infobutton"
             android:layout_gravity="right|top"
             android:layout_marginTop="32dp"
@@ -50,8 +59,22 @@
             android:background="@android:color/transparent"
             android:layout_marginLeft="16dp"
             android:layout_marginBottom="16dp"
-			android:visibility="gone"
+			android:visibility="visible"
             android:scaleType="fitCenter" />
+
+        <!-- 在主界面添加历史记录按钮 -->
+        <ImageButton
+            android:id="@+id/history_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_history_background"
+            android:src="@drawable/ic_history" />
+
+
+
     </FrameLayout>
 
     <LinearLayout

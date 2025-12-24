@@ -1,8 +1,10 @@
+// java
 package com.bodekjan.soundmeter;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -17,6 +19,14 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.MediaRecorder;
+import android.os.Environment;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.OnFailureListener;
+
+import java.io.File;
+import java.io.IOException;
+import android.app.AlertDialog;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
@@ -28,8 +38,12 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IFillFormatter;
 import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
-import java.io.File;
+import android.location.Location;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,6 +55,8 @@ public class MainActivity extends Activity {
     public static Typeface tf;
     ImageButton infoButton;
     ImageButton refreshButton;
+
+    private ImageButton historyButton;
     LineChart mChart;
     TextView minVal;
     TextView maxVal;
@@ -58,6 +74,18 @@ public class MainActivity extends Activity {
     int refresh=0;
     private MyMediaRecorder mRecorder ;
 
+    private boolean isRecording = false;
+    private MediaRecorder mediaRecorder;
+    private String currentRecordingPath;
+    private ImageButton startStopButton;
+
+    private FusedLocationProviderClient fusedLocationClient;
+    private ImageButton locationButton;
+
+    private NoiseDatabaseHelper dbHelper;
+    private double currentLatitude = 0.0;
+    private double currentLongitude = 0.0;
+
     final Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg){
@@ -74,6 +102,10 @@ public class MainActivity extends Activity {
                 maxVal.setText(df1.format(World.maxDB));
                 curVal.setText(df1.format(World.dbCount));
                 updateData(World.dbCount,0);
+
+                // 存储当前测量数据到数据库
+                saveCurrentNoiseData();
+
                 if(refresh==1){
                     long now=new Date().getTime();
                     now=now-currentTime;
@@ -85,6 +117,28 @@ public class MainActivity extends Activity {
             }
         }
     };
+
+    private void saveCurrentNoiseData() {
+        // 每5秒保存一次数据，避免数据库写入过于频繁
+        if (System.currentTimeMillis() % 5000 < 200) { // 每5秒大约保存一次
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    NoiseData noiseData = new NoiseData(
+                            World.dbCount,
+                            currentLatitude,
+                            currentLongitude,
+                            System.currentTimeMillis(),
+                            currentRecordingPath
+                    );
+                    if (dbHelper != null) {
+                        dbHelper.insertNoiseData(noiseData);
+                    }
+                }
+            }).start();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,6 +157,41 @@ public class MainActivity extends Activity {
         }
         boolean isAudioRecord = isRecordAudioPermissionGranted();
         setContentView(R.layout.activity_main);
+
+        // 初始化数据库（必须在使用 dbHelper 之前）
+        dbHelper = new NoiseDatabaseHelper(this);
+
+        // 初始化开始/停止按钮
+        startStopButton = (ImageButton) findViewById(R.id.playbutton);
+        startStopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleRecording();
+            }
+        });
+
+        // 初始化位置服务
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        // 初始化历史按钮
+        historyButton = findViewById(R.id.history_button);
+        historyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+            startActivity(intent);
+        });
+
+
+        // 添加定位按钮
+        locationButton = (ImageButton) findViewById(R.id.eggbutton);
+        locationButton.setVisibility(View.VISIBLE);
+        locationButton.setImageResource(R.drawable.ic_location);
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getCurrentLocation();
+            }
+        });
+
         tf= Typeface.createFromAsset(this.getAssets(), "fonts/Let_s go Digital Regular.ttf");
         minVal=(TextView)findViewById(R.id.minval);minVal.setTypeface(tf);
         mmVal=(TextView)findViewById(R.id.mmval);mmVal.setTypeface(tf);
@@ -161,6 +250,7 @@ public class MainActivity extends Activity {
             savedTime++;
         }
     }
+
     private void initChart() {
         if(mChart!=null){
             if (mChart.getData() != null &&
@@ -172,19 +262,14 @@ public class MainActivity extends Activity {
             currentTime=new Date().getTime();
             mChart = (LineChart) findViewById(R.id.chart1);
             mChart.setViewPortOffsets(50, 20, 5, 60);
-            // no description text
             Description desc = new Description();
             desc.setText("");
             mChart.setDescription(desc);
-            // enable touch gestures
             mChart.setTouchEnabled(true);
-            // enable scaling and dragging
             mChart.setDragEnabled(false);
             mChart.setScaleEnabled(true);
-            // if disabled, scaling can be done on x- and y-axis separately
             mChart.setPinchZoom(false);
             mChart.setDrawGridBackground(false);
-            //mChart.setMaxHighlightDistance(400);
             XAxis x = mChart.getXAxis();
             x.setLabelCount(8, false);
             x.setEnabled(true);
@@ -239,12 +324,12 @@ public class MainActivity extends Activity {
             mChart.setData(data);
             mChart.getLegend().setEnabled(false);
             mChart.animateXY(2000, 2000);
-            // dont forget to refresh the drawing
             mChart.invalidate();
             isChart=true;
         }
 
     }
+
     /* Sub-chant analysis */
     private void startListenAudio() {
         thread = new Thread(new Runnable() {
@@ -277,6 +362,7 @@ public class MainActivity extends Activity {
         });
         thread.start();
     }
+
     /**
      * Start recording
      * @param fFile
@@ -294,6 +380,7 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -312,30 +399,171 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        if (isRecording) {
+            stopRecording();
+        }
         bListener = false;
-        mRecorder.delete(); //Stop recording and delete the recording file
+        if (mRecorder != null) {
+            mRecorder.delete();
+        }
         thread = null;
-        isChart=false;
+        isChart = false;
     }
 
     @Override
     protected void onDestroy() {
+        if (isRecording) {
+            stopRecording();
+        }
         if (thread != null) {
             isThreadRun = false;
             thread = null;
         }
-        mRecorder.delete();
+        if (mRecorder != null) {
+            mRecorder.delete();
+        }
         super.onDestroy();
     }
 
+    private void getCurrentLocation() {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            if (location != null) {
+                                currentLatitude = location.getLatitude();
+                                currentLongitude = location.getLongitude();
+
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                builder.setTitle("当前位置");
+                                builder.setMessage("纬度: " + currentLatitude + "\n经度: " + currentLongitude);
+                                builder.setPositiveButton("确定", null);
+                                builder.show();
+                            } else {
+                                Toast.makeText(MainActivity.this, "无法获取当前位置，请检查位置服务是否开启", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .addOnFailureListener(this, new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(MainActivity.this, "获取位置失败: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } else {
+            requestPermissions(new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+            }, 2);
+        }
+    }
+
+    private void toggleRecording() {
+        if (isRecording) {
+            stopRecording();
+            showSaveDialog();
+        } else {
+            startRecording();
+        }
+    }
+
+    private void startRecording() {
+        try {
+            mediaRecorder = new MediaRecorder();
+            mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+            mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+
+            currentRecordingPath = getExternalFilesDir(Environment.DIRECTORY_MUSIC) +
+                    "/noise_recording_" + System.currentTimeMillis() + ".mp4";
+            mediaRecorder.setOutputFile(currentRecordingPath);
+
+            mediaRecorder.prepare();
+            mediaRecorder.start();
+
+            isRecording = true;
+            startStopButton.setImageResource(R.drawable.ic_stop); // 确保此资源存在
+
+            // 继续原有的音量检测
+            File file = FileUtil.createFile(getApplicationContext(), "temp.amr");
+            if (file != null) {
+                startRecord(file);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "录音启动失败", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void stopRecording() {
+        bListener = false;
+
+        if (mediaRecorder != null) {
+            try {
+                mediaRecorder.stop();
+                mediaRecorder.release();
+                mediaRecorder = null;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (mRecorder != null) {
+            mRecorder.delete();
+        }
+
+        isRecording = false;
+        startStopButton.setImageResource(R.drawable.play); // 确保此资源存在
+    }
+
+
+    private void showSaveDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("保存录音");
+        builder.setMessage("是否保存这次的噪音测量录音?");
+
+        builder.setPositiveButton("保存", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "录音已保存至: " + currentRecordingPath, Toast.LENGTH_LONG).show();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("删除", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 删除录音文件
+                if (currentRecordingPath != null) {
+                    File file = new File(currentRecordingPath);
+                    if (file.exists()) {
+                        file.delete();
+                    }
+                }
+                Toast.makeText(MainActivity.this, "录音已删除", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNeutralButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.show();
+    }
+
     //Create placeholder for user's consent to record_audio permission.
-    private boolean isRecordAudioPermissionGranted()
-    {
+    private boolean isRecordAudioPermissionGranted() {
         int AUDIO_RECORD_REQUEST_CODE = 1;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) ==
                     PackageManager.PERMISSION_GRANTED) {
-                // put your code for Version>=Marshmallow
                 return true;
             } else {
                 if (shouldShowRequestPermissionRationale(Manifest.permission.RECORD_AUDIO)) {
@@ -348,9 +576,20 @@ public class MainActivity extends Activity {
             }
 
         } else {
-            // put your code for Version < Marshmallow
             return true;
         }
     }
-}
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == 2) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                getCurrentLocation();
+            } else {
+                Toast.makeText(this, "需要位置权限才能获取位置信息", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+}

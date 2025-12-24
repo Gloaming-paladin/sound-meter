@@ -5,71 +5,98 @@
 5    android:versionName="1.4.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="23"
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 11-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:5-70
 11-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:22-68
-12
-13    <application
-13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:5-19:19
-14        android:allowBackup="true"
-14-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.8.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\b58fbd3358f3eaba6cbe80ca9e9904ea\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
-16        android:debuggable="true"
-17        android:extractNativeLibs="true"
-18        android:icon="@drawable/logo"
-18-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:9-38
-19        android:label="@string/app_name"
-19-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:9-41
-20        android:supportsRtl="true"
-20-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:9-35
-21        android:testOnly="true"
-22        android:theme="@style/AppTheme" >
-22-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:9-40
-23        <activity
-23-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:9-18:20
-24            android:name="com.bodekjan.soundmeter.MainActivity"
-24-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:19-47
-25            android:configChanges="orientation|keyboardHidden"
-25-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:12:13-63
-26            android:exported="true" >
-26-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:13-36
-27            <intent-filter>
-27-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:13-17:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:17-69
-28-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:17-77
-30-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:27-74
-31            </intent-filter>
-32        </activity>
-33
-34        <provider
-34-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-35            android:name="androidx.startup.InitializationProvider"
-35-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-36            android:authorities="com.bodekjan.soundmeter.androidx-startup"
-36-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-37            android:exported="false" >
-37-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-38            <meta-data
-38-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-39                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-39-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-40                android:value="androidx.startup" />
-40-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-41            <meta-data
-41-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-42                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-42-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-43                android:value="androidx.startup" />
-43-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-44        </provider>
-45    </application>
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:5-79
+12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:5-81
+13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:22-78
+14
+15    <application
+15-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:5-22:19
+16        android:allowBackup="true"
+16-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.8.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\b58fbd3358f3eaba6cbe80ca9e9904ea\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:extractNativeLibs="false"
+20        android:icon="@drawable/logo"
+20-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:9-38
+21        android:label="@string/app_name"
+21-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:9-41
+22        android:supportsRtl="true"
+22-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:12:9-40
+25        <activity
+25-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:9-20:20
+26            android:name="com.bodekjan.soundmeter.MainActivity"
+26-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:19-47
+27            android:configChanges="orientation|keyboardHidden"
+27-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:13-63
+28            android:exported="true" >
+28-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:13-36
+29            <intent-filter>
+29-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:13-19:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:17-69
+30-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:17-77
+32-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:9-78
+36            android:name="com.bodekjan.soundmeter.HistoryActivity"
+36-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:19-50
+37            android:exported="false" />
+37-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:51-75
+38        <activity
+38-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+39            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+39-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+40            android:exported="false"
+40-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+41            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+41-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+42
+43        <meta-data
+43-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+44            android:name="com.google.android.gms.version"
+44-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+45            android:value="@integer/google_play_services_version" />
+45-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 46
-47</manifest>
+47        <provider
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+49            android:authorities="com.bodekjan.soundmeter.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\043ae1193fd0f0068354df104ffde5d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+57        </provider>
+58    </application>
+59
+60</manifest>

@@ -1,4 +1,0 @@
-com.bodekjan.soundmeter.test.app-androidTest-0 D:\androidcode\Sound-Meter\app\build\generated\res\resValues\androidTest\debug
-com.bodekjan.soundmeter.test.app-mergeDebugAndroidTestResources-1 D:\androidcode\Sound-Meter\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.bodekjan.soundmeter.test.app-mergeDebugAndroidTestResources-2 D:\androidcode\Sound-Meter\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.bodekjan.soundmeter.test.app-debugAndroidTest-3 D:\androidcode\Sound-Meter\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
