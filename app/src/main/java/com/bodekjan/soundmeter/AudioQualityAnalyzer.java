@@ -118,4 +118,25 @@ public class AudioQualityAnalyzer {
 
         return Math.sqrt(weightedSum / totalMagnitude);
     }
+
+    public static double calculateDecibels(short[] audioBuffer) {
+        if (audioBuffer == null || audioBuffer.length == 0) {
+            return 0;
+        }
+
+        double sumOfSquares = 0;
+        for (short sample : audioBuffer) {
+            sumOfSquares += sample * sample;
+        }
+
+        double rms = Math.sqrt(sumOfSquares / audioBuffer.length);
+
+        if (rms == 0) {
+            return 0; // Or a very small number to represent silence
+        }
+
+        // Reference pressure for dB calculation (can be adjusted)
+        double reference = 32767.0; // Max amplitude for 16-bit audio
+        return 20 * Math.log10(rms / reference);
+    }
 }

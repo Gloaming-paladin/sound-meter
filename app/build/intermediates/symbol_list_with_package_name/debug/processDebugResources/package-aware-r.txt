@@ -3141,6 +3141,7 @@ id centroid_value
 id chain
 id chains
 id change_avatar_button
+id chart1
 id checkbox
 id checked
 id chronometer
@@ -3452,7 +3453,6 @@ id snapMargins
 id snr_value
 id spacer
 id special_effects_controller_view_tag
-id spectrum_view
 id speed
 id spline
 id split_action_bar

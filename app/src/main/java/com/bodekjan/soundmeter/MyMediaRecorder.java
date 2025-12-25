@@ -1,6 +1,8 @@
 package com.bodekjan.soundmeter;
 
+import android.content.Context;
 import android.media.MediaRecorder;
+import android.os.Build;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,19 +14,23 @@ public class MyMediaRecorder {
     public File myRecAudioFile;
     private MediaRecorder mMediaRecorder;
     public boolean isRecording = false;
-    private AudioFormat currentFormat = AudioFormat.THREE_GPP; // 添加缺失的变量定义
+    private AudioFormat currentFormat = AudioFormat.THREE_GPP;
+    private Context context;
+
+    public MyMediaRecorder(Context context) {
+        this.context = context.getApplicationContext();
+    }
 
     public float getMaxAmplitude() {
         if (mMediaRecorder != null) {
             try {
                 return mMediaRecorder.getMaxAmplitude();
-            } catch (IllegalStateException e) { // 修改异常类型
+            } catch (IllegalStateException e) {
                 e.printStackTrace();
                 return 0;
             }
-        } else {
-            return 5;
         }
+        return 5;
     }
 
     public File getMyRecAudioFile() {
@@ -35,16 +41,16 @@ public class MyMediaRecorder {
         this.myRecAudioFile = myRecAudioFile;
     }
 
-    /**
-     * Recording
-     * @return Whether to start recording successfully
-     */
     public boolean startRecorder() {
         if (myRecAudioFile == null) {
             return false;
         }
         try {
-            mMediaRecorder = new MediaRecorder();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                mMediaRecorder = new MediaRecorder(context);
+            } else {
+                mMediaRecorder = new MediaRecorder();
+            }
 
             mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mMediaRecorder.setOutputFormat(currentFormat.getOutputFormat());
@@ -55,32 +61,31 @@ public class MyMediaRecorder {
             mMediaRecorder.start();
             isRecording = true;
             return true;
-        } catch(IOException exception) {
-            mMediaRecorder.reset();
-            mMediaRecorder.release();
-            mMediaRecorder = null;
+        } catch (IOException | IllegalStateException e) {
+            if (mMediaRecorder != null) {
+                mMediaRecorder.reset();
+                mMediaRecorder.release();
+                mMediaRecorder = null;
+            }
             isRecording = false;
-            exception.printStackTrace();
-        } catch(IllegalStateException e) {
-            stopRecording();
             e.printStackTrace();
-            isRecording = false;
         }
         return false;
     }
 
     public void stopRecording() {
-        if (mMediaRecorder != null){
-            if(isRecording){
-                try{
+        if (mMediaRecorder != null) {
+            try {
+                if (isRecording) {
                     mMediaRecorder.stop();
-                    mMediaRecorder.release();
-                }catch(Exception e){
-                    e.printStackTrace();
                 }
+            } catch (RuntimeException e) {
+                android.util.Log.e("MyMediaRecorder", "stop() failed", e);
+            } finally {
+                mMediaRecorder.release();
+                mMediaRecorder = null;
+                isRecording = false;
             }
-            mMediaRecorder = null;
-            isRecording = false ;
         }
     }
 
@@ -92,7 +97,6 @@ public class MyMediaRecorder {
         }
     }
 
-    // 新增设置音频格式的方法
     public void setAudioFormat(AudioFormat format) {
         this.currentFormat = format;
     }

@@ -50,6 +50,7 @@ id bandwidth_value
 id bottom_navigation
 id centroid_value
 id change_avatar_button
+id chart1
 id clear_all_button
 id content
 id db_value
@@ -90,7 +91,6 @@ id register_username
 id save_avatar_button
 id share_button
 id snr_value
-id spectrum_view
 id speed
 id start_stop_spectrum_button
 id thd_value

@@ -185,7 +185,7 @@ public class DecibelMeterFragment extends Fragment {
     }
 
     private void initAudioRecorder() {
-        mRecorder = new MyMediaRecorder();
+        mRecorder = new MyMediaRecorder(requireContext());
         mRecorder.setAudioFormat(MyMediaRecorder.AudioFormat.THREE_GPP);
     }
 
