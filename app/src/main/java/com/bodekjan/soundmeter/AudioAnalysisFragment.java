@@ -190,6 +190,7 @@ public class AudioAnalysisFragment extends Fragment {
 
     private void startSpectrumAnalysis() {
         try {
+            resetMetrics();
             if (mRecorder == null) {
                 mRecorder = new MyMediaRecorder(requireContext());
             }
@@ -280,7 +281,6 @@ public class AudioAnalysisFragment extends Fragment {
         handler.post(() -> {
             if (isAdded()) {
                 startStopSpectrumButton.setText(getString(R.string.btn_start_spectrum));
-                resetMetrics();
             }
         });
     }
@@ -372,10 +372,14 @@ public class AudioAnalysisFragment extends Fragment {
         snrValue.setText("信噪比: --");
         centroidValue.setText("质心: --");
         bandwidthValue.setText("带宽: --");
-        
-        // 清除图表数据
+
         if (mChart != null && mChart.getData() != null) {
-            mChart.getData().clearValues();
+            LineDataSet set = (LineDataSet) mChart.getData().getDataSetByIndex(0);
+            if (set != null) {
+                set.clear();
+                mChart.getData().notifyDataChanged();
+                mChart.notifyDataSetChanged();
+            }
             mChart.invalidate();
         }
         savedTime = 0;
