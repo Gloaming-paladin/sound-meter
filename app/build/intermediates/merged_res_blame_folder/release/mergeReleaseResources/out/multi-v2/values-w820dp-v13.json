@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-33:/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-39:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "D:\\androidcode\\Sound-Meter\\app\\src\\main\\res\\values-w820dp\\dimens.xml",

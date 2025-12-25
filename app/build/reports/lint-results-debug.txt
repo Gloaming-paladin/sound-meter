@@ -1,13 +1,10 @@
 D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioEditor.java:43: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
             AudioRecord audioRecord = new AudioRecord(
                                       ^
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:409: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
-        fusedLocationClient.getLastLocation()
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\FFTAnalyzer.java:35: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
-        audioRecord = new AudioRecord(
-                      ^
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MainActivity.java:113: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\FFTAnalyzer.java:57: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+            audioRecord = new AudioRecord(
+                          ^
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MainActivity.java:130: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
         fusedLocationClient.getLastLocation()
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -58,19 +55,19 @@ D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4: Warning: READ_EXT
 
    https://goo.gle/android-storage-usecases
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:232: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        thdValue.setText(getString(R.string.label_thd, String.format("%.2f%%", thd * 100)));
-                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:233: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        snrValue.setText(getString(R.string.label_snr, String.format("%.2f dB", snr)));
-                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:234: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        centroidValue.setText(getString(R.string.label_centroid, String.format("%.0f Hz", centroid)));
-                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:235: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        bandwidthValue.setText(getString(R.string.label_bandwidth, String.format("%.0f Hz", bandwidth)));
-                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:332: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:269: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        thdValue.setText(String.format("总谐波失真: %.2f%%", thd * 100));
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:270: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        snrValue.setText(String.format("信噪比: %.2f dB", snr));
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:271: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        centroidValue.setText(String.format("质心: %.0f Hz", centroid));
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:272: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
+        bandwidthValue.setText(String.format("带宽: %.0f Hz", bandwidth));
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:350: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
         Toast.makeText(requireContext(), getString(R.string.msg_saved_format, format.toUpperCase()), Toast.LENGTH_SHORT).show();
                                                                                      ~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\HistoryActivity.java:111: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
@@ -115,7 +112,7 @@ D:\androidcode\Sound-Meter\app\build.gradle:10: Warning: Not targeting the lates
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:278: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:296: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -145,17 +142,6 @@ D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaReco
    Ensures that when parameter in a method only allows a specific set of
    constants, calls obey those rules.
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\InfoDialog.java:100: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
-            View layout = inflater.inflate(R.layout.dialog_info, null);
-                                                                 ~~~~
-
-   Explanation for issues of type "InflateParams":
-   When inflating a layout, avoid passing in null as the parent view, since
-   otherwise any layout parameters on the root of the inflated layout will be
-   ignored.
-
-   https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
-
 D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\Speedometer.java:17: Error: This custom view should extend androidx.appcompat.widget.AppCompatImageView instead [AppCompatCustomView]
 public class Speedometer extends ImageView {
                                  ~~~~~~~~~
@@ -169,49 +155,55 @@ public class Speedometer extends ImageView {
    instead extend one of the delegate classes in
    androidx.appcompat.widget.AppCompatTextView.
 
-D:\androidcode\Sound-Meter\app\build.gradle:35: Warning: A newer version of com.google.android.material:material than 1.4.0 is available: 1.13.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:37: Warning: A newer version of com.google.android.material:material than 1.4.0 is available: 1.13.0 [GradleDependency]
     implementation 'com.google.android.material:material:1.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:36: Warning: A newer version of com.google.android.material:material than 1.10.0 is available: 1.13.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:38: Warning: A newer version of com.google.android.material:material than 1.10.0 is available: 1.13.0 [GradleDependency]
     implementation 'com.google.android.material:material:1.10.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:37: Warning: A newer version of com.itextpdf:itext7-core than 7.1.15 is available: 7.2.5 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:39: Warning: A newer version of com.itextpdf:itext7-core than 7.1.15 is available: 7.2.5 [GradleDependency]
     implementation 'com.itextpdf:itext7-core:7.1.15'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:38: Warning: A newer version of com.itextpdf:kernel than 7.1.15 is available: 7.2.5 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:40: Warning: A newer version of com.itextpdf:kernel than 7.1.15 is available: 7.2.5 [GradleDependency]
     implementation 'com.itextpdf:kernel:7.1.15'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:39: Warning: A newer version of com.itextpdf:layout than 7.1.15 is available: 7.2.5 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:41: Warning: A newer version of com.itextpdf:layout than 7.1.15 is available: 7.2.5 [GradleDependency]
     implementation 'com.itextpdf:layout:7.1.15'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:40: Warning: A newer version of com.itextpdf:io than 7.1.15 is available: 7.2.5 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:42: Warning: A newer version of com.itextpdf:io than 7.1.15 is available: 7.2.5 [GradleDependency]
     implementation 'com.itextpdf:io:7.1.15'
                    ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:41: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:43: Warning: A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0 [GradleDependency]
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:43: Warning: A newer version of junit:junit than 4.12 is available: 4.13.2 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:45: Warning: A newer version of junit:junit than 4.12 is available: 4.13.2 [GradleDependency]
     testImplementation 'junit:junit:4.12'
                        ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:44: Warning: A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.7.1 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:46: Warning: A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.7.1 [GradleDependency]
     implementation('androidx.appcompat:appcompat:1.5.1')
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:47: Warning: A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.3.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:49: Warning: A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.3.0 [GradleDependency]
     implementation 'com.google.android.gms:play-services-location:21.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:49: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:50: Warning: A newer version of androidx.activity:activity-ktx than 1.8.0 is available: 1.12.2 [GradleDependency]
+    implementation 'androidx.activity:activity-ktx:1.8.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\build.gradle:51: Warning: A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9 [GradleDependency]
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\build.gradle:53: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0 [GradleDependency]
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:50: Warning: A newer version of androidx.test:core than 1.5.0 is available: 1.7.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:54: Warning: A newer version of androidx.test:core than 1.5.0 is available: 1.7.0 [GradleDependency]
     androidTestImplementation 'androidx.test:core:1.5.0'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:51: Warning: A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:55: Warning: A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0 [GradleDependency]
     androidTestImplementation 'androidx.test:runner:1.5.2'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:52: Warning: A newer version of androidx.test:rules than 1.5.0 is available: 1.7.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:56: Warning: A newer version of androidx.test:rules than 1.5.0 is available: 1.7.0 [GradleDependency]
     androidTestImplementation 'androidx.test:rules:1.5.0'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\build.gradle:53: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
+D:\androidcode\Sound-Meter\app\build.gradle:57: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0 [GradleDependency]
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -229,9 +221,6 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:11
                 android:textSize="36dp"
                 ~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:138: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-                android:textSize="36dp"
-                ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:147: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="36dp"
                 ~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:14: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
@@ -480,21 +469,6 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:17
    useless attribute processing at runtime, and is misleading for others
    reading the layout so the parameter should be removed.
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:89: Warning: This Handler class should be static or leaks might occur (anonymous android.os.Handler) [HandlerLeak]
-    private final Handler handler = new Handler() {
-                                    ^
-
-   Explanation for issues of type "HandlerLeak":
-   Since this Handler is declared as an inner class, it may prevent the outer
-   class from being garbage collected. If the Handler is using a Looper or
-   MessageQueue for a thread other than the main thread, then there is no
-   issue. If the Handler is using the Looper or MessageQueue of the main
-   thread, you need to fix your Handler declaration, as follows: Declare the
-   Handler as a static class; In the outer class, instantiate a WeakReference
-   to the outer class and pass this object to your Handler when you
-   instantiate the Handler; Make all references to members of the outer class
-   using the WeakReference object.
-
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:66: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
     <LinearLayout
      ~~~~~~~~~~~~
@@ -547,6 +521,9 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:6: Warni
    performance if you pre-mix the background with your drawable and use that
    resulting image or color as a custom theme background instead.
 
+D:\androidcode\Sound-Meter\app\src\main\res\drawable\bg_avatar_placeholder.xml:2: Warning: The resource R.drawable.bg_avatar_placeholder appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+^
 D:\androidcode\Sound-Meter\app\src\main\res\drawable\btn_history_background.xml:2: Warning: The resource R.drawable.btn_history_background appears to be unused [UnusedResources]
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 ^
@@ -586,6 +563,12 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\colors.xml:18: Warning: The r
 D:\androidcode\Sound-Meter\app\src\main\res\anim\cycle.xml:2: Warning: The resource R.anim.cycle appears to be unused [UnusedResources]
 <cycleInterpolator xmlns:android="http://schemas.android.com/apk/res/android"
 ^
+D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_avatar_options.xml:2: Warning: The resource R.layout.dialog_avatar_options appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml:2: Warning: The resource R.layout.dialog_info appears to be unused [UnusedResources]
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
 D:\androidcode\Sound-Meter\app\src\main\res\values\dimens.xml:3: Warning: The resource R.dimen.activity_horizontal_margin appears to be unused [UnusedResources]
     <dimen name="activity_horizontal_margin">16dp</dimen>
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -593,11 +576,23 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\dimens.xml:4: Warning: The re
     <dimen name="activity_vertical_margin">16dp</dimen>
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\drawable-nodpi\egg.png: Warning: The resource R.drawable.egg appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\drawable\ic_avatar_placeholder.xml:1: Warning: The resource R.drawable.ic_avatar_placeholder appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
 D:\androidcode\Sound-Meter\app\src\main\res\drawable\ic_history.xml:1: Warning: The resource R.drawable.ic_history appears to be unused [UnusedResources]
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
 ^
 D:\androidcode\Sound-Meter\app\src\main\res\mipmap-hdpi\ic_launcher.png: Warning: The resource R.mipmap.ic_launcher appears to be unused [UnusedResources]
 D:\androidcode\Sound-Meter\app\src\main\res\drawable\pause.png: Warning: The resource R.drawable.pause appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:4: Warning: The resource R.string.activity_infobull appears to be unused [UnusedResources]
+ <string name="activity_infobull">This is a custom message box</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:5: Warning: The resource R.string.activity_infotitle appears to be unused [UnusedResources]
+ <string name="activity_infotitle">About Decibel</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:6: Warning: The resource R.string.activity_infobutton appears to be unused [UnusedResources]
+ <string name="activity_infobutton">Ok</string>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:7: Warning: The resource R.string.activity_recStartErr appears to be unused [UnusedResources]
  <string name="activity_recStartErr">Unable to start recording</string>
          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -610,6 +605,24 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:9: Warning: The r
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.activity_curlabel appears to be unused [UnusedResources]
  <string name="activity_curlabel">Real Time</string>
          ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:16: Warning: The resource R.string.info_0db appears to be unused [UnusedResources]
+ <string name="info_0db">0dB : Most people just hear a low noise.</string>
+         ~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:17: Warning: The resource R.string.info_30db appears to be unused [UnusedResources]
+ <string name="info_30db">30dB～40dB it\'s the ideal calm.</string>
+         ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:18: Warning: The resource R.string.info_50db appears to be unused [UnusedResources]
+ <string name="info_50db">50dB and more: affects rest and sleep.</string>
+         ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:19: Warning: The resource R.string.info_70db appears to be unused [UnusedResources]
+ <string name="info_70db">70dB and more: can affect learning and work.</string>
+         ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:20: Warning: The resource R.string.info_90db appears to be unused [UnusedResources]
+ <string name="info_90db">90dB and more affect audition.</string>
+         ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:21: Warning: The resource R.string.info_150db appears to be unused [UnusedResources]
+ <string name="info_150db">150dB : A sudden exposure to a sound environment of 150dB, will break the eardrums. The audition will be completely lost.</string>
+         ~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:42: Warning: The resource R.string.msg_no_history appears to be unused [UnusedResources]
     <string name="msg_no_history">No history data available</string>
             ~~~~~~~~~~~~~~~~~~~~~
@@ -646,14 +659,38 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Warning: The 
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.msg_share_in_development appears to be unused [UnusedResources]
     <string name="msg_share_in_development">Share feature is under development</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:68: Warning: The resource R.string.label_thd appears to be unused [UnusedResources]
+    <string name="label_thd">THD: %s</string>
+            ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:69: Warning: The resource R.string.label_snr appears to be unused [UnusedResources]
+    <string name="label_snr">SNR: %s</string>
+            ~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Warning: The resource R.string.label_centroid appears to be unused [UnusedResources]
+    <string name="label_centroid">Centroid: %s Hz</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.label_bandwidth appears to be unused [UnusedResources]
+    <string name="label_bandwidth">Bandwidth: %s Hz</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:10: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
     <style name="AppBaseTheme" parent="android:Theme.Light"></style>
            ~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:12: Warning: The resource R.style.text_18_ffffff appears to be unused [UnusedResources]
+    <style name="text_18_ffffff">
+           ~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:18: Warning: The resource R.style.text_16_666666 appears to be unused [UnusedResources]
+    <style name="text_16_666666">
+           ~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:24: Warning: The resource R.style.sdw_white appears to be unused [UnusedResources]
+    <style name="sdw_white">
+           ~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:31: Warning: The resource R.style.sdw_79351b appears to be unused [UnusedResources]
     <style name="sdw_79351b">
            ~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:38: Warning: The resource R.style.text_15_ffffff_sdw appears to be unused [UnusedResources]
     <style name="text_15_ffffff_sdw" parent="@style/sdw_79351b">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:43: Warning: The resource R.style.text_15_666666_sdw appears to be unused [UnusedResources]
+    <style name="text_15_666666_sdw" parent="@style/sdw_white">
            ~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "UnusedResources":
@@ -779,6 +816,21 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\activity_register.xml:14: War
 D:\androidcode\Sound-Meter\app\src\main\res\layout\activity_register.xml:21: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:9: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:16: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:9: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:16: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:23: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
 
    Explanation for issues of type "Autofill":
    Specify an autofillHints attribute when targeting SDK version 26 or higher
@@ -821,9 +873,6 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:45
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:55: Warning: Missing contentDescription attribute on image [ContentDescription]
         <ImageButton
          ~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
-    <ImageView
-     ~~~~~~~~~
 
    Explanation for issues of type "ContentDescription":
    Non-textual widgets like ImageViews and ImageButtons should use the
@@ -853,24 +902,18 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml:5: Warning: '
    is not accessible via the keyboard. Please add the focusable attribute as
    well.
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:233: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:252: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         minVal.setText("0 dB");
                        ~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:234: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:253: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         maxVal.setText("0 dB");
                        ~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:235: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        mmVal.setText("0 dB");
-                      ~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:236: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        curVal.setText("0 dB");
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:254: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        avgVal.setText("0 dB");
                        ~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\ProfileFragment.java:89: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-            usernameTextView.setText("Welcome, " + username);
-                                     ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\ProfileFragment.java:89: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-            usernameTextView.setText("Welcome, " + username);
-                                     ~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\ProfileFragment.java:120: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            usernameTextView.setText("欢迎, " + username);
+                                     ~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "SetTextI18n":
    When calling TextView#setText
@@ -927,6 +970,12 @@ D:\androidcode\Sound-Meter\app\src\main\res\menu\bottom_navigation_menu.xml:10: 
 D:\androidcode\Sound-Meter\app\src\main\res\menu\bottom_navigation_menu.xml:14: Warning: Hardcoded string "我的", should use @string resource [HardcodedText]
         android:title="我的" />
         ~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_avatar_options.xml:12: Warning: Hardcoded string "保存头像到本地", should use @string resource [HardcodedText]
+        android:text="保存头像到本地"
+        ~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_avatar_options.xml:21: Warning: Hardcoded string "更换头像", should use @string resource [HardcodedText]
+        android:text="更换头像"
+        ~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml:22: Warning: Hardcoded string "sfasfasf", should use @string resource [HardcodedText]
             android:text="sfasfasf"
             ~~~~~~~~~~~~~~~~~~~~~~~
@@ -948,24 +997,48 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml:7
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:91: Warning: Hardcoded string "23 Db", should use @string resource [HardcodedText]
                 android:text="23 Db"
                 ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:114: Warning: Hardcoded string "23 Db", should use @string resource [HardcodedText]
-                android:text="23 Db"
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:114: Warning: Hardcoded string "89 Db", should use @string resource [HardcodedText]
+                android:text="89 Db"
                 ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:137: Warning: Hardcoded string "23 Db", should use @string resource [HardcodedText]
-                android:text="23 Db"
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:137: Warning: Hardcoded string "56 Db", should use @string resource [HardcodedText]
+                android:text="56 Db"
                 ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:146: Warning: Hardcoded string "0 dB", should use @string resource [HardcodedText]
-                android:text="0 dB"
-                ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:68: Warning: Hardcoded string "查看历史记录", should use @string resource [HardcodedText]
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:13: Warning: Hardcoded string "用户名", should use @string resource [HardcodedText]
+        android:hint="用户名"
+        ~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:20: Warning: Hardcoded string "密码", should use @string resource [HardcodedText]
+        android:hint="密码"
+        ~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:27: Warning: Hardcoded string "登录", should use @string resource [HardcodedText]
+        android:text="登录" />
+        ~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_login.xml:33: Warning: Hardcoded string "没有账户？点此注册", should use @string resource [HardcodedText]
+        android:text="没有账户？点此注册"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:61: Warning: Hardcoded string "查看历史记录", should use @string resource [HardcodedText]
             android:text="查看历史记录"
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:74: Warning: Hardcoded string "应用信息", should use @string resource [HardcodedText]
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:68: Warning: Hardcoded string "应用信息", should use @string resource [HardcodedText]
         android:text="应用信息"
         ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:84: Warning: Hardcoded string "Sound Meter v1.0nn这是一个噪音测量应用，可以实时监测环境噪音水平。", should use @string resource [HardcodedText]
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_profile.xml:78: Warning: Hardcoded string "Sound Meter v1.0nn这是一个噪音测量应用，可以实时监测环境噪音水平。", should use @string resource [HardcodedText]
         android:text="Sound Meter v1.0\n\n这是一个噪音测量应用，可以实时监测环境噪音水平。"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:13: Warning: Hardcoded string "用户名", should use @string resource [HardcodedText]
+        android:hint="用户名"
+        ~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:20: Warning: Hardcoded string "密码", should use @string resource [HardcodedText]
+        android:hint="密码"
+        ~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:27: Warning: Hardcoded string "确认密码", should use @string resource [HardcodedText]
+        android:hint="确认密码"
+        ~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:34: Warning: Hardcoded string "注册", should use @string resource [HardcodedText]
+        android:text="注册" />
+        ~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_register.xml:40: Warning: Hardcoded string "已有账户？点此登录", should use @string resource [HardcodedText]
+        android:text="已有账户？点此登录"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\layout\item_history.xml:20: Warning: Hardcoded string "85.20 dB", should use @string resource [HardcodedText]
             android:text="85.20 dB"
             ~~~~~~~~~~~~~~~~~~~~~~~
@@ -1058,4 +1131,4 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:63
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-53 errors, 166 warnings
+52 errors, 198 warnings

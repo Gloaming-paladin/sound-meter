@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-33:/values-zh/values-zh.xml",
+            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-39:/values-zh/values-zh.xml",
             "map": [
                 {
                     "source": "D:\\androidcode\\Sound-Meter\\app\\src\\main\\res\\values-zh\\strings.xml",

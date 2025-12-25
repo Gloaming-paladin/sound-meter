@@ -20,30 +20,15 @@
         id="MissingPermission"
         severity="error"
         message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`">
-        <fix-data missing="android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION" requirement="|android.permission.ACCESS_COARSE_LOCATION,android.permission.ACCESS_FINE_LOCATION"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="409"
-            column="9"
-            startOffset="14657"
-            endLine="409"
-            endColumn="46"
-            endOffset="14694"/>
-    </incident>
-
-    <incident
-        id="MissingPermission"
-        severity="error"
-        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`">
         <fix-data missing="android.permission.RECORD_AUDIO" requirement="android.permission.RECORD_AUDIO"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/FFTAnalyzer.java"
-            line="35"
-            column="23"
-            startOffset="1086"
-            endLine="41"
-            endColumn="10"
-            endOffset="1308"/>
+            line="57"
+            column="27"
+            startOffset="1705"
+            endLine="63"
+            endColumn="14"
+            endOffset="1958"/>
     </incident>
 
     <incident
@@ -53,12 +38,12 @@
         <fix-data missing="android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION" requirement="|android.permission.ACCESS_COARSE_LOCATION,android.permission.ACCESS_FINE_LOCATION"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MainActivity.java"
-            line="113"
+            line="130"
             column="9"
-            startOffset="4019"
-            endLine="113"
+            startOffset="4356"
+            endLine="130"
             endColumn="46"
-            endOffset="4056"/>
+            endOffset="4393"/>
     </incident>
 
     <incident

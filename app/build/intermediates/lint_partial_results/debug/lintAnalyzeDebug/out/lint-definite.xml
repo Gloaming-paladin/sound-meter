@@ -7,12 +7,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="232"
-            column="56"
-            startOffset="9206"
-            endLine="232"
-            endColumn="90"
-            endOffset="9240"/>
+            line="269"
+            column="26"
+            startOffset="10924"
+            endLine="269"
+            endColumn="67"
+            endOffset="10965"/>
     </incident>
 
     <incident
@@ -21,12 +21,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="233"
-            column="56"
-            startOffset="9299"
-            endLine="233"
-            endColumn="85"
-            endOffset="9328"/>
+            line="270"
+            column="26"
+            startOffset="10993"
+            endLine="270"
+            endColumn="60"
+            endOffset="11027"/>
     </incident>
 
     <incident
@@ -35,12 +35,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="234"
-            column="66"
-            startOffset="9397"
-            endLine="234"
-            endColumn="100"
-            endOffset="9431"/>
+            line="271"
+            column="31"
+            startOffset="11060"
+            endLine="271"
+            endColumn="69"
+            endOffset="11098"/>
     </incident>
 
     <incident
@@ -49,12 +49,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="235"
-            column="68"
-            startOffset="9502"
-            endLine="235"
-            endColumn="103"
-            endOffset="9537"/>
+            line="272"
+            column="32"
+            startOffset="11132"
+            endLine="272"
+            endColumn="71"
+            endOffset="11171"/>
     </incident>
 
     <incident
@@ -63,12 +63,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="332"
+            line="350"
             column="86"
-            startOffset="11355"
-            endLine="332"
+            startOffset="12348"
+            endLine="350"
             endColumn="97"
-            endOffset="11366"/>
+            endOffset="12359"/>
     </incident>
 
     <incident
@@ -110,12 +110,12 @@
         message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="278"
+            line="296"
             column="28"
-            startOffset="9036"
-            endLine="278"
+            startOffset="10029"
+            endLine="296"
             endColumn="67"
-            endOffset="9075"/>
+            endOffset="10068"/>
     </incident>
 
     <incident
@@ -189,20 +189,6 @@
     </incident>
 
     <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/InfoDialog.java"
-            line="100"
-            column="66"
-            startOffset="2936"
-            endLine="100"
-            endColumn="70"
-            endOffset="2940"/>
-    </incident>
-
-    <incident
         id="AppCompatCustomView"
         severity="error"
         message="This custom view should extend `androidx.appcompat.widget.AppCompatImageView` instead">
@@ -235,12 +221,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="35"
+            line="37"
             column="20"
-            startOffset="890"
-            endLine="35"
+            startOffset="906"
+            endLine="37"
             endColumn="64"
-            endOffset="934"/>
+            endOffset="950"/>
     </incident>
 
     <incident
@@ -255,12 +241,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="36"
+            line="38"
             column="20"
-            startOffset="955"
-            endLine="36"
+            startOffset="971"
+            endLine="38"
             endColumn="65"
-            endOffset="1000"/>
+            endOffset="1016"/>
     </incident>
 
     <incident
@@ -275,12 +261,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="37"
+            line="39"
             column="20"
-            startOffset="1021"
-            endLine="37"
+            startOffset="1037"
+            endLine="39"
             endColumn="53"
-            endOffset="1054"/>
+            endOffset="1070"/>
     </incident>
 
     <incident
@@ -295,12 +281,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="38"
+            line="40"
             column="20"
-            startOffset="1075"
-            endLine="38"
+            startOffset="1091"
+            endLine="40"
             endColumn="48"
-            endOffset="1103"/>
+            endOffset="1119"/>
     </incident>
 
     <incident
@@ -315,12 +301,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="39"
+            line="41"
             column="20"
-            startOffset="1124"
-            endLine="39"
+            startOffset="1140"
+            endLine="41"
             endColumn="48"
-            endOffset="1152"/>
+            endOffset="1168"/>
     </incident>
 
     <incident
@@ -335,12 +321,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="40"
+            line="42"
             column="20"
-            startOffset="1173"
-            endLine="40"
+            startOffset="1189"
+            endLine="42"
             endColumn="44"
-            endOffset="1197"/>
+            endOffset="1213"/>
     </incident>
 
     <incident
@@ -355,12 +341,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="41"
+            line="43"
             column="20"
-            startOffset="1218"
-            endLine="41"
+            startOffset="1234"
+            endLine="43"
             endColumn="62"
-            endOffset="1260"/>
+            endOffset="1276"/>
     </incident>
 
     <incident
@@ -375,12 +361,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="43"
+            line="45"
             column="24"
-            startOffset="1347"
-            endLine="43"
+            startOffset="1363"
+            endLine="45"
             endColumn="42"
-            endOffset="1365"/>
+            endOffset="1381"/>
     </incident>
 
     <incident
@@ -395,12 +381,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="44"
+            line="46"
             column="20"
-            startOffset="1386"
-            endLine="44"
+            startOffset="1402"
+            endLine="46"
             endColumn="56"
-            endOffset="1422"/>
+            endOffset="1438"/>
     </incident>
 
     <incident
@@ -415,12 +401,52 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="47"
+            line="49"
             column="20"
-            startOffset="1562"
-            endLine="47"
+            startOffset="1578"
+            endLine="49"
             endColumn="74"
-            endOffset="1616"/>
+            endOffset="1632"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.0 is available: 1.12.2">
+        <fix-replace
+            description="Change to 1.12.2"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.12.2"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="20"
+            startOffset="1653"
+            endLine="50"
+            endColumn="58"
+            endOffset="1691"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9">
+        <fix-replace
+            description="Change to 1.8.9"
+            family="Update versions"
+            oldString="1.6.2"
+            replacement="1.8.9"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="20"
+            startOffset="1712"
+            endLine="51"
+            endColumn="58"
+            endOffset="1750"/>
     </incident>
 
     <incident
@@ -435,12 +461,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="49"
+            line="53"
             column="31"
-            startOffset="1670"
-            endLine="49"
+            startOffset="1804"
+            endLine="53"
             endColumn="62"
-            endOffset="1701"/>
+            endOffset="1835"/>
     </incident>
 
     <incident
@@ -455,12 +481,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="50"
+            line="54"
             column="31"
-            startOffset="1733"
-            endLine="50"
+            startOffset="1867"
+            endLine="54"
             endColumn="57"
-            endOffset="1759"/>
+            endOffset="1893"/>
     </incident>
 
     <incident
@@ -475,12 +501,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="51"
+            line="55"
             column="31"
-            startOffset="1791"
-            endLine="51"
+            startOffset="1925"
+            endLine="55"
             endColumn="59"
-            endOffset="1819"/>
+            endOffset="1953"/>
     </incident>
 
     <incident
@@ -495,12 +521,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="52"
+            line="56"
             column="31"
-            startOffset="1851"
-            endLine="52"
+            startOffset="1985"
+            endLine="56"
             endColumn="58"
-            endOffset="1878"/>
+            endOffset="2012"/>
     </incident>
 
     <incident
@@ -515,12 +541,12 @@
             priority="0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="53"
+            line="57"
             column="31"
-            startOffset="1910"
-            endLine="53"
+            startOffset="2044"
+            endLine="57"
             endColumn="75"
-            endOffset="1954"/>
+            endOffset="2088"/>
     </incident>
 
     <incident
@@ -578,25 +604,6 @@
             endLine="138"
             endColumn="40"
             endOffset="5398"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"
-            priority="0"/>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
-            line="147"
-            column="17"
-            startOffset="5717"
-            endLine="147"
-            endColumn="40"
-            endOffset="5740"/>
     </incident>
 
     <incident
@@ -1589,20 +1596,6 @@
     </incident>
 
     <incident
-        id="HandlerLeak"
-        severity="warning"
-        message="This `Handler` class should be static or leaks might occur (anonymous android.os.Handler)">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="89"
-            column="37"
-            startOffset="2962"
-            endLine="120"
-            endColumn="6"
-            endOffset="4014"/>
-    </incident>
-
-    <incident
         id="DisableBaselineAlignment"
         severity="warning"
         message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
@@ -2084,6 +2077,146 @@
     </incident>
 
     <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="9"
+            column="6"
+            startOffset="291"
+            endLine="9"
+            endColumn="14"
+            endOffset="299"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="16"
+            column="6"
+            startOffset="499"
+            endLine="16"
+            endColumn="14"
+            endOffset="507"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="9"
+            column="6"
+            startOffset="291"
+            endLine="9"
+            endColumn="14"
+            endOffset="299"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="16"
+            column="6"
+            startOffset="502"
+            endLine="16"
+            endColumn="14"
+            endOffset="510"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="23"
+            column="6"
+            startOffset="720"
+            endLine="23"
+            endColumn="14"
+            endOffset="728"/>
+    </incident>
+
+    <incident
         id="ButtonCase"
         severity="warning"
         message="The standard Android way to capitalize Ok is &quot;OK&quot; (tip: use `@android:string/ok` instead)">
@@ -2210,45 +2343,17 @@
     </incident>
 
     <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set contentDescription"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="contentDescription"
-                value="TODO"
-                point="4"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAccessibility=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAccessibility"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
-            line="9"
-            column="6"
-            startOffset="313"
-            endLine="9"
-            endColumn="15"
-            endOffset="322"/>
-    </incident>
-
-    <incident
         id="SetTextI18n"
         severity="warning"
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="233"
+            line="252"
             column="24"
-            startOffset="7692"
-            endLine="233"
+            startOffset="8716"
+            endLine="252"
             endColumn="30"
-            endOffset="7698"/>
+            endOffset="8722"/>
     </incident>
 
     <incident
@@ -2257,12 +2362,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="234"
+            line="253"
             column="24"
-            startOffset="7724"
-            endLine="234"
+            startOffset="8748"
+            endLine="253"
             endColumn="30"
-            endOffset="7730"/>
+            endOffset="8754"/>
     </incident>
 
     <incident
@@ -2271,26 +2376,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="235"
-            column="23"
-            startOffset="7755"
-            endLine="235"
-            endColumn="29"
-            endOffset="7761"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
-            line="236"
+            line="254"
             column="24"
-            startOffset="7787"
-            endLine="236"
+            startOffset="8780"
+            endLine="254"
             endColumn="30"
-            endOffset="7793"/>
+            endOffset="8786"/>
     </incident>
 
     <incident
@@ -2299,26 +2390,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/ProfileFragment.java"
-            line="89"
+            line="120"
             column="38"
-            startOffset="3722"
-            endLine="89"
-            endColumn="60"
-            endOffset="3744"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/ProfileFragment.java"
-            line="89"
-            column="38"
-            startOffset="3722"
-            endLine="89"
-            endColumn="49"
-            endOffset="3733"/>
+            startOffset="4333"
+            endLine="120"
+            endColumn="55"
+            endOffset="4350"/>
     </incident>
 
     <incident
@@ -2520,6 +2597,34 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;保存头像到本地&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_avatar_options.xml"
+            line="12"
+            column="9"
+            startOffset="413"
+            endLine="12"
+            endColumn="31"
+            endOffset="435"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;更换头像&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_avatar_options.xml"
+            line="21"
+            column="9"
+            startOffset="712"
+            endLine="21"
+            endColumn="28"
+            endOffset="731"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;sfasfasf&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_info.xml"
@@ -2618,7 +2723,7 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;23 Db&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;89 Db&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
             line="114"
@@ -2632,7 +2737,7 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;23 Db&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;56 Db&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
             line="137"
@@ -2646,15 +2751,57 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;0 dB&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;用户名&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
-            line="146"
-            column="17"
-            startOffset="5680"
-            endLine="146"
-            endColumn="36"
-            endOffset="5699"/>
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="13"
+            column="9"
+            startOffset="438"
+            endLine="13"
+            endColumn="27"
+            endOffset="456"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;密码&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="20"
+            column="9"
+            startOffset="646"
+            endLine="20"
+            endColumn="26"
+            endOffset="663"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;登录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="27"
+            column="9"
+            startOffset="857"
+            endLine="27"
+            endColumn="26"
+            endOffset="874"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;没有账户？点此注册&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="33"
+            column="9"
+            startOffset="1030"
+            endLine="33"
+            endColumn="33"
+            endOffset="1054"/>
     </incident>
 
     <incident
@@ -2663,12 +2810,12 @@
         message="Hardcoded string &quot;查看历史记录&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
-            line="68"
+            line="61"
             column="13"
-            startOffset="2435"
-            endLine="68"
+            startOffset="2171"
+            endLine="61"
             endColumn="34"
-            endOffset="2456"/>
+            endOffset="2192"/>
     </incident>
 
     <incident
@@ -2677,12 +2824,12 @@
         message="Hardcoded string &quot;应用信息&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
-            line="74"
+            line="68"
             column="9"
-            startOffset="2630"
-            endLine="74"
+            startOffset="2387"
+            endLine="68"
             endColumn="28"
-            endOffset="2649"/>
+            endOffset="2406"/>
     </incident>
 
     <incident
@@ -2691,12 +2838,82 @@
         message="Hardcoded string &quot;Sound Meter v1.0\n\n这是一个噪音测量应用，可以实时监测环境噪音水平。&quot;, should use `@string` resource">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
-            line="84"
+            line="78"
             column="9"
-            startOffset="2972"
-            endLine="84"
+            startOffset="2729"
+            endLine="78"
             endColumn="68"
-            endOffset="3031"/>
+            endOffset="2788"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;用户名&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="13"
+            column="9"
+            startOffset="441"
+            endLine="13"
+            endColumn="27"
+            endOffset="459"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;密码&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="20"
+            column="9"
+            startOffset="652"
+            endLine="20"
+            endColumn="26"
+            endOffset="669"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;确认密码&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="27"
+            column="9"
+            startOffset="878"
+            endLine="27"
+            endColumn="28"
+            endOffset="897"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;注册&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="34"
+            column="9"
+            startOffset="1094"
+            endLine="34"
+            endColumn="26"
+            endOffset="1111"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;已有账户？点此登录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="40"
+            column="9"
+            startOffset="1264"
+            endLine="40"
+            endColumn="33"
+            endOffset="1288"/>
     </incident>
 
     <incident

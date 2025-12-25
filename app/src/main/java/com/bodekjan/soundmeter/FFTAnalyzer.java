@@ -11,7 +11,7 @@ import java.io.IOException;
 public class FFTAnalyzer {
     private static final int SAMPLE_RATE = 44100;
     private static final int BUFFER_SIZE = 1024;
-    private static final int FFT_SIZE = 512;
+    public static final int FFT_SIZE = 512;
 
     private AudioRecord audioRecord;
     private AudioFileDecoder audioFileDecoder; // 用于解码本地文件
@@ -51,7 +51,7 @@ public class FFTAnalyzer {
             return false;
         }
 
-        int bufferSizeInBytes = Math.max(minBufferSizeInBytes, FFT_SIZE * 2 * 2);
+        int bufferSizeInBytes = minBufferSizeInBytes * 2;
 
         try {
             audioRecord = new AudioRecord(
@@ -118,7 +118,7 @@ public class FFTAnalyzer {
 
         int bytesRead;
         if (audioRecord != null && audioRecord.getRecordingState() == AudioRecord.RECORDSTATE_RECORDING) {
-            bytesRead = audioRecord.read(audioBuffer, 0, FFT_SIZE);
+            bytesRead = audioRecord.read(audioBuffer, 0, audioBuffer.length);
         } else if (audioFileDecoder != null) {
             try {
                 bytesRead = audioFileDecoder.read(audioBuffer);
@@ -222,6 +222,12 @@ public class FFTAnalyzer {
     }
 
     public static double[] getFrequencyBins(int sampleRate, int fftSize) {
+        if (fftSize <= 0) {
+            throw new IllegalArgumentException("FFT size must be a positive integer.");
+        }
+        if (Integer.bitCount(fftSize) != 1) {
+            throw new IllegalArgumentException("FFT size must be a power of 2.");
+        }
         double[] frequencies = new double[fftSize / 2];
         double frequencyStep = (double) sampleRate / fftSize;
         for (int i = 0; i < fftSize / 2; i++) {

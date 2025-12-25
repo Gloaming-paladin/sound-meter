@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-33:/values-es/values-es.xml",
+            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-39:/values-es/values-es.xml",
             "map": [
                 {
                     "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\ad9ebe0e866f78f6753a87a16a9ab180\\transformed\\play-services-base-18.1.0\\res\\values-es\\values.xml",

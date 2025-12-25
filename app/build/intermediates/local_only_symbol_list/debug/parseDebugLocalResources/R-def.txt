@@ -44,7 +44,6 @@ drawable refresh
 drawable texture
 id analysis_progress_bar
 id analyze_local_file_button
-id avatar_layout
 id avglabel
 id avgval
 id bandwidth_value
@@ -80,7 +79,6 @@ id nav_decibel_meter
 id nav_profile
 id negativeButton
 id playbutton
-id profile_avatar
 id refresh_button
 id refreshbutton
 id register_button

@@ -42,46 +42,18 @@ public class ProfileFragment extends Fragment {
     private Button loginButton, registerButton, logoutButton, historyButton;
     private LinearLayout loggedOutButtons, loggedInSection;
     private TextView usernameTextView;
-    private ImageView avatarImageView;
-    private RelativeLayout avatarLayout;
+
     private SharedPreferences sharedPreferences;
     private NoiseDatabaseHelper dbHelper;
 
-    private ActivityResultLauncher<Intent> pickImageLauncher;
-    private ActivityResultLauncher<String[]> requestPermissionsLauncher;
+    private ActivityResultLauncher<String> requestPermissionLauncher;
+
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        pickImageLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
-                        Uri imageUri = result.getData().getData();
-                        avatarImageView.setImageURI(imageUri);
-                        updateUserAvatarInDb(imageUri.toString());
-                    }
-                }
-        );
 
-        requestPermissionsLauncher = registerForActivityResult(
-                new ActivityResultContracts.RequestMultiplePermissions(),
-                permissions -> {
-                    boolean allPermissionsGranted = true;
-                    for (Boolean isGranted : permissions.values()) {
-                        if (!isGranted) {
-                            allPermissionsGranted = false;
-                            break;
-                        }
-                    }
-
-                    if (allPermissionsGranted) {
-                        openGallery();
-                    } else {
-                        Toast.makeText(requireContext(), "需要存储权限才能选择头像", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
 
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
@@ -103,51 +75,32 @@ public class ProfileFragment extends Fragment {
         loggedOutButtons = view.findViewById(R.id.logged_out_buttons);
         loggedInSection = view.findViewById(R.id.logged_in_section);
         usernameTextView = view.findViewById(R.id.username_text);
-        avatarImageView = view.findViewById(R.id.profile_avatar);
-        avatarLayout = view.findViewById(R.id.avatar_layout);
-
-        loginButton.setOnClickListener(v -> goToLogin());
-        registerButton.setOnClickListener(v -> goToRegister());
-        logoutButton.setOnClickListener(v -> handleLogout());
-        historyButton.setOnClickListener(v -> openHistoryActivity());
-        avatarLayout.setOnClickListener(v -> {
-            String username = sharedPreferences.getString("username", null);
-            if (username != null) {
-                String avatarPath = dbHelper.getUserAvatar(username);
-                if (avatarPath != null && !avatarPath.isEmpty()) {
-                    showAvatarOptions();
-                } else {
-                    checkPermissionAndOpenGallery();
-                }
-            } else {
-                Toast.makeText(requireContext(), "请先登录", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void checkPermissionAndOpenGallery() {
-        requestPermissionsLauncher.launch(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE});
-    }
-
-    private void openGallery() {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        pickImageLauncher.launch(intent);
-    }
 
 
-
-    private void updateUserAvatarInDb(String avatarPath) {
-        String username = sharedPreferences.getString("username", null);
-        if (username != null) {
-            dbHelper.updateUserAvatar(username, avatarPath);
+        if (loginButton != null) {
+            loginButton.setOnClickListener(v -> goToLogin());
         }
+        if (registerButton != null) {
+            registerButton.setOnClickListener(v -> goToRegister());
+        }
+        if (logoutButton != null) {
+            logoutButton.setOnClickListener(v -> handleLogout());
+        }
+        if (historyButton != null) {
+            historyButton.setOnClickListener(v -> openHistoryActivity());
+        }
+
     }
+
+
 
     private void handleLogout() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        ((MainActivity) requireActivity()).showLogin();
+        if (requireActivity() instanceof MainActivity) {
+            ((MainActivity) requireActivity()).showLogin();
+        }
     }
 
     private void openHistoryActivity() {
@@ -156,6 +109,9 @@ public class ProfileFragment extends Fragment {
     }
 
     private void updateUI() {
+        if (sharedPreferences == null || dbHelper == null || loggedOutButtons == null || loggedInSection == null || usernameTextView == null) {
+            return;
+        }
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
         if (isLoggedIn) {
             loggedOutButtons.setVisibility(View.GONE);
@@ -163,16 +119,11 @@ public class ProfileFragment extends Fragment {
             String username = sharedPreferences.getString("username", "User");
             usernameTextView.setText("欢迎, " + username);
 
-            String avatarPath = dbHelper.getUserAvatar(username);
-            if (avatarPath != null && !avatarPath.isEmpty()) {
-                avatarImageView.setImageURI(Uri.parse(avatarPath));
-            } else {
-                avatarImageView.setImageResource(R.drawable.bg_avatar_placeholder);
-            }
+
         } else {
             loggedOutButtons.setVisibility(View.VISIBLE);
             loggedInSection.setVisibility(View.GONE);
-            avatarImageView.setImageResource(R.drawable.bg_avatar_placeholder);
+
         }
     }
 
@@ -190,60 +141,7 @@ public class ProfileFragment extends Fragment {
         transaction.commit();
     }
 
-    private void showAvatarOptions() {
-        View dialogView = getLayoutInflater().inflate(R.layout.dialog_avatar_options, null);
-        BottomSheetDialog dialog = new BottomSheetDialog(requireContext());
-        dialog.setContentView(dialogView);
 
-        TextView saveAvatarButton = dialogView.findViewById(R.id.save_avatar_button);
-        TextView changeAvatarButton = dialogView.findViewById(R.id.change_avatar_button);
-
-        saveAvatarButton.setOnClickListener(v -> {
-            saveAvatarToDevice();
-            dialog.dismiss();
-        });
-
-        changeAvatarButton.setOnClickListener(v -> {
-            checkPermissionAndOpenGallery();
-            dialog.dismiss();
-        });
-
-        dialog.show();
-    }
-
-    private void saveAvatarToDevice() {
-        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            requestPermissionsLauncher.launch(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
-            return;
-        }
-
-        BitmapDrawable drawable = (BitmapDrawable) avatarImageView.getDrawable();
-        Bitmap bitmap = drawable.getBitmap();
-
-        ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.DISPLAY_NAME, "avatar_" + System.currentTimeMillis() + ".png");
-        values.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
-        values.put(MediaStore.Images.Media.IS_PENDING, 1);
-
-        Uri uri = requireContext().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-
-        if (uri != null) {
-            try (OutputStream out = requireContext().getContentResolver().openOutputStream(uri)) {
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            values.clear();
-            values.put(MediaStore.Images.Media.IS_PENDING, 0);
-            requireContext().getContentResolver().update(uri, values, null, null);
-
-            Toast.makeText(requireContext(), "头像已保存到相册", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(requireContext(), "保存失败", Toast.LENGTH_SHORT).show();
-        }
-    }
 
 
 }

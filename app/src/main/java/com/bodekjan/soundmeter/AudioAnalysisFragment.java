@@ -257,7 +257,7 @@ public class AudioAnalysisFragment extends Fragment {
     }
 
     private void updateMetricsFromSpectrum(double[] spectrum) {
-        double[] frequencies = FFTAnalyzer.getFrequencyBins(44100, 512);
+        double[] frequencies = FFTAnalyzer.getFrequencyBins(44100, FFTAnalyzer.FFT_SIZE);
         double thd = AudioQualityAnalyzer.calculateTHD(spectrum, frequencies);
         double snr = AudioQualityAnalyzer.calculateSNR(spectrum, frequencies);
         double centroid = AudioQualityAnalyzer.calculateSpectralCentroid(spectrum, frequencies);

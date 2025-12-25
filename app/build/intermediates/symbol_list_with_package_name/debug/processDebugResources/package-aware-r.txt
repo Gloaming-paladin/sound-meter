@@ -3119,7 +3119,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id avatar_layout
 id avglabel
 id avgval
 id bandwidth_value
@@ -3393,7 +3392,6 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
-id profile_avatar
 id progress_circular
 id progress_horizontal
 id radio

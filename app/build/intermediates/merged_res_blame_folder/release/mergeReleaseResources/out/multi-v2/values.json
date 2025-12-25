@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-33:/values/values.xml",
+            "outputFile": "com.bodekjan.soundmeter.app-mergeReleaseResources-39:/values/values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\ad9ebe0e866f78f6753a87a16a9ab180\\transformed\\play-services-base-18.1.0\\res\\values\\values.xml",
@@ -328,7 +328,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\cc2f2714543b8230f1968e7b38dbe77f\\transformed\\fragment-1.3.6\\res\\values\\values.xml",
+                    "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\33b6db20a01e0b84b77354bf6f718b63\\transformed\\fragment-1.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
                         "startColumns": "4,4,4,4,4",

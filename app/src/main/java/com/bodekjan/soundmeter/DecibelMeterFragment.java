@@ -1,5 +1,8 @@
 package com.bodekjan.soundmeter;
 
+import android.os.Looper;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -83,9 +86,11 @@ public class DecibelMeterFragment extends Fragment {
     private double currentLongitude = 0.0;
     private String currentRecordingPath;
 
+    private ActivityResultLauncher<String> requestPermissionsLauncher;
+
     private ImageButton locationButton;
 
-    private final Handler handler = new Handler() {
+    private final Handler handler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
@@ -133,6 +138,23 @@ public class DecibelMeterFragment extends Fragment {
 
         // 初始化数据库助手
         dbHelper = new NoiseDatabaseHelper(requireContext());
+
+        requestPermissionsLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+            if (isGranted) {
+                startRecording();
+            } else {
+                if (shouldShowRequestPermissionRationale(Manifest.permission.RECORD_AUDIO)) {
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle(getString(R.string.title_permission_request))
+                            .setMessage(getString(R.string.msg_permission_needed))
+                            .setPositiveButton(getString(R.string.btn_retry), (dialog, which) -> requestPermissions())
+                            .setNegativeButton(getString(R.string.btn_cancel), null)
+                            .show();
+                } else {
+                    showPermissionSettingsDialog();
+                }
+            }
+        });
 
         // 默认不测量分贝
         resetMeasurement();
@@ -333,45 +355,10 @@ public class DecibelMeterFragment extends Fragment {
     }
 
     private void requestPermissions() {
-        requestPermissions(
-                new String[]{Manifest.permission.RECORD_AUDIO},
-                100);
+        requestPermissionsLauncher.launch(Manifest.permission.RECORD_AUDIO);
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 100) {
-            boolean allGranted = true;
-            boolean shouldShowRationale = false;
-            
-            for (int i = 0; i < grantResults.length; i++) {
-                if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-                    allGranted = false;
-                    if (shouldShowRequestPermissionRationale(permissions[i])) {
-                        shouldShowRationale = true;
-                    }
-                }
-            }
 
-            if (allGranted) {
-                startRecording();
-            } else {
-                if (shouldShowRationale) {
-                    // User denied permission but didn't check "Don't ask again", show explanation and retry
-                    new AlertDialog.Builder(requireContext())
-                            .setTitle(getString(R.string.title_permission_request))
-                            .setMessage(getString(R.string.msg_permission_needed))
-                            .setPositiveButton(getString(R.string.btn_retry), (dialog, which) -> requestPermissions())
-                            .setNegativeButton(getString(R.string.btn_cancel), null)
-                            .show();
-                } else {
-                    // User denied permission and checked "Don't ask again", guide user to settings
-                    showPermissionSettingsDialog();
-                }
-            }
-        }
-    }
 
     private void showPermissionSettingsDialog() {
         new AlertDialog.Builder(requireContext())
@@ -402,23 +389,24 @@ public class DecibelMeterFragment extends Fragment {
     }
 
     private void startLocationUpdate() {
-        fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(requireActivity(), location -> {
-                    if (location != null) {
-                        currentLatitude = location.getLatitude();
-                        currentLongitude = location.getLongitude();
-                        Toast.makeText(requireContext(), getString(R.string.msg_location_success, String.valueOf(currentLatitude), String.valueOf(currentLongitude)), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        try {
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(requireActivity(), location -> {
+                        if (location != null) {
+                            currentLatitude = location.getLatitude();
+                            currentLongitude = location.getLongitude();
+                            Toast.makeText(requireContext(), getString(R.string.msg_location_success, String.valueOf(currentLatitude), String.valueOf(currentLongitude)), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } catch (SecurityException e) {
+            e.printStackTrace();
+            // Handle the case where permission is not granted
+            Toast.makeText(requireContext(), "Location permission not granted.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void showInfoDialog() {
-        InfoDialog.Builder builder = new InfoDialog.Builder(requireActivity());
-        builder.setMessage(getString(R.string.activity_infobull));
-        builder.setTitle(getString(R.string.activity_infotitle));
-        builder.setNegativeButton(getString(R.string.activity_infobutton),
-                (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+        InfoDialog.show(requireContext());
     }
 
     // 新增方法：初始化图表

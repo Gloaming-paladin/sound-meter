@@ -104,29 +104,6 @@
                 style="@style/Uy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/activity_avglabel"
-                android:id="@+id/avglabel"
-                android:textColor="@color/external_progress2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23 Db"
-                android:textSize="36dp"
-                android:id="@+id/mmval"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-
-            <np.TextView
-                style="@style/Uy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/activity_maxlabel"
                 android:id="@+id/maxlabel"
                 android:textColor="@color/external_progress2" />
@@ -134,19 +111,34 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 Db"
+                android:text="89 Db"
                 android:textSize="36dp"
                 android:id="@+id/maxval"
                 android:textColor="#ffffff" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/curval"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <np.TextView
+                style="@style/Uy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0 dB"
-                android:textSize="36dp"
-                android:textColor="#ffffff" />
+                android:text="@string/activity_avglabel"
+                android:id="@+id/avglabel"
+                android:textColor="@color/external_progress2" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56 Db"
+                android:textSize="36dp"
+                android:id="@+id/avgval"
+                android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
