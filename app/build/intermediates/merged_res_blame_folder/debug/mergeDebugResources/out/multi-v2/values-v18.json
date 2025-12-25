@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.bodekjan.soundmeter.app-mergeDebugResources-23:/values-v18/values-v18.xml",
+            "outputFile": "com.bodekjan.soundmeter.app-mergeDebugResources-33:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\41b8df5d56613c89f0c2c3d7d1e190f1\\transformed\\appcompat-1.5.1\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\30208\\.gradle\\caches\\8.10.2\\transforms\\1926d536a0bd03b757a8b36878e26eea\\transformed\\appcompat-1.6.1\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

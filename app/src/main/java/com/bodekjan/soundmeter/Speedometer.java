@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -20,6 +21,7 @@ public class Speedometer extends ImageView {
     private Matrix mMatrix = new Matrix();
     private Bitmap indicatorBitmap;
     private Paint paint = new Paint();
+    private Typeface typeface;  // 添加 Typeface 成员变量
     static final long  ANIMATION_INTERVAL = 20;
 
     public Speedometer(Context context) {
@@ -28,6 +30,11 @@ public class Speedometer extends ImageView {
 
     public Speedometer(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    // 添加设置 Typeface 的方法
+    public void setTypeface(Typeface tf) {
+        this.typeface = tf;
     }
 
     private void init() {
@@ -43,7 +50,9 @@ public class Speedometer extends ImageView {
 
         paint = new Paint();
         paint.setTextSize(44);
-        paint.setTypeface(MainActivity.tf);
+        if (typeface != null) {
+            paint.setTypeface(typeface);  // 使用传递的 Typeface
+        }
         paint.setAntiAlias(true);  //Anti-aliasing
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setColor(Color.WHITE);

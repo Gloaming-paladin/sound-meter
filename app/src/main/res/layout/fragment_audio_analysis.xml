@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_page"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="音频分析"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white" />
+
+    <!-- 频谱图显示区域 -->
+    <com.bodekjan.soundmeter.SpectrumView
+        android:id="@+id/spectrum_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 音频质量指标显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/thd_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="THD: --"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/snr_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SNR: --"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- 频谱分析控制按钮 -->
+    <Button
+        android:id="@+id/start_stop_spectrum_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始频谱分析"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/mygreen" />
+
+    <!-- 数据导出与分享按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/export_csv_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="导出CSV数据"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/mygreen" />
+
+        <Button
+            android:id="@+id/generate_pdf_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成PDF报告"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/mygreen" />
+
+        <Button
+            android:id="@+id/share_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="分享报告"
+            android:backgroundTint="@color/mygreen" />
+
+    </LinearLayout>
+
+</LinearLayout>

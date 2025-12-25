@@ -17,4 +17,7 @@
     <color name="digital_number">#ffdcefff</color>
     <color name="black">#323232</color>
     <color name="fullblack">#111111</color>
+    <!-- 底部导航栏颜色 -->
+    <color name="background_color">#2E2E2E</color>
+    <color name="bottom_nav_color">#FFFFFF</color>
 </resources>
