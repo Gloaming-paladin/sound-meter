@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_page"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/profile_avatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_avatar_placeholder" />
+
+    <LinearLayout
+        android:id="@+id/logged_out_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_login"
+            android:backgroundTint="@color/mygreen" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_register"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/mygreen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/logged_in_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_logout"
+            android:backgroundTint="@color/mygreen" />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/history_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查看历史记录"
+            android:backgroundTint="@color/mygreen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="应用信息"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sound Meter v1.0\n\n这是一个噪音测量应用，可以实时监测环境噪音水平。"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

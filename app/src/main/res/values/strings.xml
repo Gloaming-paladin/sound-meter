@@ -19,4 +19,58 @@
 	<string name="info_70db">70dB and more: can affect learning and work.</string>
 	<string name="info_90db">90dB and more affect audition.</string>
 	<string name="info_150db">150dB : A sudden exposure to a sound environment of 150dB, will break the eardrums. The audition will be completely lost.</string>
+    
+    <!-- Dynamic Messages -->
+    <string name="msg_start_recording">Recording started</string>
+    <string name="msg_recording_failed">Recording failed</string>
+    <string name="title_save_recording">Save Recording</string>
+    <string name="msg_save_recording_confirm">Do you want to save the recording file?</string>
+    <string name="btn_save">Save</string>
+    <string name="title_select_format">Select File Format</string>
+    <string name="msg_saved_format">Recording saved as %s format</string>
+    <string name="title_permission_request">Permission Request</string>
+    <string name="msg_permission_needed">This app needs recording permission to function properly. Please grant it.</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="msg_permission_denied_forever">You have denied recording permission and selected "Don't ask again". Please enable it manually in Settings.</string>
+    <string name="btn_go_to_settings">Settings</string>
+    <string name="msg_location_success">Location: Lat %1$s, Lon %2$s</string>
+    <string name="chart_description">Decibel Measurement Chart</string>
+    <string name="chart_label">Decibel Value</string>
+
+    <!-- HistoryActivity -->
+    <string name="msg_no_history">No history data available</string>
+    <string name="title_clear_history">Clear History</string>
+    <string name="msg_clear_history_confirm">Are you sure you want to clear all history data?</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="msg_history_cleared">History cleared</string>
+    <string name="msg_location_format">Location: %1$.4f, %2$.4f</string>
+
+    <!-- ProfileFragment -->
+    <string name="msg_logged_out">Logged out</string>
+    <string name="msg_logged_in">Logged in successfully</string>
+    <string name="btn_logout">Logout</string>
+    <string name="status_logged_in">Logged In</string>
+    <string name="btn_login">Login</string>
+    <string name="status_logged_out">Not Logged In</string>
+
+    <!-- AudioAnalysisFragment -->
+    <string name="msg_recording_permission_needed">Recording permission required</string>
+    <string name="msg_csv_export_success">CSV Exported: %s</string>
+    <string name="msg_csv_export_failed">CSV Export Failed: %s</string>
+    <string name="msg_pdf_unavailable">PDF feature requires additional libraries, currently unavailable</string>
+    <string name="msg_share_in_development">Share feature is under development</string>
+    <string name="msg_all_permissions_needed">All permissions are required for normal operation</string>
+    <string name="btn_start_spectrum">Start Spectrum Analysis</string>
+    <string name="btn_stop_spectrum">Stop Spectrum Analysis</string>
+    <string name="btn_analyze_local_file">Analyze Local File</string>
+    <string name="title_audio_analysis">Audio Analysis</string>
+    <string name="label_thd">THD: %s</string>
+    <string name="label_snr">SNR: %s</string>
+    <string name="label_centroid">Centroid: %s Hz</string>
+    <string name="label_bandwidth">Bandwidth: %s Hz</string>
+    <string name="btn_export_csv">Export CSV</string>
+    <string name="btn_generate_pdf">Generate PDF</string>
+    <string name="btn_share_report">Share Report</string>
+    <string name="btn_register">Register</string>
 </resources>

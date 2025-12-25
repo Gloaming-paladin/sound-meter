@@ -37,6 +37,15 @@ public class SpectrumView extends View {
         invalidate();
     }
 
+    public void clearSpectrum() {
+        if (barHeights != null) {
+            for (int i = 0; i < barHeights.length; i++) {
+                barHeights[i] = 0;
+            }
+        }
+        invalidate();
+    }
+
     private void updateBarHeights() {
         if (spectrumData == null || spectrumData.length == 0) return;
 
@@ -58,7 +67,7 @@ public class SpectrumView extends View {
             if (count > 0) {
                 double avg = sum / count;
                 // 对数缩放，增强视觉效果
-                barHeights[i] = (float) Math.log10(1 + avg * 100) * maxHeight / 2;
+                barHeights[i] = (float) (Math.log10(1 + avg * 10000) * maxHeight / 2.5);
             } else {
                 barHeights[i] = 0;
             }

@@ -25,6 +25,13 @@ public class NoiseDatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_TIMESTAMP = "timestamp";
     public static final String COLUMN_RECORDING_PATH = "recording_path";
 
+    // 用户表
+    public static final String TABLE_USERS = "users";
+    public static final String COLUMN_USER_ID = "user_id";
+    public static final String COLUMN_USERNAME = "username";
+    public static final String COLUMN_PASSWORD = "password";
+    public static final String COLUMN_AVATAR = "avatar";
+
     // 创建表的SQL语句
     private static final String CREATE_TABLE_NOISE =
             "CREATE TABLE IF NOT EXISTS " + TABLE_NOISE + " (" +
@@ -36,6 +43,14 @@ public class NoiseDatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_RECORDING_PATH + " TEXT" +
                     ")";
 
+    private static final String CREATE_TABLE_USERS =
+            "CREATE TABLE IF NOT EXISTS " + TABLE_USERS + " (" +
+                    COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    COLUMN_USERNAME + " TEXT UNIQUE NOT NULL, " +
+                    COLUMN_PASSWORD + " TEXT NOT NULL, " +
+                    COLUMN_AVATAR + " TEXT" +
+                    ")";
+
     public NoiseDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -43,11 +58,13 @@ public class NoiseDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_NOISE);
+        db.execSQL(CREATE_TABLE_USERS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NOISE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
 
@@ -67,15 +84,81 @@ public class NoiseDatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-
-    public void clearAllNoiseData() {
+    // 添加用户
+    public boolean addUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_NOISE, null, null);
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USERNAME, username);
+        values.put(COLUMN_PASSWORD, password); // 在实际应用中，密码应该被加密存储
+
+        long result = db.insert(TABLE_USERS, null, values);
         db.close();
+        return result != -1;
     }
 
+    // 检查用户是否存在（登录）
+    public boolean checkUser(String username, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_USER_ID};
+        String selection = COLUMN_USERNAME + "=? AND " + COLUMN_PASSWORD + "=?";
+        String[] selectionArgs = {username, password};
 
-    // 获取所有噪音数据（返回使用现有 NoiseData 构造器）
+        Cursor cursor = db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
+
+        return count > 0;
+    }
+
+    // 检查用户名是否已存在（注册）
+    public boolean checkUserExists(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_USER_ID};
+        String selection = COLUMN_USERNAME + "=?";
+        String[] selectionArgs = {username};
+
+        Cursor cursor = db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
+
+        return count > 0;
+    }
+
+    // 更新用户头像
+    public int updateUserAvatar(String username, String avatarPath) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_AVATAR, avatarPath);
+        int result = db.update(TABLE_USERS, values, COLUMN_USERNAME + " = ?", new String[]{username});
+        db.close();
+        return result;
+    }
+
+    // 获取用户头像
+    public String getUserAvatar(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_AVATAR};
+        String selection = COLUMN_USERNAME + " = ?";
+        String[] selectionArgs = {username};
+        Cursor cursor = db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+
+        String avatarPath = null;
+        if (cursor != null) {
+            try {
+                if (cursor.moveToFirst()) {
+                    avatarPath = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_AVATAR));
+                }
+            } finally {
+                cursor.close();
+            }
+        }
+        db.close();
+        return avatarPath;
+    }
+
+    // 获取所有噪音数据
     public List<NoiseData> getAllNoiseData() {
         List<NoiseData> noiseDataList = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_NOISE + " ORDER BY " + COLUMN_TIMESTAMP + " DESC";
@@ -104,6 +187,26 @@ public class NoiseDatabaseHelper extends SQLiteOpenHelper {
         }
         db.close();
         return noiseDataList;
+    }
+
+    // 清除所有噪音数据
+    public void clearAllNoiseData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NOISE, null, null);
+        db.close();
+    }
+
+    // 获取用户信息
+    public Cursor getUser(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COLUMN_USER_ID, COLUMN_USERNAME, COLUMN_AVATAR};
+        String selection = COLUMN_USERNAME + "=?";
+        String[] selectionArgs = {username};
+        Cursor cursor = db.query(TABLE_USERS, columns, selection, selectionArgs, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor;
     }
 
 

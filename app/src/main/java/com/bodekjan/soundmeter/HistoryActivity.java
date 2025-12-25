@@ -110,7 +110,7 @@ public class HistoryActivity extends AppCompatActivity {
 
             holder.dbValueTextView.setText(String.format("%.2f dB", data.getDbValue()));
             holder.timeTextView.setText(formattedTime);
-            holder.locationTextView.setText(String.format("位置: %.4f, %.4f",
+            holder.locationTextView.setText(context.getString(R.string.msg_location_format,
                     data.getLatitude(), data.getLongitude()));
 
             // 根据分贝值设置颜色

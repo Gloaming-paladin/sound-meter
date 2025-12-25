@@ -2,7 +2,9 @@ package com.bodekjan.soundmeter;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -11,12 +13,19 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private static final int PERMISSION_REQUEST_CODE = 100;
+    private FusedLocationProviderClient fusedLocationClient;
+    private double currentLatitude = 0.0;
+    private double currentLongitude = 0.0;
+    private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,35 +33,52 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+
+        // 初始化 FusedLocationProviderClient
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         // 检查权限
         if (!checkPermissions()) {
             requestPermissions();
-        } else {
-            // 设置默认Fragment
-            if (savedInstanceState == null) {
-                loadFragment(new DecibelMeterFragment());
-            }
         }
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull android.view.MenuItem item) {
-                Fragment selectedFragment = null;
+        if (isLoggedIn()) {
+            showMainContent();
+        } else {
+            showLogin();
+        }
 
-                // 使用 if-else 替代 switch 语句
-                if (item.getItemId() == R.id.nav_decibel_meter) {
-                    selectedFragment = new DecibelMeterFragment();
-                } else if (item.getItemId() == R.id.nav_audio_analysis) {
-                    selectedFragment = new AudioAnalysisFragment();
-                } else if (item.getItemId() == R.id.nav_profile) {
-                    selectedFragment = new ProfileFragment();
-                }
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            Fragment selectedFragment = null;
+            int itemId = item.getItemId();
 
-                return loadFragment(selectedFragment);
+            if (itemId == R.id.nav_decibel_meter) {
+                selectedFragment = new DecibelMeterFragment();
+            } else if (itemId == R.id.nav_audio_analysis) {
+                selectedFragment = new AudioAnalysisFragment();
+            } else if (itemId == R.id.nav_profile) {
+                selectedFragment = new ProfileFragment();
             }
+
+            return loadFragment(selectedFragment);
         });
     }
+
+    private boolean isLoggedIn() {
+        return sharedPreferences.getBoolean("isLoggedIn", false);
+    }
+
+    public void showMainContent() {
+        bottomNavigationView.setVisibility(View.VISIBLE);
+        loadFragment(new DecibelMeterFragment());
+    }
+
+    public void showLogin() {
+        bottomNavigationView.setVisibility(View.GONE);
+        loadFragment(new LoginFragment());
+    }
+
 
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
@@ -66,15 +92,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkPermissions() {
-        return ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermissions() {
         ActivityCompat.requestPermissions(this,
                 new String[]{
-                        Manifest.permission.RECORD_AUDIO,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        Manifest.permission.RECORD_AUDIO
                 },
                 PERMISSION_REQUEST_CODE);
     }
@@ -90,12 +114,26 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             }
-            if (allGranted) {
-                // 权限授予后加载默认Fragment
-                loadFragment(new DecibelMeterFragment());
-            } else {
-                Toast.makeText(this, "需要所有权限才能正常工作", Toast.LENGTH_SHORT).show();
+            if (!allGranted) {
+                Toast.makeText(this, getString(R.string.msg_all_permissions_needed), Toast.LENGTH_SHORT).show();
             }
         }
+
+        // 处理定位权限请求
+        if (requestCode == 101 && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            startLocationUpdate();
+        }
+    }
+
+    private void startLocationUpdate() {
+        // 使用 FusedLocationProviderClient 获取位置
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, location -> {
+                    if (location != null) {
+                        currentLatitude = location.getLatitude();
+                        currentLongitude = location.getLongitude();
+                        Toast.makeText(this, getString(R.string.msg_location_success, String.valueOf(currentLatitude), String.valueOf(currentLongitude)), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

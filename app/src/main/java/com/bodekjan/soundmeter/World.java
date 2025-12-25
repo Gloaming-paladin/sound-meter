@@ -6,9 +6,9 @@ import android.util.Log;
  * Created by bodekjan on 2016/8/8.
  */
 public class World {
-    public static float dbCount = 40;
-    public static float minDB =100;
-    public static float maxDB =0;
+    public static float dbCount = 0;
+    public static float minDB = 0;
+    public static float maxDB = 0;
     public static float lastDbCount = dbCount;
     private static float min = 0.5f;  //Set the minimum sound change
     private static float value = 0;   // Sound decibel value
