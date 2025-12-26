@@ -35,14 +35,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.bodekjan.soundmeter.MainActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:name="com.bodekjan.soundmeter.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.bodekjan.soundmeter.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false" >
         </activity>
         <activity
             android:name="com.bodekjan.soundmeter.HistoryActivity"
