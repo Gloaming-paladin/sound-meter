@@ -3121,7 +3121,6 @@ id autoCompleteToEnd
 id autoCompleteToStart
 id avglabel
 id avgval
-id bandwidth_value
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3137,7 +3136,6 @@ id centerCrop
 id centerInside
 id center_horizontal
 id center_vertical
-id centroid_value
 id chain
 id chains
 id change_avatar_button
@@ -3206,7 +3204,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id export_csv_button
 id fade
 id fill
 id fill_horizontal
@@ -3224,7 +3221,6 @@ id forever
 id fragment_container
 id fragment_container_view_tag
 id fullscreen_header
-id generate_pdf_button
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3438,7 +3434,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id share_button
 id shortcut
 id showCustom
 id showHome
@@ -3450,7 +3445,6 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id snr_value
 id spacer
 id special_effects_controller_view_tag
 id speed
@@ -3504,7 +3498,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id thd_value
 id time
 id timestamp
 id title

@@ -50,14 +50,8 @@ public class AudioAnalysisFragment extends Fragment {
     private Thread spectrumAnalysisThread;
     private AtomicBoolean isSpectrumAnalysisEnabled = new AtomicBoolean(false);
     private volatile boolean isAnalyzingFile = false;
-    private Button exportCsvButton;
-    private Button generatePdfButton;
-    private Button shareButton;
     private Button analyzeLocalFileButton;
-    private TextView thdValue;
-    private TextView snrValue;
-    private TextView centroidValue;
-    private TextView bandwidthValue;
+
     private Button startStopSpectrumButton;
     private NoiseDatabaseHelper dbHelper;
     private Handler handler = new Handler(Looper.getMainLooper());
@@ -116,19 +110,9 @@ public class AudioAnalysisFragment extends Fragment {
 
     private void initializeViews(View view) {
         mChart = view.findViewById(R.id.chart1);
-        exportCsvButton = view.findViewById(R.id.export_csv_button);
-        generatePdfButton = view.findViewById(R.id.generate_pdf_button);
-        shareButton = view.findViewById(R.id.share_button);
         analyzeLocalFileButton = view.findViewById(R.id.analyze_local_file_button);
-        thdValue = view.findViewById(R.id.thd_value);
-        snrValue = view.findViewById(R.id.snr_value);
-        centroidValue = view.findViewById(R.id.centroid_value);
-        bandwidthValue = view.findViewById(R.id.bandwidth_value);
         startStopSpectrumButton = view.findViewById(R.id.start_stop_spectrum_button);
 
-        exportCsvButton.setOnClickListener(v -> exportToCSV());
-        generatePdfButton.setOnClickListener(v -> showPdfNotAvailable());
-        shareButton.setOnClickListener(v -> shareReport());
         startStopSpectrumButton.setOnClickListener(v -> toggleSpectrumAnalysis());
         analyzeLocalFileButton.setOnClickListener(v -> openFilePicker());
 
@@ -217,11 +201,6 @@ public class AudioAnalysisFragment extends Fragment {
                                 handler.post(() -> {
                                     if (isAdded()) {
                                         updateData(dbValue, 0);
-                                        // Clear other metrics during real-time analysis
-                                        thdValue.setText("总谐波失真: --");
-                                        snrValue.setText("信噪比: --");
-                                        centroidValue.setText("质心: --");
-                                        bandwidthValue.setText("带宽: --");
                                     }
                                 });
                             }
@@ -316,18 +295,11 @@ public class AudioAnalysisFragment extends Fragment {
                                                  maxAmplitude = v;
                                              }
                                          }
-                        double[] frequencies = FFTAnalyzer.getFrequencyBins(44100, FFTAnalyzer.FFT_SIZE);
-                        double thd = AudioQualityAnalyzer.calculateTHD(spectrum, frequencies);
-                        double snr = AudioQualityAnalyzer.calculateSNR(spectrum, frequencies);
-                        double centroid = AudioQualityAnalyzer.calculateSpectralCentroid(spectrum, frequencies);
-                        double bandwidth = AudioQualityAnalyzer.calculateSpectralBandwidth(spectrum, frequencies, centroid);
-
                         float dbValue = (float) (20 * Math.log10(maxAmplitude > 0 ? maxAmplitude : 1));
 
                         handler.post(() -> {
                             if (isAdded()) {
                                 updateData(dbValue, 0);
-                                updateQualityMetricsUI(thd, snr, centroid, bandwidth);
                             }
                         });
                     } else {
@@ -360,19 +332,9 @@ public class AudioAnalysisFragment extends Fragment {
         spectrumAnalysisThread.start();
     }
 
-    private void updateQualityMetricsUI(double thd, double snr, double centroid, double bandwidth) {
-        thdValue.setText(String.format("总谐波失真: %.2f%%", thd * 100));
-        snrValue.setText(String.format("信噪比: %.2f dB", snr));
-        centroidValue.setText(String.format("质心: %.0f Hz", centroid));
-        bandwidthValue.setText(String.format("带宽: %.0f Hz", bandwidth));
-    }
+
 
     private void resetMetrics() {
-        thdValue.setText("总谐波失真: --");
-        snrValue.setText("信噪比: --");
-        centroidValue.setText("质心: --");
-        bandwidthValue.setText("带宽: --");
-
         if (mChart != null && mChart.getData() != null) {
             LineDataSet set = (LineDataSet) mChart.getData().getDataSetByIndex(0);
             if (set != null) {
@@ -449,17 +411,7 @@ public class AudioAnalysisFragment extends Fragment {
         }
     }
 
-    private void exportToCSV() {
-        // ... (rest of the code is unchanged)
-    }
 
-    private void showPdfNotAvailable() {
-        Toast.makeText(requireContext(), getString(R.string.msg_pdf_unavailable), Toast.LENGTH_LONG).show();
-    }
-
-    private void shareReport() {
-        // ... (rest of the code is unchanged)
-    }
 
     @Override
     public void onPause() {

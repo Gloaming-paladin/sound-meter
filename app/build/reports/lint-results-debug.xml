@@ -88,78 +88,6 @@
     <issue
         id="DefaultLocale"
         severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="        thdValue.setText(String.format(&quot;总谐波失真: %.2f%%&quot;, thd * 100));"
-        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java"
-            line="269"
-            column="26"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="        snrValue.setText(String.format(&quot;信噪比: %.2f dB&quot;, snr));"
-        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java"
-            line="270"
-            column="26"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="        centroidValue.setText(String.format(&quot;质心: %.0f Hz&quot;, centroid));"
-        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java"
-            line="271"
-            column="31"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
-        category="Correctness"
-        priority="6"
-        summary="Implied default locale in case conversion"
-        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` **without specifying an explicit locale** is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is **not** `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.ROOT)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
-        url="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        urls="https://developer.android.com/reference/java/util/Locale.html#default_locale"
-        errorLine1="        bandwidthValue.setText(String.format(&quot;带宽: %.0f Hz&quot;, bandwidth));"
-        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java"
-            line="272"
-            column="32"/>
-    </issue>
-
-    <issue
-        id="DefaultLocale"
-        severity="Warning"
         message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
         category="Correctness"
         priority="6"
@@ -241,7 +169,7 @@
         errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java"
-            line="50"
+            line="56"
             column="44"/>
     </issue>
 
@@ -257,7 +185,7 @@
         errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java"
-            line="51"
+            line="57"
             column="44"/>
     </issue>
 
@@ -2326,6 +2254,22 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.string.msg_recording_permission_needed` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;msg_recording_permission_needed&quot;>Recording permission required&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.string.msg_csv_export_success` appears to be unused"
         category="Performance"
         priority="3"
@@ -2352,6 +2296,22 @@
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
             line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.msg_pdf_unavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;msg_pdf_unavailable&quot;>PDF feature requires additional libraries, currently unavailable&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="61"
             column="13"/>
     </issue>
 
@@ -2432,6 +2392,54 @@
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
             line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.btn_export_csv` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;btn_export_csv&quot;>Export CSV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.btn_generate_pdf` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;btn_generate_pdf&quot;>Generate PDF&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.btn_share_report` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;btn_share_report&quot;>Share Report&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="74"
             column="13"/>
     </issue>
 
@@ -3438,70 +3446,6 @@
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml"
             line="102"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;THD: --&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;THD: --&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml"
-            line="44"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;SNR: --&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;SNR: --&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml"
-            line="53"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Centroid: --&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Centroid: --&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml"
-            line="69"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Bandwidth: --&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Bandwidth: --&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml"
-            line="78"
             column="17"/>
     </issue>
 

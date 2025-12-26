@@ -55,18 +55,6 @@ D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4: Warning: READ_EXT
 
    https://goo.gle/android-storage-usecases
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:269: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        thdValue.setText(String.format("总谐波失真: %.2f%%", thd * 100));
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:270: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        snrValue.setText(String.format("信噪比: %.2f dB", snr));
-                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:271: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        centroidValue.setText(String.format("质心: %.0f Hz", centroid));
-                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioAnalysisFragment.java:272: Warning: Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead [DefaultLocale]
-        bandwidthValue.setText(String.format("带宽: %.0f Hz", bandwidth));
-                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMeterFragment.java:350: Warning: Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
         Toast.makeText(requireContext(), getString(R.string.msg_saved_format, format.toUpperCase()), Toast.LENGTH_SHORT).show();
                                                                                      ~~~~~~~~~~~
@@ -131,10 +119,10 @@ D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\DecibelMete
 
    https://developer.android.com/reference/java/text/SimpleDateFormat.html
 
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java:50: Error: Must be one of: OutputFormat.DEFAULT, OutputFormat.THREE_GPP, OutputFormat.MPEG_4, OutputFormat.AMR_NB, OutputFormat.AMR_WB, OutputFormat.AAC_ADTS, OutputFormat.MPEG_2_TS, OutputFormat.WEBM, OutputFormat.OGG [WrongConstant]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java:56: Error: Must be one of: OutputFormat.DEFAULT, OutputFormat.THREE_GPP, OutputFormat.MPEG_4, OutputFormat.AMR_NB, OutputFormat.AMR_WB, OutputFormat.AAC_ADTS, OutputFormat.MPEG_2_TS, OutputFormat.WEBM, OutputFormat.OGG [WrongConstant]
             mMediaRecorder.setOutputFormat(currentFormat.getOutputFormat());
                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java:51: Error: Must be one of: AudioEncoder.DEFAULT, AudioEncoder.AMR_NB, AudioEncoder.AMR_WB, AudioEncoder.AAC, AudioEncoder.HE_AAC, AudioEncoder.AAC_ELD, AudioEncoder.VORBIS, AudioEncoder.OPUS [WrongConstant]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MyMediaRecorder.java:57: Error: Must be one of: AudioEncoder.DEFAULT, AudioEncoder.AMR_NB, AudioEncoder.AMR_WB, AudioEncoder.AAC, AudioEncoder.HE_AAC, AudioEncoder.AAC_ELD, AudioEncoder.VORBIS, AudioEncoder.OPUS [WrongConstant]
             mMediaRecorder.setAudioEncoder(currentFormat.getAudioEncoder());
                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -650,12 +638,18 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:53: Warning: The 
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:55: Warning: The resource R.string.status_logged_out appears to be unused [UnusedResources]
     <string name="status_logged_out">Not Logged In</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:58: Warning: The resource R.string.msg_recording_permission_needed appears to be unused [UnusedResources]
+    <string name="msg_recording_permission_needed">Recording permission required</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:59: Warning: The resource R.string.msg_csv_export_success appears to be unused [UnusedResources]
     <string name="msg_csv_export_success">CSV Exported: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Warning: The resource R.string.msg_csv_export_failed appears to be unused [UnusedResources]
     <string name="msg_csv_export_failed">CSV Export Failed: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.msg_pdf_unavailable appears to be unused [UnusedResources]
+    <string name="msg_pdf_unavailable">PDF feature requires additional libraries, currently unavailable</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.msg_share_in_development appears to be unused [UnusedResources]
     <string name="msg_share_in_development">Share feature is under development</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -671,6 +665,15 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Warning: The 
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.label_bandwidth appears to be unused [UnusedResources]
     <string name="label_bandwidth">Bandwidth: %s Hz</string>
             ~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:72: Warning: The resource R.string.btn_export_csv appears to be unused [UnusedResources]
+    <string name="btn_export_csv">Export CSV</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:73: Warning: The resource R.string.btn_generate_pdf appears to be unused [UnusedResources]
+    <string name="btn_generate_pdf">Generate PDF</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:74: Warning: The resource R.string.btn_share_report appears to be unused [UnusedResources]
+    <string name="btn_share_report">Share Report</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:10: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
     <style name="AppBaseTheme" parent="android:Theme.Light"></style>
            ~~~~~~~~~~~~~~~~~~~
@@ -982,18 +985,6 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml:22: Warning: 
 D:\androidcode\Sound-Meter\app\src\main\res\layout\dialog_info.xml:102: Warning: Hardcoded string "Ok", should use @string resource [HardcodedText]
                 android:text="Ok" />
                 ~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml:44: Warning: Hardcoded string "THD: --", should use @string resource [HardcodedText]
-                android:text="THD: --"
-                ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml:53: Warning: Hardcoded string "SNR: --", should use @string resource [HardcodedText]
-                android:text="SNR: --"
-                ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml:69: Warning: Hardcoded string "Centroid: --", should use @string resource [HardcodedText]
-                android:text="Centroid: --"
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_audio_analysis.xml:78: Warning: Hardcoded string "Bandwidth: --", should use @string resource [HardcodedText]
-                android:text="Bandwidth: --"
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:91: Warning: Hardcoded string "23 Db", should use @string resource [HardcodedText]
                 android:text="23 Db"
                 ~~~~~~~~~~~~~~~~~~~~
@@ -1131,4 +1122,4 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:63
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-52 errors, 198 warnings
+52 errors, 195 warnings

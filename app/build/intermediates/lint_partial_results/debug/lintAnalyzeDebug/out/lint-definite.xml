@@ -4,71 +4,15 @@
     <incident
         id="DefaultLocale"
         severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="269"
-            column="26"
-            startOffset="10924"
-            endLine="269"
-            endColumn="67"
-            endOffset="10965"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="270"
-            column="26"
-            startOffset="10993"
-            endLine="270"
-            endColumn="60"
-            endOffset="11027"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="271"
-            column="31"
-            startOffset="11060"
-            endLine="271"
-            endColumn="69"
-            endOffset="11098"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
-        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/AudioAnalysisFragment.java"
-            line="272"
-            column="32"
-            startOffset="11132"
-            endLine="272"
-            endColumn="71"
-            endOffset="11171"/>
-    </incident>
-
-    <incident
-        id="DefaultLocale"
-        severity="warning"
         message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
             line="350"
             column="86"
-            startOffset="12348"
+            startOffset="12364"
             endLine="350"
             endColumn="97"
-            endOffset="12359"/>
+            endOffset="12375"/>
     </incident>
 
     <incident
@@ -112,10 +56,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
             line="296"
             column="28"
-            startOffset="10029"
+            startOffset="10045"
             endLine="296"
             endColumn="67"
-            endOffset="10068"/>
+            endOffset="10084"/>
     </incident>
 
     <incident
@@ -124,12 +68,12 @@
         message="Must be one of: OutputFormat.DEFAULT, OutputFormat.THREE_GPP, OutputFormat.MPEG_4, OutputFormat.AMR_NB, OutputFormat.AMR_WB, OutputFormat.AAC_ADTS, OutputFormat.MPEG_2_TS, OutputFormat.WEBM, OutputFormat.OGG">
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MyMediaRecorder.java"
-            line="50"
+            line="56"
             column="44"
-            startOffset="1295"
-            endLine="50"
+            startOffset="1524"
+            endLine="56"
             endColumn="75"
-            endOffset="1326"/>
+            endOffset="1555"/>
     </incident>
 
     <incident
@@ -180,12 +124,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MyMediaRecorder.java"
-            line="51"
+            line="57"
             column="44"
-            startOffset="1372"
-            endLine="51"
+            startOffset="1601"
+            endLine="57"
             endColumn="75"
-            endOffset="1403"/>
+            endOffset="1632"/>
     </incident>
 
     <incident
@@ -2350,10 +2294,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
             line="252"
             column="24"
-            startOffset="8716"
+            startOffset="8732"
             endLine="252"
             endColumn="30"
-            endOffset="8722"/>
+            endOffset="8738"/>
     </incident>
 
     <incident
@@ -2364,10 +2308,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
             line="253"
             column="24"
-            startOffset="8748"
+            startOffset="8764"
             endLine="253"
             endColumn="30"
-            endOffset="8754"/>
+            endOffset="8770"/>
     </incident>
 
     <incident
@@ -2378,10 +2322,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
             line="254"
             column="24"
-            startOffset="8780"
+            startOffset="8796"
             endLine="254"
             endColumn="30"
-            endOffset="8786"/>
+            endOffset="8802"/>
     </incident>
 
     <incident
@@ -2648,62 +2592,6 @@
             endLine="102"
             endColumn="34"
             endOffset="4193"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;THD: --&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_audio_analysis.xml"
-            line="44"
-            column="17"
-            startOffset="1564"
-            endLine="44"
-            endColumn="39"
-            endOffset="1586"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;SNR: --&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_audio_analysis.xml"
-            line="53"
-            column="17"
-            startOffset="1905"
-            endLine="53"
-            endColumn="39"
-            endOffset="1927"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Centroid: --&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_audio_analysis.xml"
-            line="69"
-            column="17"
-            startOffset="2491"
-            endLine="69"
-            endColumn="44"
-            endOffset="2518"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Bandwidth: --&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_audio_analysis.xml"
-            line="78"
-            column="17"
-            startOffset="2843"
-            endLine="78"
-            endColumn="45"
-            endOffset="2871"/>
     </incident>
 
     <incident
