@@ -66,12 +66,12 @@
     <string name="btn_stop_spectrum">停止频谱分析</string>
     <string name="btn_analyze_local_file">分析本地音频</string>
     <string name="title_audio_analysis">音频分析</string>
-    <string name="label_thd">THD: %s</string>
-    <string name="label_snr">SNR: %s</string>
+    <string name="label_thd">总谐波失真: %s</string>
+    <string name="label_snr">信噪比: %s</string>
     <string name="label_centroid">质心: %s Hz</string>
     <string name="label_bandwidth">带宽: %s Hz</string>
-    <string name="btn_export_csv">导出CSV数据</string>
-    <string name="btn_generate_pdf">生成PDF报告</string>
+    <string name="btn_export_csv">导出CSV</string>
+    <string name="btn_generate_pdf">生成PDF</string>
     <string name="btn_share_report">分享报告</string>
     <string name="btn_register">注册</string>
 </resources>

@@ -160,7 +160,7 @@ public class PreviewFragment extends Fragment {
             if (uri != null) {
                 try (OutputStream outputStream = resolver.openOutputStream(uri)) {
                     mutableBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-                    Toast.makeText(getContext(), "Image saved to gallery", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "图片已保存至相册", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -186,7 +186,7 @@ public class PreviewFragment extends Fragment {
             while ((len = in.read(buf)) > 0) {
                 out.write(buf, 0, len);
             }
-            Toast.makeText(getContext(), "Video saved to gallery", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "视频已保存至相册", Toast.LENGTH_SHORT).show();
             savePreviewScreenshot();
         } catch (IOException e) {
             e.printStackTrace();
@@ -216,7 +216,7 @@ public class PreviewFragment extends Fragment {
         if (uri != null) {
             try (OutputStream outputStream = resolver.openOutputStream(uri)) {
                 bitmap.compress(Bitmap.CompressFormat.JPEG, 90, outputStream);
-                Toast.makeText(getContext(), "Preview screenshot saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "预览截图已保存", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }

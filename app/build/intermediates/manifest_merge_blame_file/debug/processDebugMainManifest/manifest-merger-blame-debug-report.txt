@@ -106,19 +106,19 @@
 59        </provider>
 60
 61        <service
-61-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
+61-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:24:9-33:19
 62            android:name="androidx.camera.core.impl.MetadataHolderService"
-62-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
+62-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:25:13-75
 63            android:enabled="false"
-63-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+63-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:26:13-36
 64            android:exported="false" >
-64-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+64-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:27:13-37
 65            <meta-data
-65-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
+65-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:30:13-32:89
 66                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-66-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
+66-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:31:17-103
 67                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-67-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
+67-->[androidx.camera:camera-camera2:1.3.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\3741fd52065ed942392098b75d414fff\transformed\camera-camera2-1.3.1\AndroidManifest.xml:32:17-86
 68        </service>
 69
 70        <activity

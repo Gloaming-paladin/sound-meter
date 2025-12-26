@@ -185,7 +185,7 @@ public class DecibelCameraFragment extends Fragment {
 
     private void takePhoto() {
         if (imageCapture == null) {
-            Toast.makeText(getContext(), "Camera not ready, please grant permissions first.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "相机未准备好，请先授予权限。", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -200,9 +200,6 @@ public class DecibelCameraFragment extends Fragment {
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         Uri savedUri = outputFileResults.getSavedUri();
-                        if (savedUri == null) {
-                            savedUri = Uri.fromFile(photoFile);
-                        }
                         Bundle bundle = new Bundle();
                         bundle.putParcelable("file_uri", savedUri);
                         bundle.putBoolean("is_video", false);
@@ -223,7 +220,7 @@ public class DecibelCameraFragment extends Fragment {
 
                     @Override
                     public void onError(@NonNull ImageCaptureException exception) {
-                        Toast.makeText(getContext(), "Photo capture failed: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "照片拍摄失败: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -273,7 +270,7 @@ public class DecibelCameraFragment extends Fragment {
             transaction.commit();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getContext(), "Failed to save image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "图片保存失败", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -306,13 +303,20 @@ public class DecibelCameraFragment extends Fragment {
 
     private void startVideoRecording() {
         if (videoCapture == null) {
-            Toast.makeText(getContext(), "Camera not ready, please grant permissions first.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "相机未准备好，请先授予权限。", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        File tempFile = new File(requireContext().getCacheDir(), System.currentTimeMillis() + ".mp4");
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, System.currentTimeMillis() + ".mp4");
+        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "video/mp4");
 
-        PendingRecording pendingRecording = videoCapture.getOutput().prepareRecording(requireContext(), new FileOutputOptions.Builder(tempFile).build());
+        MediaStoreOutputOptions mediaStoreOutputOptions = new MediaStoreOutputOptions.Builder(requireContext().getContentResolver(), MediaStore.Video.Media.EXTERNAL_CONTENT_URI)
+                .setContentValues(contentValues)
+                .build();
+
+        PendingRecording pendingRecording = videoCapture.getOutput()
+                .prepareRecording(requireContext(), mediaStoreOutputOptions);
 
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
             pendingRecording.withAudioEnabled();
@@ -320,7 +324,7 @@ public class DecibelCameraFragment extends Fragment {
 
         activeRecording = pendingRecording.start(ContextCompat.getMainExecutor(requireContext()), videoRecordEvent -> {
             if (videoRecordEvent instanceof VideoRecordEvent.Start) {
-                Toast.makeText(getContext(), "Recording started", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "录制开始", Toast.LENGTH_SHORT).show();
             } else if (videoRecordEvent instanceof VideoRecordEvent.Finalize) {
                 isRecording = false;
                 ImageButton recordButton = getView().findViewById(R.id.record_button);
@@ -345,7 +349,7 @@ public class DecibelCameraFragment extends Fragment {
                     transaction.addToBackStack(null);
                     transaction.commit();
                 } else {
-                    Toast.makeText(getContext(), "Video recording failed: " + finalizeEvent.getError(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "视频录制失败: " + finalizeEvent.getError(), Toast.LENGTH_SHORT).show();
                 }
                 activeRecording = null;
             }
