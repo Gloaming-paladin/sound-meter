@@ -2935,6 +2935,7 @@ drawable design_snackbar_background
 drawable egg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable history_record
 drawable ic_about
 drawable ic_arrow_back_black_24
 drawable ic_arrow_forward
@@ -2961,6 +2962,7 @@ drawable ic_register
 drawable ic_search_black_24
 drawable ic_settings
 drawable ic_stop
+drawable log_out
 drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password

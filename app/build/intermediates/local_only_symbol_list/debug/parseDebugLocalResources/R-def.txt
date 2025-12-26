@@ -29,6 +29,7 @@ drawable bg_page
 drawable btn_history_background
 drawable camera
 drawable egg
+drawable history_record
 drawable ic_about
 drawable ic_arrow_forward
 drawable ic_audio_analysis
@@ -43,6 +44,7 @@ drawable ic_profile
 drawable ic_register
 drawable ic_settings
 drawable ic_stop
+drawable log_out
 drawable logo
 drawable noise_disc
 drawable noise_index
