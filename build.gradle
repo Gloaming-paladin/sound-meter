@@ -18,3 +18,16 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+import java.net.Socket
+import javax.net.ssl.SSLSocket
+import javax.net.ssl.SSLSocketFactory
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.fork = true
+        options.forkOptions.jvmArgs += [
+            '-Dhttps.protocols=TLSv1.2,TLSv1.1,TLSv1'
+        ]
+    }
+}

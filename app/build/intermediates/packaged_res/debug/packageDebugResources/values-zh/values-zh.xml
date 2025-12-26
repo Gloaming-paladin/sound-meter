@@ -23,7 +23,7 @@
     <string name="btn_retry">重试</string>
     <string name="btn_save">保存</string>
     <string name="btn_share_report">分享报告</string>
-    <string name="btn_start_spectrum">开始频谱分析</string>
+    <string name="btn_start_spectrum">开始音频分析</string>
     <string name="btn_stop_spectrum">停止频谱分析</string>
     <string name="chart_description">分贝测量图表</string>
     <string name="chart_label">分贝值</string>

@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new DecibelMeterFragment();
             } else if (itemId == R.id.nav_audio_analysis) {
                 selectedFragment = new AudioAnalysisFragment();
+            } else if (itemId == R.id.navigation_decibel_camera) {
+                selectedFragment = new DecibelCameraFragment();
             } else if (itemId == R.id.nav_profile) {
                 selectedFragment = new ProfileFragment();
             }

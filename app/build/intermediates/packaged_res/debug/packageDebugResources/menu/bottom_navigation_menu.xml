@@ -9,6 +9,10 @@
         android:icon="@drawable/ic_audio_analysis"
         android:title="音频分析" />
     <item
+        android:id="@+id/navigation_decibel_camera"
+        android:icon="@drawable/camera"
+        android:title="分贝相机" />
+    <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_profile"
         android:title="我的" />

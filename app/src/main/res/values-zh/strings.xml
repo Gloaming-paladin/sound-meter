@@ -62,7 +62,7 @@
     <string name="msg_pdf_unavailable">PDF功能需要额外依赖库，当前不可用</string>
     <string name="msg_share_in_development">分享功能正在开发中</string>
     <string name="msg_all_permissions_needed">需要所有权限才能正常工作</string>
-    <string name="btn_start_spectrum">开始频谱分析</string>
+    <string name="btn_start_spectrum">开始音频分析</string>
     <string name="btn_stop_spectrum">停止频谱分析</string>
     <string name="btn_analyze_local_file">分析本地音频</string>
     <string name="title_audio_analysis">音频分析</string>

@@ -30,7 +30,7 @@ public class MyMediaRecorder {
                 return 0;
             }
         }
-        return 5;
+        return 0;
     }
 
     public File getMyRecAudioFile() {

@@ -616,6 +616,7 @@ attr iconifiedByDefault
 attr imageAspectRatio
 attr imageAspectRatioAdjust
 attr imageButtonStyle
+attr implementationMode
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
 attr indicatorColor
@@ -955,6 +956,7 @@ attr rippleColor
 attr round
 attr roundPercent
 attr saturation
+attr scaleType
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -2904,6 +2906,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camera
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3028,6 +3031,7 @@ drawable notify_panel_notification_icon_bg
 drawable pause
 drawable play
 drawable question
+drawable record
 drawable refresh
 drawable test_level_drawable
 drawable texture
@@ -3119,6 +3123,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id avg_decibel_text
+id avg_decibel_text_preview
 id avglabel
 id avgval
 id barrier
@@ -3130,7 +3136,11 @@ id bottom
 id bottom_navigation
 id bounce
 id buttonPanel
+id button_dont_save
+id button_save
+id buttons_layout
 id cancel_button
+id capture_button
 id center
 id centerCrop
 id centerInside
@@ -3150,6 +3160,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id collapseActionView
+id compatible
 id compress
 id confirm_button
 id container
@@ -3168,6 +3179,8 @@ id date_picker_actions
 id db_value
 id decelerate
 id decelerateAndComplete
+id decibel_text
+id decibel_text_preview
 id decor_content_parent
 id default_activity_button
 id deltaRelative
@@ -3206,6 +3219,9 @@ id expand_activities_button
 id expanded_menu
 id fade
 id fill
+id fillCenter
+id fillEnd
+id fillStart
 id fill_horizontal
 id fill_vertical
 id filled
@@ -3216,6 +3232,7 @@ id fitToContents
 id fitXY
 id fixed
 id flip
+id flip_camera_button
 id floating
 id forever
 id fragment_container
@@ -3244,6 +3261,7 @@ id ignoreRequest
 id image
 id indeterminate
 id info
+id info_layout
 id infobutton
 id invisible
 id inward
@@ -3265,6 +3283,8 @@ id listMode
 id list_item
 id location
 id location_button
+id location_text
+id location_text_preview
 id logged_in_section
 id logged_out_buttons
 id login_button
@@ -3298,10 +3318,14 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id max_decibel_text
+id max_decibel_text_preview
 id maxlabel
 id maxval
 id message
 id middle
+id min_decibel_text
+id min_decibel_text_preview
 id mini
 id minlabel
 id minval
@@ -3345,6 +3369,7 @@ id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
+id navigation_decibel_camera
 id navigation_header_container
 id negativeButton
 id never
@@ -3383,16 +3408,21 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id performance
 id pin
 id playbutton
 id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id preview_image
+id preview_video
+id preview_view
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id record_button
 id rectangles
 id refresh_button
 id refreshbutton
@@ -3672,8 +3702,10 @@ layout design_text_input_start_icon
 layout dialog_avatar_options
 layout dialog_info
 layout fragment_audio_analysis
+layout fragment_decibel_camera
 layout fragment_decibel_meter
 layout fragment_login
+layout fragment_preview
 layout fragment_profile
 layout fragment_register
 layout item_history
@@ -5216,6 +5248,7 @@ styleable OnClick clickAction targetId
 styleable OnSwipe dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
+styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values
@@ -5254,3 +5287,4 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths
