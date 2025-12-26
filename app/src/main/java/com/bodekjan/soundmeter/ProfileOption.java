@@ -10,7 +10,8 @@ public class ProfileOption {
         REGISTER,
         LOGOUT,
         HISTORY,
-        SETTINGS
+        SETTINGS,
+        ABOUT
     }
 
     public ProfileOption(int iconResId, String title, Action action) {

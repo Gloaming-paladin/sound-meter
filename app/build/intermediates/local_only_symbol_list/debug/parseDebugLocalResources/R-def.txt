@@ -29,6 +29,7 @@ drawable bg_page
 drawable btn_history_background
 drawable camera
 drawable egg
+drawable ic_about
 drawable ic_arrow_forward
 drawable ic_audio_analysis
 drawable ic_avatar_placeholder
@@ -40,6 +41,7 @@ drawable ic_login
 drawable ic_logout
 drawable ic_profile
 drawable ic_register
+drawable ic_settings
 drawable ic_stop
 drawable logo
 drawable noise_disc
@@ -128,6 +130,7 @@ layout activity_register
 layout activity_splash
 layout dialog_avatar_options
 layout dialog_info
+layout fragment_about
 layout fragment_audio_analysis
 layout fragment_decibel_camera
 layout fragment_decibel_meter
@@ -135,6 +138,7 @@ layout fragment_login
 layout fragment_preview
 layout fragment_profile
 layout fragment_register
+layout fragment_settings
 layout item_history
 layout list_item_profile_option
 menu bottom_navigation_menu

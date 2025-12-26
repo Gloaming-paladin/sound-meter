@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bg_page"
     android:padding="16dp">
-
-
 
     <LinearLayout
         android:id="@+id/user_info_section"
@@ -39,24 +36,7 @@
         android:id="@+id/profile_options_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/user_info_section"
         android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="应用信息"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sound Meter v1.0\n\n这是一个噪音测量应用，可以实时监测环境噪音水平。"
-        android:textSize="14sp"
-        android:layout_marginBottom="16dp"
-        android:textColor="@android:color/white" />
-
-</LinearLayout>
+</RelativeLayout>

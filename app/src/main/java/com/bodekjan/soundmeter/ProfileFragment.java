@@ -114,8 +114,10 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
 
     private void setupLoggedInOptions() {
         List<ProfileOption> options = new ArrayList<>();
-        options.add(new ProfileOption(R.drawable.ic_history, "查看历史记录", ProfileOption.Action.HISTORY));
-        options.add(new ProfileOption(R.drawable.ic_logout, "退出登录", ProfileOption.Action.LOGOUT));
+        options.add(new ProfileOption(R.drawable.history_record, "查看历史记录", ProfileOption.Action.HISTORY));
+        options.add(new ProfileOption(R.drawable.ic_settings, "设置", ProfileOption.Action.SETTINGS));
+        options.add(new ProfileOption(R.drawable.ic_about, "关于", ProfileOption.Action.ABOUT));
+        options.add(new ProfileOption(R.drawable.log_out, "退出登录", ProfileOption.Action.LOGOUT));
         recyclerView.setAdapter(new ProfileOptionAdapter(options, this));
     }
 
@@ -134,6 +136,12 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
             case HISTORY:
                 openHistoryActivity();
                 break;
+            case SETTINGS:
+                goToSettings();
+                break;
+            case ABOUT:
+                goToAbout();
+                break;
         }
     }
 
@@ -147,6 +155,20 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
     private void goToRegister() {
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, new RegisterFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void goToSettings() {
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, new SettingsFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void goToAbout() {
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, new AboutFragment());
         transaction.addToBackStack(null);
         transaction.commit();
     }

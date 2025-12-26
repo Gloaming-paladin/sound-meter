@@ -2935,6 +2935,7 @@ drawable design_snackbar_background
 drawable egg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_about
 drawable ic_arrow_back_black_24
 drawable ic_arrow_forward
 drawable ic_audio_analysis
@@ -2958,6 +2959,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_profile
 drawable ic_register
 drawable ic_search_black_24
+drawable ic_settings
 drawable ic_stop
 drawable logo
 drawable m3_appbar_background
@@ -3710,6 +3712,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_avatar_options
 layout dialog_info
+layout fragment_about
 layout fragment_audio_analysis
 layout fragment_decibel_camera
 layout fragment_decibel_meter
@@ -3717,6 +3720,7 @@ layout fragment_login
 layout fragment_preview
 layout fragment_profile
 layout fragment_register
+layout fragment_settings
 layout item_history
 layout list_item_profile_option
 layout m3_alert_dialog
