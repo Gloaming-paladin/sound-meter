@@ -73,4 +73,6 @@
     <string name="btn_generate_pdf">Generate PDF</string>
     <string name="btn_share_report">Share Report</string>
     <string name="btn_register">Register</string>
+    <string name="saved_successfully">Saved successfully</string>
+    <string name="save_failed">Save failed</string>
 </resources>

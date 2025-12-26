@@ -185,6 +185,8 @@ string msg_save_recording_confirm
 string msg_saved_format
 string msg_share_in_development
 string msg_start_recording
+string save_failed
+string saved_successfully
 string status_logged_in
 string status_logged_out
 string title_audio_analysis

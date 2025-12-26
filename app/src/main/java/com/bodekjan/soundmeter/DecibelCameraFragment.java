@@ -200,8 +200,12 @@ public class DecibelCameraFragment extends Fragment {
                     @Override
                     public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
                         Uri savedUri = outputFileResults.getSavedUri();
+                        if (savedUri == null) {
+                            savedUri = Uri.fromFile(photoFile);
+                        }
                         Bundle bundle = new Bundle();
                         bundle.putParcelable("file_uri", savedUri);
+                        bundle.putString("temp_file_path", photoFile.getAbsolutePath());
                         bundle.putBoolean("is_video", false);
                         bundle.putString("decibel_text", decibelText.getText().toString());
                         bundle.putString("avg_decibel_text", avgDecibelText.getText().toString());
@@ -307,16 +311,12 @@ public class DecibelCameraFragment extends Fragment {
             return;
         }
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, System.currentTimeMillis() + ".mp4");
-        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "video/mp4");
+        File videoFile = new File(requireContext().getCacheDir(), System.currentTimeMillis() + ".mp4");
 
-        MediaStoreOutputOptions mediaStoreOutputOptions = new MediaStoreOutputOptions.Builder(requireContext().getContentResolver(), MediaStore.Video.Media.EXTERNAL_CONTENT_URI)
-                .setContentValues(contentValues)
-                .build();
+        FileOutputOptions fileOutputOptions = new FileOutputOptions.Builder(videoFile).build();
 
         PendingRecording pendingRecording = videoCapture.getOutput()
-                .prepareRecording(requireContext(), mediaStoreOutputOptions);
+                .prepareRecording(requireContext(), fileOutputOptions);
 
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
             pendingRecording.withAudioEnabled();
@@ -334,6 +334,7 @@ public class DecibelCameraFragment extends Fragment {
                     Uri outputUri = finalizeEvent.getOutputResults().getOutputUri();
                     Bundle bundle = new Bundle();
                     bundle.putParcelable("file_uri", outputUri);
+                    bundle.putString("temp_file_path", videoFile.getAbsolutePath());
                     bundle.putBoolean("is_video", true);
                     bundle.putString("decibel_text", decibelText.getText().toString());
                     bundle.putString("avg_decibel_text", avgDecibelText.getText().toString());

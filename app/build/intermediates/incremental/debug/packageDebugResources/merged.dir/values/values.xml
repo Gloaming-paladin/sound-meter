@@ -77,6 +77,8 @@
     <string name="msg_saved_format">Recording saved as %s format</string>
     <string name="msg_share_in_development">Share feature is under development</string>
     <string name="msg_start_recording">Recording started</string>
+    <string name="save_failed">Save failed</string>
+    <string name="saved_successfully">Saved successfully</string>
     <string name="status_logged_in">Logged In</string>
     <string name="status_logged_out">Not Logged In</string>
     <string name="title_audio_analysis">Audio Analysis</string>
