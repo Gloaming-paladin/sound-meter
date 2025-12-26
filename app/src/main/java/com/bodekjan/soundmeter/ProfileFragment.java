@@ -35,26 +35,24 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class ProfileFragment extends Fragment {
-    private static final int PICK_IMAGE_REQUEST = 1;
-    private static final int STORAGE_PERMISSION_CODE = 101;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-    private Button loginButton, registerButton, logoutButton, historyButton;
-    private LinearLayout loggedOutButtons, loggedInSection;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProfileFragment extends Fragment implements ProfileOptionAdapter.OnOptionClickListener {
+
+    private ImageView avatarImageView;
     private TextView usernameTextView;
+    private RecyclerView recyclerView;
 
     private SharedPreferences sharedPreferences;
     private NoiseDatabaseHelper dbHelper;
 
-    private ActivityResultLauncher<String> requestPermissionLauncher;
-
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
@@ -68,39 +66,38 @@ public class ProfileFragment extends Fragment {
     }
 
     private void initializeViews(View view) {
-        loginButton = view.findViewById(R.id.login_button);
-        registerButton = view.findViewById(R.id.register_button);
-        logoutButton = view.findViewById(R.id.logout_button);
-        historyButton = view.findViewById(R.id.history_button);
-        loggedOutButtons = view.findViewById(R.id.logged_out_buttons);
-        loggedInSection = view.findViewById(R.id.logged_in_section);
+        avatarImageView = view.findViewById(R.id.avatar_image);
         usernameTextView = view.findViewById(R.id.username_text);
-
-
-        if (loginButton != null) {
-            loginButton.setOnClickListener(v -> goToLogin());
-        }
-        if (registerButton != null) {
-            registerButton.setOnClickListener(v -> goToRegister());
-        }
-        if (logoutButton != null) {
-            logoutButton.setOnClickListener(v -> handleLogout());
-        }
-        if (historyButton != null) {
-            historyButton.setOnClickListener(v -> openHistoryActivity());
-        }
-
+        recyclerView = view.findViewById(R.id.profile_options_recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }
 
-
+    private void updateUI() {
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        if (isLoggedIn) {
+            String username = sharedPreferences.getString("username", "User");
+            usernameTextView.setText("欢迎, " + username);
+            String avatarPath = dbHelper.getUserAvatar(username);
+            if (avatarPath != null) {
+                // Here you would load the image from the path. For simplicity, we'll just set a default icon.
+                // Glide.with(this).load(avatarPath).into(avatarImageView);
+                avatarImageView.setImageResource(R.drawable.ic_default_avatar); // Placeholder
+            } else {
+                avatarImageView.setImageResource(R.drawable.ic_default_avatar);
+            }
+            setupLoggedInOptions();
+        } else {
+            usernameTextView.setText("登录 / 注册");
+            avatarImageView.setImageResource(R.drawable.ic_default_avatar);
+            setupLoggedOutOptions();
+        }
+    }
 
     private void handleLogout() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        if (requireActivity() instanceof MainActivity) {
-            ((MainActivity) requireActivity()).showLogin();
-        }
+        updateUI(); // Re-load the UI to show logged-out state
     }
 
     private void openHistoryActivity() {
@@ -108,22 +105,35 @@ public class ProfileFragment extends Fragment {
         startActivity(intent);
     }
 
-    private void updateUI() {
-        if (sharedPreferences == null || dbHelper == null || loggedOutButtons == null || loggedInSection == null || usernameTextView == null) {
-            return;
-        }
-        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
-        if (isLoggedIn) {
-            loggedOutButtons.setVisibility(View.GONE);
-            loggedInSection.setVisibility(View.VISIBLE);
-            String username = sharedPreferences.getString("username", "User");
-            usernameTextView.setText("欢迎, " + username);
+    private void setupLoggedOutOptions() {
+        List<ProfileOption> options = new ArrayList<>();
+        options.add(new ProfileOption(R.drawable.ic_login, "登录", ProfileOption.Action.LOGIN));
+        options.add(new ProfileOption(R.drawable.ic_register, "注册", ProfileOption.Action.REGISTER));
+        recyclerView.setAdapter(new ProfileOptionAdapter(options, this));
+    }
 
+    private void setupLoggedInOptions() {
+        List<ProfileOption> options = new ArrayList<>();
+        options.add(new ProfileOption(R.drawable.ic_history, "查看历史记录", ProfileOption.Action.HISTORY));
+        options.add(new ProfileOption(R.drawable.ic_logout, "退出登录", ProfileOption.Action.LOGOUT));
+        recyclerView.setAdapter(new ProfileOptionAdapter(options, this));
+    }
 
-        } else {
-            loggedOutButtons.setVisibility(View.VISIBLE);
-            loggedInSection.setVisibility(View.GONE);
-
+    @Override
+    public void onOptionClick(ProfileOption option) {
+        switch (option.getAction()) {
+            case LOGIN:
+                goToLogin();
+                break;
+            case REGISTER:
+                goToRegister();
+                break;
+            case LOGOUT:
+                handleLogout();
+                break;
+            case HISTORY:
+                openHistoryActivity();
+                break;
         }
     }
 

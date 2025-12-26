@@ -2896,6 +2896,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bg_avatar_placeholder
 drawable bg_dialog
+drawable bg_list_item
 drawable bg_page
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2935,14 +2936,18 @@ drawable egg
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
+drawable ic_arrow_forward
 drawable ic_audio_analysis
 drawable ic_avatar_placeholder
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_decibel
+drawable ic_default_avatar
 drawable ic_history
 drawable ic_keyboard_black_24dp
 drawable ic_location
+drawable ic_login
+drawable ic_logout
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -2951,6 +2956,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_profile
+drawable ic_register
 drawable ic_search_black_24
 drawable ic_stop
 drawable logo
@@ -3123,6 +3129,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id avatar_image
 id avg_decibel_text
 id avg_decibel_text_preview
 id avglabel
@@ -3247,7 +3254,6 @@ id group_divider
 id groups
 id header_title
 id hideable
-id history_button
 id history_recycler_view
 id home
 id homeAsUp
@@ -3285,14 +3291,11 @@ id location
 id location_button
 id location_text
 id location_text_preview
-id logged_in_section
-id logged_out_buttons
 id login_button
 id login_link
 id login_password
 id login_submit_button
 id login_username
-id logout_button
 id m3_side_sheet
 id marquee
 id masked
@@ -3395,6 +3398,8 @@ id open_search_view_search_prefix
 id open_search_view_status_bar_spacer
 id open_search_view_toolbar
 id open_search_view_toolbar_container
+id option_icon
+id option_text
 id outline
 id outward
 id packed
@@ -3418,6 +3423,7 @@ id pressed
 id preview_image
 id preview_video
 id preview_view
+id profile_options_recycler
 id progress_circular
 id progress_horizontal
 id radio
@@ -3551,6 +3557,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_info_section
 id username_text
 id view_offset_helper
 id view_tree_lifecycle_owner
@@ -3711,6 +3718,7 @@ layout fragment_preview
 layout fragment_profile
 layout fragment_register
 layout item_history
+layout list_item_profile_option
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

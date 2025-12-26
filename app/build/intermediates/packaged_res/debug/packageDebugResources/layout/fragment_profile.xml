@@ -9,58 +9,37 @@
 
 
     <LinearLayout
-        android:id="@+id/logged_out_buttons"
+        android:id="@+id/user_info_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_login"
-            android:backgroundTint="@color/mygreen" />
-
-        <Button
-            android:id="@+id/register_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_register"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/mygreen" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/logged_in_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_default_avatar"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/username_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/logout_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_logout"
-            android:backgroundTint="@color/mygreen" />
-
-        <Button
-            android:id="@+id/history_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="查看历史记录"
-            android:backgroundTint="@color/mygreen" />
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="登录 / 注册"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_options_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:layout_width="match_parent"
