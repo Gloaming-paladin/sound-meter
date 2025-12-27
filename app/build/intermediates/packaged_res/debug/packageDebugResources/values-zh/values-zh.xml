@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="action_export">导出</string>
+    <string name="action_open_folder">打开文件夹</string>
     <string name="activity_avglabel">平均</string>
     <string name="activity_curlabel">实时</string>
     <string name="activity_infobull">这是一个自定义消息框</string>
@@ -11,7 +13,6 @@
     <string name="activity_recFileErr">无法创建文件</string>
     <string name="activity_recStartErr">无法开始录音</string>
     <string name="app_name">分贝仪</string>
-    <string name="btn_analyze_local_file">分析本地音频</string>
     <string name="btn_cancel">取消</string>
     <string name="btn_confirm">确定</string>
     <string name="btn_export_csv">导出CSV</string>
@@ -27,6 +28,14 @@
     <string name="btn_stop_spectrum">停止频谱分析</string>
     <string name="chart_description">分贝测量图表</string>
     <string name="chart_label">分贝值</string>
+    <string name="db_avg_format">平均值: %.2f dB</string>
+    <string name="db_initial_avg">平均值: -- dB</string>
+    <string name="db_initial_max">最大值: -- dB</string>
+    <string name="db_initial_min">最小值: -- dB</string>
+    <string name="db_initial_real_time">-- dB</string>
+    <string name="db_max_format">最大值: %.2f dB</string>
+    <string name="db_min_format">最小值: %.2f dB</string>
+    <string name="db_real_time_format">%.2f dB</string>
     <string name="info_0db">0dB : 人耳刚能听到的微弱声音。</string>
     <string name="info_150db">150dB : 如果突然暴露在高达150db的噪声环境中，鼓膜会破裂出血，双耳完全失去听力。</string>
     <string name="info_30db">30dB～40dB : 较为理想的安静环境。</string>

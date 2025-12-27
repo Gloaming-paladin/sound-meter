@@ -14,12 +14,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Color;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import com.bodekjan.soundmeter.view.ProgressButton;
+
 public class RegisterFragment extends Fragment {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
-    private Button registerButton;
+    private ProgressButton registerButton;
     private TextView loginLink;
+    private TextView passwordStrengthFeedback;
     private NoiseDatabaseHelper dbHelper;
 
     @Nullable
@@ -38,36 +46,90 @@ public class RegisterFragment extends Fragment {
         confirmPasswordEditText = view.findViewById(R.id.register_confirm_password);
         registerButton = view.findViewById(R.id.register_button);
         loginLink = view.findViewById(R.id.login_link);
+        passwordStrengthFeedback = view.findViewById(R.id.password_strength_feedback);
+
+        passwordEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                checkPasswordStrength(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
 
         registerButton.setOnClickListener(v -> registerUser());
         loginLink.setOnClickListener(v -> goToLogin());
     }
 
     private void registerUser() {
-        String username = usernameEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
-        String confirmPassword = confirmPasswordEditText.getText().toString().trim();
+        registerButton.startLoading();
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            String username = usernameEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+            String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
-        if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            Toast.makeText(requireContext(), "请填写所有字段", Toast.LENGTH_SHORT).show();
+            if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                Toast.makeText(requireContext(), R.string.toast_register_fill_all_fields, Toast.LENGTH_SHORT).show();
+                registerButton.stopMorphAnimation();
+                return;
+            }
+
+            if (!password.equals(confirmPassword)) {
+                Toast.makeText(requireContext(), R.string.toast_password_mismatch, Toast.LENGTH_SHORT).show();
+                registerButton.stopMorphAnimation();
+                return;
+            }
+
+            if (dbHelper.checkUserExists(username)) {
+                Toast.makeText(requireContext(), R.string.toast_username_exists, Toast.LENGTH_SHORT).show();
+                registerButton.stopMorphAnimation();
+                return;
+            }
+
+            if (dbHelper.addUser(username, password)) {
+                Toast.makeText(requireContext(), R.string.toast_register_success, Toast.LENGTH_SHORT).show();
+                goToLogin();
+            } else {
+                Toast.makeText(requireContext(), R.string.toast_register_failed, Toast.LENGTH_SHORT).show();
+                registerButton.stopMorphAnimation();
+            }
+        }, 2000);
+    }
+
+    private void checkPasswordStrength(String password) {
+        if (password.isEmpty()) {
+            passwordStrengthFeedback.setVisibility(TextView.GONE);
             return;
         }
-
-        if (!password.equals(confirmPassword)) {
-            Toast.makeText(requireContext(), "两次输入的密码不一致", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (dbHelper.checkUserExists(username)) {
-            Toast.makeText(requireContext(), "用户名已存在", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (dbHelper.addUser(username, password)) {
-            Toast.makeText(requireContext(), "注册成功！", Toast.LENGTH_SHORT).show();
-            goToLogin();
+        passwordStrengthFeedback.setVisibility(TextView.VISIBLE);
+        Animation fadeIn = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+        passwordStrengthFeedback.startAnimation(fadeIn);
+        boolean hasLower = password.matches(".*[a-z].*");
+        boolean hasUpper = password.matches(".*[A-Z].*");
+        boolean hasDigit = password.matches(".*[0-9].*");
+        boolean hasSpecial = password.matches(".*[^a-zA-Z0-9].*");
+        int strength = 0;
+        if (hasLower || hasUpper) strength++;
+        if (hasDigit) strength++;
+        if (hasSpecial) strength++;
+        if (password.length() < 8) {
+            passwordStrengthFeedback.setText(R.string.password_strength_weak);
+            passwordStrengthFeedback.setTextColor(Color.RED);
         } else {
-            Toast.makeText(requireContext(), "注册失败，请稍后重试", Toast.LENGTH_SHORT).show();
+            if (strength == 1) {
+                passwordStrengthFeedback.setText(R.string.password_strength_medium);
+                passwordStrengthFeedback.setTextColor(Color.YELLOW);
+            } else if (strength >= 2) {
+                passwordStrengthFeedback.setText(R.string.password_strength_strong);
+                passwordStrengthFeedback.setTextColor(Color.GREEN);
+            } else {
+                passwordStrengthFeedback.setText(R.string.password_strength_weak);
+                passwordStrengthFeedback.setTextColor(Color.RED);
+            }
         }
     }
 

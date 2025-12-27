@@ -81,14 +81,14 @@
                 style="@style/Uy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/activity_minlabel"
+                android:text="@string/decibel_meter_min"
                 android:id="@+id/minlabel"
                 android:textColor="@color/external_progress2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 Db"
+                android:text="-- Db"
                 android:textSize="36dp"
                 android:id="@+id/minval"
                 android:textColor="#ffffff" />
@@ -104,14 +104,14 @@
                 style="@style/Uy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/activity_maxlabel"
+                android:text="@string/decibel_meter_max"
                 android:id="@+id/maxlabel"
                 android:textColor="@color/external_progress2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="89 Db"
+                android:text="-- Db"
                 android:textSize="36dp"
                 android:id="@+id/maxval"
                 android:textColor="#ffffff" />
@@ -127,14 +127,14 @@
                 style="@style/Uy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/activity_avglabel"
+                android:text="@string/decibel_meter_avg"
                 android:id="@+id/avglabel"
                 android:textColor="@color/external_progress2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="56 Db"
+                android:text="-- Db"
                 android:textSize="36dp"
                 android:id="@+id/avgval"
                 android:textColor="#ffffff" />

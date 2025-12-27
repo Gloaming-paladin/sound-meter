@@ -9,7 +9,7 @@
         android:id="@+id/save_avatar_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="保存头像到本地"
+        android:text="@string/dialog_avatar_save_to_local"
         android:padding="12dp"
         android:gravity="center"
         android:background="@android:color/white" />
@@ -18,7 +18,7 @@
         android:id="@+id/change_avatar_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="更换头像"
+        android:text="@string/dialog_avatar_change_avatar"
         android:padding="12dp"
         android:gravity="center"
         android:background="@android:color/white"

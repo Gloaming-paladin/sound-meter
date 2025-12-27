@@ -16,10 +16,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bodekjan.soundmeter.view.ProgressButton;
+
 public class LoginFragment extends Fragment {
     private EditText usernameEditText;
     private EditText passwordEditText;
-    private Button loginButton;
+    private ProgressButton loginButton;
     private TextView registerLink;
     private NoiseDatabaseHelper dbHelper;
     private SharedPreferences sharedPreferences;
@@ -46,29 +48,34 @@ public class LoginFragment extends Fragment {
     }
 
     private void loginUser() {
-        String username = usernameEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
+        loginButton.startLoading();
+        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+            String username = usernameEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
 
-        if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(requireContext(), "请输入用户名和密码", Toast.LENGTH_SHORT).show();
-            return;
-        }
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(requireContext(), R.string.toast_fill_all_fields, Toast.LENGTH_SHORT).show();
+                loginButton.stopMorphAnimation();
+                return;
+            }
 
-        if (dbHelper.checkUser(username, password)) {
-            // 保存登录状态
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putBoolean("isLoggedIn", true);
-            editor.putString("username", username);
-            editor.apply();
+            if (dbHelper.checkUser(username, password)) {
+                // 保存登录状态
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("isLoggedIn", true);
+                editor.putString("username", username);
+                editor.apply();
 
-            Toast.makeText(requireContext(), "登录成功！", Toast.LENGTH_SHORT).show();
-            
-            // 导航到主界面 (这里假设 MainActivity 会处理这个逻辑)
-            ((MainActivity) requireActivity()).showMainContent();
+                Toast.makeText(requireContext(), R.string.toast_login_success, Toast.LENGTH_SHORT).show();
+                
+                // 导航到主界面 (这里假设 MainActivity 会处理这个逻辑)
+                ((MainActivity) requireActivity()).showMainContent();
 
-        } else {
-            Toast.makeText(requireContext(), "用户名或密码错误", Toast.LENGTH_SHORT).show();
-        }
+            } else {
+                Toast.makeText(requireContext(), R.string.toast_login_failed, Toast.LENGTH_SHORT).show();
+                loginButton.stopMorphAnimation();
+            }
+        }, 2000);
     }
 
     private void goToRegister() {

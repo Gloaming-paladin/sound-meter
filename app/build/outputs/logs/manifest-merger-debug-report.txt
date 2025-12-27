@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:31:9-39:20
+INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:9-42:20
 	android:grantUriPermissions
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:35:13-47
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:38:13-47
 	android:authorities
 		INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:13-60
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:13-60
 	android:exported
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:13-37
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:13-37
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:32:13-62
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:35:13-62
 manifest
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\8045ff922730674f1717ee77d2c5096e\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\30208\.gradle\caches\8.10.2\transforms\3a904424c6420a87a98501273af49dd5\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\30208\.gradle\caches\8.10.2\transforms\1afd3cd9b5b8868e9722057b0f10eda3\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
@@ -83,10 +83,6 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.1] C:\Users\30208\.
 		INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:5-81
-	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:22-78
 uses-permission#android.permission.READ_MEDIA_IMAGES
 ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:5-76
 	android:name
@@ -97,33 +93,39 @@ ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:5-107
 		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:78-104
 	android:name
 		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:5-108
+	android:maxSdkVersion
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:79-105
+	android:name
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:22-78
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:5-70
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:5-70
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:22-68
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.CAMERA
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:5-65
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:22-62
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:22-62
 uses-feature#android.hardware.camera
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:5-60
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:5-60
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:19-57
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:19-57
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:22-76
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:5-81
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:5-80
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:12:5-80
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:22-77
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:12:22-77
 application
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:5-40:19
-INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:5-40:19
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:5-43:19
+INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:5-43:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\8045ff922730674f1717ee77d2c5096e\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\8045ff922730674f1717ee77d2c5096e\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:23:5-34:19
@@ -157,51 +159,53 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\30
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:9-41
 	android:icon
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:9-38
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:9-38
 	android:allowBackup
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:9-40
 activity#com.bodekjan.soundmeter.SplashActivity
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:9-25:20
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:13-36
+	android:theme
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:13-47
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:19-49
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:13-24:29
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.bodekjan.soundmeter.MainActivity
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:9-29:20
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:9-32:20
 	android:exported
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:31:13-37
 	android:configChanges
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:27:13-63
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:13-63
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:19-47
 activity#com.bodekjan.soundmeter.HistoryActivity
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:9-78
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:9-78
 	android:exported
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:51-75
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:51-75
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:19-50
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:19-50
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:13-38:54
+ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:39:13-41:54
 	android:resource
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:38:17-51
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:41:17-51
 	android:name
-		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:17-67
+		ADDED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:40:17-67
 uses-sdk
 INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml

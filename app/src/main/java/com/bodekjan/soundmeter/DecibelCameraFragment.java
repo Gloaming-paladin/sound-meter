@@ -185,7 +185,7 @@ public class DecibelCameraFragment extends Fragment {
 
     private void takePhoto() {
         if (imageCapture == null) {
-            Toast.makeText(getContext(), "相机未准备好，请先授予权限。", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.camera_not_ready, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -224,7 +224,7 @@ public class DecibelCameraFragment extends Fragment {
 
                     @Override
                     public void onError(@NonNull ImageCaptureException exception) {
-                        Toast.makeText(getContext(), "照片拍摄失败: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), getString(R.string.photo_capture_failed, exception.getMessage()), Toast.LENGTH_SHORT).show();
                     }
                 }
         );
@@ -274,7 +274,7 @@ public class DecibelCameraFragment extends Fragment {
             transaction.commit();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getContext(), "图片保存失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.image_save_failed, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -307,7 +307,7 @@ public class DecibelCameraFragment extends Fragment {
 
     private void startVideoRecording() {
         if (videoCapture == null) {
-            Toast.makeText(getContext(), "相机未准备好，请先授予权限。", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.camera_not_ready, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -324,7 +324,7 @@ public class DecibelCameraFragment extends Fragment {
 
         activeRecording = pendingRecording.start(ContextCompat.getMainExecutor(requireContext()), videoRecordEvent -> {
             if (videoRecordEvent instanceof VideoRecordEvent.Start) {
-                Toast.makeText(getContext(), "录制开始", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.recording_started, Toast.LENGTH_SHORT).show();
             } else if (videoRecordEvent instanceof VideoRecordEvent.Finalize) {
                 isRecording = false;
                 ImageButton recordButton = getView().findViewById(R.id.record_button);
@@ -350,7 +350,7 @@ public class DecibelCameraFragment extends Fragment {
                     transaction.addToBackStack(null);
                     transaction.commit();
                 } else {
-                    Toast.makeText(getContext(), "视频录制失败: " + finalizeEvent.getError(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), getString(R.string.video_recording_failed, finalizeEvent.getError()), Toast.LENGTH_SHORT).show();
                 }
                 activeRecording = null;
             }
@@ -393,7 +393,7 @@ public class DecibelCameraFragment extends Fragment {
         mRecorder.setMyRecAudioFile(tempAudioFile);
 
         if (!mRecorder.startRecorder()) {
-            Toast.makeText(getContext(), "麦克风可能被占用，无法启动分贝计", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.mic_occupied, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -413,9 +413,9 @@ public class DecibelCameraFragment extends Fragment {
                 decibelCount++;
                 double avgDecibel = totalDecibel / decibelCount;
 
-                minDecibelText.setText(String.format("最小: %.1f dB", minDecibel));
-                maxDecibelText.setText(String.format("最大: %.1f dB", maxDecibel));
-                avgDecibelText.setText(String.format("平均: %.1f dB", avgDecibel));
+                minDecibelText.setText(getString(R.string.decibel_camera_min_decibel, minDecibel));
+                maxDecibelText.setText(getString(R.string.decibel_camera_max_decibel, maxDecibel));
+                avgDecibelText.setText(getString(R.string.decibel_camera_avg_decibel, avgDecibel));
 
                 mHandler.postDelayed(this, 100);
             }
@@ -436,27 +436,27 @@ public class DecibelCameraFragment extends Fragment {
         LocationManager lm = (LocationManager) requireContext().getSystemService(Context.LOCATION_SERVICE);
         if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER) && !lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             new AlertDialog.Builder(requireContext())
-                .setMessage("请开启定位服务以获取位置信息")
-                .setPositiveButton("开启", (dialog, which) -> {
+                .setMessage(R.string.location_service_required)
+                .setPositiveButton(R.string.enable_location_service, (dialog, which) -> {
                     Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                     startActivity(intent);
                 })
-                .setNegativeButton("取消", null)
+                .setNegativeButton(R.string.cancel, null)
                 .show();
-            locationText.setText("纬度: N/A, 经度: N/A");
+            locationText.setText(R.string.location_unavailable);
             return;
         }
 
         if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            locationText.setText("纬度: N/A, 经度: N/A");
+            locationText.setText(R.string.location_unavailable);
             return;
         }
         fusedLocationClient.getLastLocation()
                 .addOnSuccessListener(requireActivity(), location -> {
                     if (location != null) {
-                        locationText.setText(String.format("纬度: %.2f, 经度: %.2f", location.getLatitude(), location.getLongitude()));
+                        locationText.setText(getString(R.string.location_format, location.getLatitude(), location.getLongitude()));
                     } else {
-                        locationText.setText("无法获取位置");
+                        locationText.setText(R.string.location_fetch_failed);
                     }
                 });
     }

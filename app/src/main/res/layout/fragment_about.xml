@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sound Meter v1.0"
+        android:text="@string/about_version"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -17,6 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="这是一个噪音测量应用，可以实时监测环境噪音水平。" />
+        android:text="@string/about_description" />
 
 </LinearLayout>

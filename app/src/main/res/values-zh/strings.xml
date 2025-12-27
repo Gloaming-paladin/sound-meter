@@ -64,7 +64,16 @@
     <string name="msg_all_permissions_needed">需要所有权限才能正常工作</string>
     <string name="btn_start_spectrum">开始音频分析</string>
     <string name="btn_stop_spectrum">停止频谱分析</string>
-    <string name="btn_analyze_local_file">分析本地音频</string>
+
+    <string name="db_real_time_format">%.2f dB</string>
+    <string name="db_max_format">最大值: %.2f dB</string>
+    <string name="db_min_format">最小值: %.2f dB</string>
+    <string name="db_avg_format">平均值: %.2f dB</string>
+    <string name="db_initial_real_time">-- dB</string>
+    <string name="db_initial_max">最大值: -- dB</string>
+    <string name="db_initial_min">最小值: -- dB</string>
+    <string name="db_initial_avg">平均值: -- dB</string>
+
     <string name="title_audio_analysis">音频分析</string>
     <string name="label_thd">总谐波失真: %s</string>
     <string name="label_snr">信噪比: %s</string>
@@ -74,4 +83,6 @@
     <string name="btn_generate_pdf">生成PDF</string>
     <string name="btn_share_report">分享报告</string>
     <string name="btn_register">注册</string>
+    <string name="action_export">导出</string>
+    <string name="action_open_folder">打开文件夹</string>
 </resources>

@@ -22,6 +22,52 @@
         android:layout_height="250dp"
         android:layout_marginBottom="10dp" />
 
+    <TextView
+        android:id="@+id/real_time_db_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/db_initial_real_time"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/max_db_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/db_initial_max"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/min_db_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/db_initial_min"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/avg_db_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/db_initial_avg"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
 
 
     <ProgressBar
@@ -41,13 +87,7 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/mygreen" />
 
-    <Button
-        android:id="@+id/analyze_local_file_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_analyze_local_file"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/mygreen" />
+
 
 
 

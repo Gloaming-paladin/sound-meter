@@ -1,12 +1,10 @@
 package com.bodekjan.soundmeter;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.LayoutInflater;
@@ -15,21 +13,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.ArrayList;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
@@ -38,46 +29,32 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import android.graphics.Color;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AudioAnalysisFragment extends Fragment {
     private LineChart mChart;
+    private TextView realTimeDbText, maxDbText, minDbText, avgDbText;
+    private float maxDb = 0f, minDb = 120f, avgDb = 0f, dbSum = 0f;
+    private int dbCount = 0;
     private ArrayList<Entry> yVals;
     private long savedTime = 0;
-    private boolean isChart = false;
-    
+
     private MyMediaRecorder mRecorder;
     private Thread spectrumAnalysisThread;
     private AtomicBoolean isSpectrumAnalysisEnabled = new AtomicBoolean(false);
-    private volatile boolean isAnalyzingFile = false;
-    private Button analyzeLocalFileButton;
-
     private Button startStopSpectrumButton;
-    private NoiseDatabaseHelper dbHelper;
     private Handler handler = new Handler(Looper.getMainLooper());
     private String tempRecordingPath;
 
-    private ActivityResultLauncher<Intent> filePickerLauncher;
     private ActivityResultLauncher<String> requestPermissionLauncher;
-
-    private static final int PERMISSION_REQUEST_CODE = 100;
-    private static final int FILE_PICKER_REQUEST_CODE = 101;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        filePickerLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
-                        Uri audioFileUri = result.getData().getData();
-                        if (audioFileUri != null) {
-                            analyzeAudioFile(audioFileUri);
-                        }
-                    }
-                }
-        );
-
         requestPermissionLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 isGranted -> {
@@ -105,32 +82,19 @@ public class AudioAnalysisFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initializeViews(view);
-        dbHelper = new NoiseDatabaseHelper(requireContext());
     }
 
     private void initializeViews(View view) {
         mChart = view.findViewById(R.id.chart1);
-        analyzeLocalFileButton = view.findViewById(R.id.analyze_local_file_button);
+        realTimeDbText = view.findViewById(R.id.real_time_db_text);
+        maxDbText = view.findViewById(R.id.max_db_text);
+        minDbText = view.findViewById(R.id.min_db_text);
+        avgDbText = view.findViewById(R.id.avg_db_text);
         startStopSpectrumButton = view.findViewById(R.id.start_stop_spectrum_button);
-
         startStopSpectrumButton.setOnClickListener(v -> toggleSpectrumAnalysis());
-        analyzeLocalFileButton.setOnClickListener(v -> openFilePicker());
-
         resetMetrics();
         setupChart();
     }
-
-    private void openFilePicker() {
-        if (isAnalyzingFile || isSpectrumAnalysisEnabled.get()) {
-            Toast.makeText(requireContext(), "Please stop the current analysis first.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("audio/*");
-        filePickerLauncher.launch(intent);
-    }
-
-
 
     private boolean checkPermissions() {
         return ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED;
@@ -157,10 +121,6 @@ public class AudioAnalysisFragment extends Fragment {
     }
 
     private void toggleSpectrumAnalysis() {
-        if (isAnalyzingFile) {
-            Toast.makeText(requireContext(), "Cannot start real-time analysis while analyzing a file.", Toast.LENGTH_SHORT).show();
-            return;
-        }
         if (isSpectrumAnalysisEnabled.get()) {
             stopSpectrumAnalysis();
         } else {
@@ -185,7 +145,6 @@ public class AudioAnalysisFragment extends Fragment {
             }
             mRecorder.setMyRecAudioFile(tempFile);
 
-            android.util.Log.d("AudioAnalysisFragment", "startSpectrumAnalysis: launching...");
             if (mRecorder.startRecorder()) {
                 isSpectrumAnalysisEnabled.set(true);
                 startStopSpectrumButton.setText(getString(R.string.btn_stop_spectrum));
@@ -194,7 +153,7 @@ public class AudioAnalysisFragment extends Fragment {
                     android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_URGENT_AUDIO);
                     while (isSpectrumAnalysisEnabled.get()) {
                         try {
-                            Thread.sleep(50); // Match DecibelMeterFragment's delay
+                            Thread.sleep(50);
                             float amplitude = mRecorder.getMaxAmplitude();
                             if (amplitude > 0) {
                                 float dbValue = (float) (20 * Math.log10(amplitude));
@@ -230,10 +189,9 @@ public class AudioAnalysisFragment extends Fragment {
         if (spectrumAnalysisThread != null) {
             spectrumAnalysisThread.interrupt();
             try {
-                spectrumAnalysisThread.join(100); // Wait a bit for the thread to die
+                spectrumAnalysisThread.join(100);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                e.printStackTrace();
             }
             spectrumAnalysisThread = null;
         }
@@ -242,20 +200,17 @@ public class AudioAnalysisFragment extends Fragment {
             try {
                 mRecorder.stopRecording();
             } catch (RuntimeException e) {
-                // This can happen if stop() is called in an invalid state.
                 android.util.Log.e("AudioAnalysisFragment", "RuntimeException on stopRecording", e);
             } finally {
-                mRecorder = null; // Always release the recorder
+                mRecorder = null;
             }
         }
 
-        if (tempRecordingPath != null && !tempRecordingPath.isEmpty()) {
-            File tempFile = new File(tempRecordingPath);
-            if (tempFile.exists()) {
-                tempFile.delete();
-            }
-            tempRecordingPath = null;
+        File tempFile = new File(tempRecordingPath);
+        if (tempFile.exists()) {
+            tempFile.delete();
         }
+        tempRecordingPath = null;
 
         handler.post(() -> {
             if (isAdded()) {
@@ -276,70 +231,20 @@ public class AudioAnalysisFragment extends Fragment {
         }
     }
 
-    private void analyzeAudioFile(Uri audioFileUri) {
-        isAnalyzingFile = true;
-        startStopSpectrumButton.setEnabled(false); // Disable button during file analysis
-        analyzeLocalFileButton.setEnabled(false);
-
-        spectrumAnalysisThread = new Thread(() -> {
-            android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND);
-            FFTAnalyzer fileAnalyzer = null;
-            try {
-                fileAnalyzer = new FFTAnalyzer(requireContext(), audioFileUri);
-                while (isAnalyzingFile) {
-                    double[] spectrum = fileAnalyzer.getFrequencySpectrum();
-                                     if (spectrum != null) {
-                        double maxAmplitude = 0;
-                                         for (double v : spectrum) {
-                                             if (v > maxAmplitude) {
-                                                 maxAmplitude = v;
-                                             }
-                                         }
-                        float dbValue = (float) (20 * Math.log10(maxAmplitude > 0 ? maxAmplitude : 1));
-
-                        handler.post(() -> {
-                            if (isAdded()) {
-                                updateData(dbValue, 0);
-                            }
-                        });
-                    } else {
-                        break; // End of file
-                    }
-                    try {
-                        Thread.sleep(50);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                        break;
-                    }
-                }
-            } catch (IOException e) {
-                handler.post(() -> Toast.makeText(requireContext(), "Failed to analyze file.", Toast.LENGTH_SHORT).show());
-            } finally {
-                if (fileAnalyzer != null) {
-                    fileAnalyzer.release();
-                }
-                handler.post(() -> {
-                    isAnalyzingFile = false;
-                    if (isAdded()) {
-                        startStopSpectrumButton.setEnabled(true);
-                        analyzeLocalFileButton.setEnabled(true);
-                        resetMetrics();
-                        Toast.makeText(requireContext(), "File analysis complete.", Toast.LENGTH_SHORT).show();
-                    } else {
-                        // Even if fragment is not added, we should ensure the state is reset
-                        // and buttons are re-enabled for the next time the view is created.
-                        startStopSpectrumButton.setEnabled(true);
-                        analyzeLocalFileButton.setEnabled(true);
-                    }
-                });
-            }
-        });
-        spectrumAnalysisThread.start();
-    }
-
-
-
     private void resetMetrics() {
+        maxDb = 0f;
+        minDb = 120f;
+        avgDb = 0f;
+        dbSum = 0f;
+        dbCount = 0;
+
+        if (realTimeDbText != null) {
+            realTimeDbText.setText(getString(R.string.db_initial_real_time));
+            maxDbText.setText(getString(R.string.db_initial_max));
+            minDbText.setText(getString(R.string.db_initial_min));
+            avgDbText.setText(getString(R.string.db_initial_avg));
+        }
+
         if (mChart != null && mChart.getData() != null) {
             LineDataSet set = (LineDataSet) mChart.getData().getDataSetByIndex(0);
             if (set != null) {
@@ -376,7 +281,7 @@ public class AudioAnalysisFragment extends Fragment {
         rightAxis.setEnabled(false);
 
         Description description = new Description();
-        description.setText("分贝趋势"); // Using hardcoded string
+        description.setText("分贝趋势");
         mChart.setDescription(description);
 
         yVals = new ArrayList<>();
@@ -394,8 +299,19 @@ public class AudioAnalysisFragment extends Fragment {
     }
 
     private void updateData(float value, int index) {
-        android.util.Log.d("AudioAnalysisFragment", "updateData: " + value);
         if (mChart != null) {
+            realTimeDbText.setText(String.format(getString(R.string.db_real_time_format), value));
+
+            if (value > maxDb) maxDb = value;
+            if (value < minDb) minDb = value;
+            dbSum += value;
+            dbCount++;
+            avgDb = dbSum / dbCount;
+
+            maxDbText.setText(String.format(getString(R.string.db_max_format), maxDb));
+            minDbText.setText(String.format(getString(R.string.db_min_format), minDb));
+            avgDbText.setText(String.format(getString(R.string.db_avg_format), avgDb));
+
             LineData data = mChart.getData();
             if (data != null) {
                 LineDataSet set = (LineDataSet) data.getDataSetByIndex(0);
@@ -416,8 +332,6 @@ public class AudioAnalysisFragment extends Fragment {
         }
     }
 
-
-
     @Override
     public void onPause() {
         super.onPause();
@@ -429,20 +343,12 @@ public class AudioAnalysisFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        isSpectrumAnalysisEnabled.set(false);
-        isAnalyzingFile = false;
-        if (spectrumAnalysisThread != null) {
-            spectrumAnalysisThread.interrupt();
-        }
-        if (mRecorder != null) {
-            mRecorder.stopRecording();
-            mRecorder = null;
+        if (isSpectrumAnalysisEnabled.get()) {
+            stopSpectrumAnalysis();
         }
         if (mChart != null) {
             mChart.clear();
             mChart = null;
         }
     }
-
-
 }

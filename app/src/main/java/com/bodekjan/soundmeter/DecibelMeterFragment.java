@@ -102,9 +102,9 @@ public class DecibelMeterFragment extends Fragment {
                     return;
                 }
                 speedometer.refresh();
-                minVal.setText(df1.format(World.minDB));
-                avgVal.setText(df1.format((World.minDB + World.maxDB) / 2));
-                maxVal.setText(df1.format(World.maxDB));
+                minVal.setText(getString(R.string.decibel_meter_db_format, World.minDB));
+                avgVal.setText(getString(R.string.decibel_meter_db_format, (World.minDB + World.maxDB) / 2));
+                maxVal.setText(getString(R.string.decibel_meter_db_format, World.maxDB));
                 updateData(World.dbCount, 0);
 
                 // 存储当前测量数据到数据库
@@ -249,9 +249,9 @@ public class DecibelMeterFragment extends Fragment {
 
         // 更新UI
         speedometer.refresh();
-        minVal.setText("0 dB");
-        maxVal.setText("0 dB");
-        avgVal.setText("0 dB");
+        minVal.setText(getString(R.string.decibel_meter_0_db));
+        maxVal.setText(getString(R.string.decibel_meter_0_db));
+        avgVal.setText(getString(R.string.decibel_meter_0_db));
 
         // 停止测量线程
         stopMeasurement();
@@ -401,7 +401,7 @@ public class DecibelMeterFragment extends Fragment {
         } catch (SecurityException e) {
             e.printStackTrace();
             // Handle the case where permission is not granted
-            Toast.makeText(requireContext(), "Location permission not granted.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), getString(R.string.location_permission_not_granted), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -502,10 +502,10 @@ public class DecibelMeterFragment extends Fragment {
             long id = dbHelper.insertNoiseData(noiseData);
             if (id != -1) {
                 // 保存成功
-                Log.d("DecibelMeterFragment", "噪音数据保存成功，ID: " + id);
+                Log.d("DecibelMeterFragment", getString(R.string.noise_data_save_success, id));
             } else {
                 // 保存失败
-                Log.e("DecibelMeterFragment", "噪音数据保存失败");
+                Log.e("DecibelMeterFragment", getString(R.string.noise_data_save_failed));
             }
         }
     }
