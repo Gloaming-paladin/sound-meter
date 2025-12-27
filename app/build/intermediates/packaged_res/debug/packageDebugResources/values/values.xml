@@ -129,6 +129,8 @@
     <string name="nav_profile">我的</string>
     <string name="noise_data_save_failed">噪音数据保存失败</string>
     <string name="noise_data_save_success">噪音数据保存成功，ID: %d</string>
+    <string name="password_strength_info_message">弱：长度小于8位。\n\n中：包含字母、数字、符号中的两种。\n\n强：包含字母、数字和特殊符号的组合，且长度大于8位。</string>
+    <string name="password_strength_info_title">密码强度标准</string>
     <string name="password_strength_medium">中</string>
     <string name="password_strength_strong">强</string>
     <string name="password_strength_weak">弱</string>
@@ -169,14 +171,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="DarkDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">#2c3e50</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
     <style name="Dialog" parent="android:style/Theme.Dialog">
         <item name="android:background">#00000000</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
     </style>
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_background</item>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
     <style name="Uy">
         <item name="typeface">ALKATIP.TTF</item>

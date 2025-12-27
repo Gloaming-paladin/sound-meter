@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private double currentLatitude = 0.0;
     private double currentLongitude = 0.0;
     private SharedPreferences sharedPreferences;
+    private final Fragment decibelMeterFragment = new DecibelMeterFragment();
+    private final Fragment audioAnalysisFragment = new AudioAnalysisFragment();
+    private final Fragment decibelCameraFragment = new DecibelCameraFragment();
+    private final Fragment profileFragment = new ProfileFragment();
+    private final Fragment loginFragment = new LoginFragment();
+    private Fragment activeFragment = decibelMeterFragment;
 
 
     @Override
@@ -43,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions();
         }
 
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, loginFragment, "5").hide(loginFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, profileFragment, "4").hide(profileFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelCameraFragment, "3").hide(decibelCameraFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, audioAnalysisFragment, "2").hide(audioAnalysisFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelMeterFragment, "1").commit();
+
         if (isLoggedIn()) {
             showMainContent();
         } else {
@@ -50,20 +62,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            Fragment selectedFragment = null;
             int itemId = item.getItemId();
-
             if (itemId == R.id.nav_decibel_meter) {
-                selectedFragment = new DecibelMeterFragment();
+                getSupportFragmentManager().beginTransaction().hide(activeFragment).show(decibelMeterFragment).commit();
+                activeFragment = decibelMeterFragment;
+                return true;
             } else if (itemId == R.id.nav_audio_analysis) {
-                selectedFragment = new AudioAnalysisFragment();
+                getSupportFragmentManager().beginTransaction().hide(activeFragment).show(audioAnalysisFragment).commit();
+                activeFragment = audioAnalysisFragment;
+                return true;
             } else if (itemId == R.id.navigation_decibel_camera) {
-                selectedFragment = new DecibelCameraFragment();
+                getSupportFragmentManager().beginTransaction().hide(activeFragment).show(decibelCameraFragment).commit();
+                activeFragment = decibelCameraFragment;
+                return true;
             } else if (itemId == R.id.nav_profile) {
-                selectedFragment = new ProfileFragment();
+                getSupportFragmentManager().beginTransaction().hide(activeFragment).show(profileFragment).commit();
+                activeFragment = profileFragment;
+                return true;
             }
-
-            return loadFragment(selectedFragment);
+            return false;
         });
     }
 
@@ -73,24 +90,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void showMainContent() {
         bottomNavigationView.setVisibility(View.VISIBLE);
-        loadFragment(new DecibelMeterFragment());
+        getSupportFragmentManager().beginTransaction().hide(activeFragment).show(decibelMeterFragment).commit();
+        activeFragment = decibelMeterFragment;
     }
 
     public void showLogin() {
         bottomNavigationView.setVisibility(View.GONE);
-        loadFragment(new LoginFragment());
-    }
-
-
-    private boolean loadFragment(Fragment fragment) {
-        if (fragment != null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commit();
-            return true;
-        }
-        return false;
+        getSupportFragmentManager().beginTransaction().hide(activeFragment).show(loginFragment).commit();
+        activeFragment = loginFragment;
     }
 
     private boolean checkPermissions() {

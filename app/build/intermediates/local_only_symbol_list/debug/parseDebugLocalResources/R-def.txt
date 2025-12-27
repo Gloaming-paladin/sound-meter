@@ -152,6 +152,7 @@ id register_submit_button
 id register_username
 id save_avatar_button
 id speed
+id splash_content
 id splash_icon
 id start_stop_spectrum_button
 id timestamp
@@ -288,6 +289,8 @@ string nav_decibel_meter
 string nav_profile
 string noise_data_save_failed
 string noise_data_save_success
+string password_strength_info_message
+string password_strength_info_title
 string password_strength_medium
 string password_strength_strong
 string password_strength_weak
@@ -323,6 +326,7 @@ string toast_username_exists
 string video_recording_failed
 style AppBaseTheme
 style AppTheme
+style DarkDialog
 style Dialog
 style SplashTheme
 style Uy
