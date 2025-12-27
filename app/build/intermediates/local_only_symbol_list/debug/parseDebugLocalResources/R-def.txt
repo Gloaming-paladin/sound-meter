@@ -56,6 +56,8 @@ drawable ic_profile
 drawable ic_register
 drawable ic_settings
 drawable ic_stop
+drawable ic_visibility_off
+drawable ic_visibility_on
 drawable log_out
 drawable logo
 drawable noise_disc
@@ -102,6 +104,7 @@ id login_card
 id login_link
 id login_logo
 id login_password
+id login_password_visibility_toggle
 id login_register_link
 id login_submit_button
 id login_username
@@ -139,10 +142,12 @@ id refreshbutton
 id register_button
 id register_card
 id register_confirm_password
+id register_confirm_password_visibility_toggle
 id register_link
 id register_login_link
 id register_logo
 id register_password
+id register_password_visibility_toggle
 id register_submit_button
 id register_username
 id save_avatar_button
@@ -310,6 +315,7 @@ string toast_fill_all_fields
 string toast_login_failed
 string toast_login_success
 string toast_password_mismatch
+string toast_password_too_weak
 string toast_register_failed
 string toast_register_fill_all_fields
 string toast_register_success

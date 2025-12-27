@@ -166,4 +166,5 @@
     <string name="location_permission_not_granted">未授予位置权限。</string>
     <string name="noise_data_save_success">噪音数据保存成功，ID: %d</string>
     <string name="noise_data_save_failed">噪音数据保存失败</string>
+    <string name="toast_password_too_weak">密码太弱，请使用数字和字母的组合</string>
 </resources>

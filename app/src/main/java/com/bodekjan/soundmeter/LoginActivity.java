@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         loginCard = findViewById(R.id.login_card);
         usernameEditText = findViewById(R.id.login_username);
         passwordEditText = findViewById(R.id.login_password);
+        ImageView passwordVisibilityToggle = findViewById(R.id.login_password_visibility_toggle);
         loginButton = findViewById(R.id.login_submit_button);
         registerLink = findViewById(R.id.login_register_link);
 
@@ -43,6 +44,36 @@ public class LoginActivity extends AppCompatActivity {
         loginCard.startAnimation(fadeIn);
         loginButton.startAnimation(slideInFromBottom);
         registerLink.startAnimation(slideInFromBottom);
+
+        passwordVisibilityToggle.setVisibility(android.view.View.GONE);
+
+        passwordEditText.addTextChangedListener(new android.text.TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(android.text.Editable s) {
+                if (s.length() > 0) {
+                    passwordVisibilityToggle.setVisibility(android.view.View.VISIBLE);
+                } else {
+                    passwordVisibilityToggle.setVisibility(android.view.View.GONE);
+                }
+            }
+        });
+
+        passwordVisibilityToggle.setOnClickListener(v -> {
+            if (passwordEditText.getInputType() == (android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+                passwordEditText.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                passwordVisibilityToggle.setImageResource(R.drawable.ic_visibility_on);
+            } else {
+                passwordEditText.setInputType(android.text.InputType.TYPE_CLASS_TEXT | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                passwordVisibilityToggle.setImageResource(R.drawable.ic_visibility_off);
+            }
+            passwordEditText.setSelection(passwordEditText.length());
+        });
 
         loginButton.setOnClickListener(v -> {
             loginButton.startLoading();
@@ -67,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                     loginButton.stopMorphAnimation();
                 }
-            }, 2000);
+            }, 500);
         });
 
         registerLink.setOnClickListener(v -> {

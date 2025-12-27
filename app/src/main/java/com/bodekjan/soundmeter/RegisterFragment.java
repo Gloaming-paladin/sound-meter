@@ -90,6 +90,12 @@ public class RegisterFragment extends Fragment {
                 return;
             }
 
+            if (isPasswordWeak(password)) {
+                Toast.makeText(requireContext(), R.string.toast_password_too_weak, Toast.LENGTH_SHORT).show();
+                registerButton.stopMorphAnimation();
+                return;
+            }
+
             if (dbHelper.addUser(username, password)) {
                 Toast.makeText(requireContext(), R.string.toast_register_success, Toast.LENGTH_SHORT).show();
                 goToLogin();
@@ -108,29 +114,27 @@ public class RegisterFragment extends Fragment {
         passwordStrengthFeedback.setVisibility(TextView.VISIBLE);
         Animation fadeIn = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
         passwordStrengthFeedback.startAnimation(fadeIn);
-        boolean hasLower = password.matches(".*[a-z].*");
-        boolean hasUpper = password.matches(".*[A-Z].*");
-        boolean hasDigit = password.matches(".*[0-9].*");
+
+        boolean hasDigit = password.matches(".*\\d.*");
+        boolean hasLetter = password.matches(".*[a-zA-Z].*");
         boolean hasSpecial = password.matches(".*[^a-zA-Z0-9].*");
-        int strength = 0;
-        if (hasLower || hasUpper) strength++;
-        if (hasDigit) strength++;
-        if (hasSpecial) strength++;
-        if (password.length() < 8) {
+
+        if (hasDigit && hasLetter && hasSpecial) {
+            passwordStrengthFeedback.setText(R.string.password_strength_strong);
+            passwordStrengthFeedback.setTextColor(Color.GREEN);
+        } else if (hasDigit && hasLetter) {
+            passwordStrengthFeedback.setText(R.string.password_strength_medium);
+            passwordStrengthFeedback.setTextColor(Color.YELLOW);
+        } else {
             passwordStrengthFeedback.setText(R.string.password_strength_weak);
             passwordStrengthFeedback.setTextColor(Color.RED);
-        } else {
-            if (strength == 1) {
-                passwordStrengthFeedback.setText(R.string.password_strength_medium);
-                passwordStrengthFeedback.setTextColor(Color.YELLOW);
-            } else if (strength >= 2) {
-                passwordStrengthFeedback.setText(R.string.password_strength_strong);
-                passwordStrengthFeedback.setTextColor(Color.GREEN);
-            } else {
-                passwordStrengthFeedback.setText(R.string.password_strength_weak);
-                passwordStrengthFeedback.setTextColor(Color.RED);
-            }
         }
+    }
+
+    private boolean isPasswordWeak(String password) {
+        boolean hasDigit = password.matches(".*\\d.*");
+        boolean hasLetter = password.matches(".*[a-zA-Z].*");
+        return !(hasDigit && hasLetter);
     }
 
     private void goToLogin() {
