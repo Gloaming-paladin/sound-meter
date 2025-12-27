@@ -101,7 +101,10 @@ id nav_decibel_meter
 id nav_profile
 id navigation_decibel_camera
 id negativeButton
+id option_cancel
 id option_icon
+id option_save_to_phone
+id option_select_from_album
 id option_text
 id playbutton
 id preview_image
@@ -130,6 +133,7 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout activity_splash
+layout bottom_sheet_avatar_options
 layout dialog_avatar_options
 layout dialog_info
 layout fragment_about

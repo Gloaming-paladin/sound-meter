@@ -11,204 +11,210 @@
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 11-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:5-81
 11-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:3:22-78
-12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:5-80
-12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:22-77
-13    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:5-70
-13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:22-68
-14    <uses-permission android:name="android.permission.CAMERA" />
-14-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:5-65
-14-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:22-62
-15
-16    <uses-feature android:name="android.hardware.camera" />
-16-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:5-60
-16-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:19-57
-17
-18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-18-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:5-79
-18-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:22-76
-19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-19-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:5-81
-19-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:22-78
-20    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-20-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:5-80
-20-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:22-77
-21
-22    <permission
-22-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-23        android:name="com.bodekjan.soundmeter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-23-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-24        android:protectionLevel="signature" />
-24-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-25
-26    <uses-permission android:name="com.bodekjan.soundmeter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-26-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-26-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-27
-28    <application
-28-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:12:5-39:19
-29        android:allowBackup="true"
-29-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:9-35
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-31        android:debuggable="true"
-32        android:extractNativeLibs="false"
-33        android:icon="@drawable/logo"
-33-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:9-38
-34        android:label="@string/app_name"
-34-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:9-41
-35        android:supportsRtl="true"
-35-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:9-35
-36        android:theme="@style/AppTheme" >
-36-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:9-40
-37        <activity
-37-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:9-24:20
-38            android:name="com.bodekjan.soundmeter.SplashActivity"
-38-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:19-49
-39            android:exported="true" >
-39-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:13-36
-40            <intent-filter>
-40-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:13-23:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:17-69
-41-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:17-77
-43-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:27-74
-44            </intent-filter>
-45        </activity>
-46        <activity
-46-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:9-28:20
-47            android:name="com.bodekjan.soundmeter.MainActivity"
-47-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:19-47
-48            android:configChanges="orientation|keyboardHidden"
-48-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:13-63
-49            android:exported="false" >
-49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:27:13-37
-50        </activity>
-51        <activity
-51-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:9-78
-52            android:name="com.bodekjan.soundmeter.HistoryActivity"
-52-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:19-50
-53            android:exported="false" />
-53-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:51-75
-54
-55        <provider
-56            android:name="androidx.core.content.FileProvider"
-56-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:31:13-62
-57            android:authorities="com.bodekjan.soundmeter.provider"
-57-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:32:13-60
-58            android:exported="false"
-58-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:13-37
-59            android:grantUriPermissions="true" >
-59-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:13-47
-60            <meta-data
-60-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:35:13-37:54
-61                android:name="android.support.FILE_PROVIDER_PATHS"
-61-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:17-67
-62                android:resource="@xml/file_paths" />
-62-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:17-51
-63        </provider>
-64
-65        <service
-65-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
-66            android:name="androidx.camera.core.impl.MetadataHolderService"
-66-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
-67            android:enabled="false"
-67-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
-68            android:exported="false" >
-68-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
-69            <meta-data
-69-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
-70                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
-70-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
-71                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
-71-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
-72        </service>
-73
-74        <activity
-74-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-75            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-75-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-76            android:exported="false"
-76-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-77            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-77-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-78
-79        <meta-data
-79-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-80            android:name="com.google.android.gms.version"
-80-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-81            android:value="@integer/google_play_services_version" />
-81-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-82
-83        <provider
-83-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-84            android:name="androidx.startup.InitializationProvider"
-84-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-85            android:authorities="com.bodekjan.soundmeter.androidx-startup"
-85-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-86            android:exported="false" >
-86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-87            <meta-data
-87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-88                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-89                android:value="androidx.startup" />
-89-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+12    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:5-76
+12-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:4:22-73
+13    <uses-permission
+13-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:5-107
+14        android:name="android.permission.READ_EXTERNAL_STORAGE"
+14-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:22-77
+15        android:maxSdkVersion="32" />
+15-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:5:78-104
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+16-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:5-70
+16-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:6:22-68
+17    <uses-permission android:name="android.permission.CAMERA" />
+17-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:5-65
+17-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:7:22-62
+18
+19    <uses-feature android:name="android.hardware.camera" />
+19-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:5-60
+19-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:8:19-57
+20
+21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:5-79
+21-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:9:22-76
+22    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+22-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:5-81
+22-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:10:22-78
+23    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+23-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:5-80
+23-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:11:22-77
+24
+25    <permission
+25-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+26        android:name="com.bodekjan.soundmeter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+26-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+27        android:protectionLevel="signature" />
+27-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+28
+29    <uses-permission android:name="com.bodekjan.soundmeter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+29-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+29-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+30
+31    <application
+31-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:13:5-40:19
+32        android:allowBackup="true"
+32-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+34        android:debuggable="true"
+35        android:extractNativeLibs="false"
+36        android:icon="@drawable/logo"
+36-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:9-38
+37        android:label="@string/app_name"
+37-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:16:9-41
+38        android:supportsRtl="true"
+38-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:17:9-35
+39        android:theme="@style/AppTheme" >
+39-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:18:9-40
+40        <activity
+40-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:9-25:20
+41            android:name="com.bodekjan.soundmeter.SplashActivity"
+41-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:19-49
+42            android:exported="true" >
+42-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:13-36
+43            <intent-filter>
+43-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:13-24:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:17-69
+44-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:22:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:17-77
+46-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:27-74
+47            </intent-filter>
+48        </activity>
+49        <activity
+49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:9-29:20
+50            android:name="com.bodekjan.soundmeter.MainActivity"
+50-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:19-47
+51            android:configChanges="orientation|keyboardHidden"
+51-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:27:13-63
+52            android:exported="false" >
+52-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:28:13-37
+53        </activity>
+54        <activity
+54-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:9-78
+55            android:name="com.bodekjan.soundmeter.HistoryActivity"
+55-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:19-50
+56            android:exported="false" />
+56-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:51-75
+57
+58        <provider
+59            android:name="androidx.core.content.FileProvider"
+59-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:32:13-62
+60            android:authorities="com.bodekjan.soundmeter.provider"
+60-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:13-60
+61            android:exported="false"
+61-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:13-37
+62            android:grantUriPermissions="true" >
+62-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:35:13-47
+63            <meta-data
+63-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:13-38:54
+64                android:name="android.support.FILE_PROVIDER_PATHS"
+64-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:17-67
+65                android:resource="@xml/file_paths" />
+65-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:38:17-51
+66        </provider>
+67
+68        <service
+68-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:24:9-33:19
+69            android:name="androidx.camera.core.impl.MetadataHolderService"
+69-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:25:13-75
+70            android:enabled="false"
+70-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:26:13-36
+71            android:exported="false" >
+71-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:27:13-37
+72            <meta-data
+72-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:30:13-32:89
+73                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+73-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:31:17-103
+74                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+74-->[androidx.camera:camera-camera2:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0c0e7c1ea0e440f6fe8275c08e4b0722\transformed\camera-camera2-1.3.0\AndroidManifest.xml:32:17-86
+75        </service>
+76
+77        <activity
+77-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+78            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+78-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+79            android:exported="false"
+79-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+80-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\ad9ebe0e866f78f6753a87a16a9ab180\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+81
+82        <meta-data
+82-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+83            android:name="com.google.android.gms.version"
+83-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+84            android:value="@integer/google_play_services_version" />
+84-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\463e41a87fb826f920d2de802bebf2bf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+85
+86        <provider
+86-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+87            android:name="androidx.startup.InitializationProvider"
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+88            android:authorities="com.bodekjan.soundmeter.androidx-startup"
+88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+89            android:exported="false" >
+89-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 90            <meta-data
-90-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-91                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-91-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 92                android:value="androidx.startup" />
-92-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\0ce9a801f2bacceeacd8b39ffade1436\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 93            <meta-data
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-94                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+93-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+94-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
 95                android:value="androidx.startup" />
-95-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-96        </provider>
-97
-98        <receiver
-98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-99            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-100            android:directBootAware="false"
-100-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-101            android:enabled="true"
-101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-102            android:exported="true"
-102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-103            android:permission="android.permission.DUMP" >
-103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-104            <intent-filter>
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-105                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-106            </intent-filter>
+95-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\30208\.gradle\caches\8.10.2\transforms\58fdc4bf117fc00de80eec35cc3225bc\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+96            <meta-data
+96-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+98                android:value="androidx.startup" />
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+99        </provider>
+100
+101        <receiver
+101-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+102            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+102-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+103            android:directBootAware="false"
+103-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+104            android:enabled="true"
+104-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+105            android:exported="true"
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+106            android:permission="android.permission.DUMP" >
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
 107            <intent-filter>
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-108                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+108                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+108-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
 109            </intent-filter>
 110            <intent-filter>
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-111                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+111                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
 112            </intent-filter>
 113            <intent-filter>
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-114                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+113-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+114                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 115            </intent-filter>
-116        </receiver>
-117    </application>
-118
-119</manifest>
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+117                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\4ec503d75cf0f50a78587e8116a6443e\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+118            </intent-filter>
+119        </receiver>
+120    </application>
+121
+122</manifest>

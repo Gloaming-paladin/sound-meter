@@ -325,6 +325,11 @@ public class AudioAnalysisFragment extends Fragment {
                         analyzeLocalFileButton.setEnabled(true);
                         resetMetrics();
                         Toast.makeText(requireContext(), "File analysis complete.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        // Even if fragment is not added, we should ensure the state is reset
+                        // and buttons are re-enabled for the next time the view is created.
+                        startStopSpectrumButton.setEnabled(true);
+                        analyzeLocalFileButton.setEnabled(true);
                     }
                 });
             }

@@ -3402,7 +3402,10 @@ id open_search_view_search_prefix
 id open_search_view_status_bar_spacer
 id open_search_view_toolbar
 id open_search_view_toolbar_container
+id option_cancel
 id option_icon
+id option_save_to_phone
+id option_select_from_album
 id option_text
 id outline
 id outward
@@ -3696,6 +3699,7 @@ layout activity_login
 layout activity_main
 layout activity_register
 layout activity_splash
+layout bottom_sheet_avatar_options
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

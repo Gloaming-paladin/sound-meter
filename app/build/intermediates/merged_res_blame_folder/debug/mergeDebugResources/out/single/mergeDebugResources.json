@@ -68,6 +68,10 @@
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable-nodpi\\noise_index.png"
     },
     {
+        "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable_history_record.png.flat",
+        "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable\\history_record.png"
+    },
+    {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable-nodpi_noise_disc.png.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable-nodpi\\noise_disc.png"
     },
@@ -86,6 +90,10 @@
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable_bg_dialog.xml.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable\\bg_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable_log_out.png.flat",
+        "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable\\log_out.png"
     },
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\layout_fragment_profile.xml.flat",
@@ -114,6 +122,10 @@
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-46:/layout_bottom_sheet_avatar_options.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-48:/layout/bottom_sheet_avatar_options.xml"
     },
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\layout_activity_login.xml.flat",
@@ -184,10 +196,6 @@
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable\\ic_default_avatar.xml"
     },
     {
-        "merged": "com.bodekjan.soundmeter.app-debug-46:/drawable_log_out.png.flat",
-        "source": "com.bodekjan.soundmeter.app-main-48:/drawable/log_out.png"
-    },
-    {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -234,10 +242,6 @@
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\layout_item_history.xml.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\layout\\item_history.xml"
-    },
-    {
-        "merged": "com.bodekjan.soundmeter.app-debug-46:/drawable_history_record.png.flat",
-        "source": "com.bodekjan.soundmeter.app-main-48:/drawable/history_record.png"
     },
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable-hdpi_question.png.flat",
