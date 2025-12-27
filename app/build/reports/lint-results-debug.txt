@@ -4,7 +4,7 @@ D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\AudioEditor
 D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\FFTAnalyzer.java:57: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
             audioRecord = new AudioRecord(
                           ^
-D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MainActivity.java:139: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
+D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MainActivity.java:136: Error: Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with checkPermission) or explicitly handle a potential SecurityException [MissingPermission]
         fusedLocationClient.getLastLocation()
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -299,16 +299,16 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:11
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:138: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="36dp"
                 ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:20: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:19: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         <item name="android:textSize">18.0dip</item>
                                       ~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:26: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         <item name="android:textSize">12dp</item>
                                       ~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:45: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:44: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         <item name="android:textSize">15.0dip</item>
                                       ~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:51: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:50: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         <item name="android:textSize">15.0dip</item>
                                       ~~~~~~~
 
@@ -657,72 +657,87 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:149: Error: "deci
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:150: Error: "decibel_camera_max_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_max_decibel">最大: %.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:151: Error: "decibel_camera_location" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:151: Error: "decibel_camera_avg_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="decibel_camera_avg_label">平均:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Error: "decibel_camera_min_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="decibel_camera_min_label">最小:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Error: "decibel_camera_max_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="decibel_camera_max_label">最大:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Error: "decibel_camera_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="decibel_camera_db_format">%.1f dB</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Error: "decibel_camera_location" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_location">位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Error: "camera_not_ready" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:156: Error: "camera_not_ready" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="camera_not_ready">相机未准备好，请先授予权限。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Error: "photo_capture_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:157: Error: "photo_capture_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="photo_capture_failed">照片拍摄失败: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Error: "image_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:158: Error: "image_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="image_save_failed">图片保存失败</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Error: "recording_started" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:159: Error: "recording_started" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="recording_started">录制开始</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:156: Error: "video_recording_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:160: Error: "video_recording_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="video_recording_failed">视频录制失败: %d</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:157: Error: "mic_occupied" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:161: Error: "mic_occupied" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="mic_occupied">麦克风可能被占用，无法启动分贝计</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:158: Error: "location_service_required" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:162: Error: "location_service_required" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_service_required">请开启定位服务以获取位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:159: Error: "enable_location_service" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:163: Error: "enable_location_service" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="enable_location_service">开启</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:160: Error: "cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:164: Error: "cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="cancel">取消</string>
             ~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:161: Error: "location_unavailable" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:165: Error: "location_unavailable" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_unavailable">纬度: N/A, 经度: N/A</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:162: Error: "location_fetch_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:166: Error: "location_fetch_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_fetch_failed">无法获取位置</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:163: Error: "location_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:167: Error: "location_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_format">纬度: %1$.2f, 经度: %2$.2f</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:164: Error: "decibel_meter_min" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:168: Error: "decibel_meter_min" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_min">最小</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:165: Error: "decibel_meter_avg" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:169: Error: "decibel_meter_avg" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_avg">平均</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:166: Error: "decibel_meter_max" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:170: Error: "decibel_meter_max" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_max">最大</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:167: Error: "decibel_meter_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:171: Error: "decibel_meter_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_db_format">%.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:168: Error: "decibel_meter_0_db" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:172: Error: "decibel_meter_0_db" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_0_db">0 dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:169: Error: "location_permission_not_granted" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:173: Error: "location_permission_not_granted" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_permission_not_granted">未授予位置权限。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:170: Error: "noise_data_save_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:174: Error: "noise_data_save_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="noise_data_save_success">噪音数据保存成功，ID: %d</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:171: Error: "noise_data_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:175: Error: "noise_data_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="noise_data_save_failed">噪音数据保存失败</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:172: Error: "toast_password_too_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:176: Error: "toast_password_too_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_password_too_weak">密码太弱，请使用数字和字母的组合</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:177: Error: "decibel_meter_initial_value" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="decibel_meter_initial_value">-- dB</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "MissingTranslation":
    If an application has more than one locale, then all the strings declared
@@ -1068,16 +1083,25 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:144: Warning: The
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:145: Warning: The resource R.string.dialog_avatar_change_avatar appears to be unused [UnusedResources]
     <string name="dialog_avatar_change_avatar">更换头像</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:151: Warning: The resource R.string.decibel_camera_location appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Warning: The resource R.string.decibel_camera_min_label appears to be unused [UnusedResources]
+    <string name="decibel_camera_min_label">最小:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Warning: The resource R.string.decibel_camera_max_label appears to be unused [UnusedResources]
+    <string name="decibel_camera_max_label">最大:</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Warning: The resource R.string.decibel_camera_db_format appears to be unused [UnusedResources]
+    <string name="decibel_camera_db_format">%.1f dB</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Warning: The resource R.string.decibel_camera_location appears to be unused [UnusedResources]
     <string name="decibel_camera_location">位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:16: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:15: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
     <style name="AppBaseTheme" parent="android:Theme.Light"></style>
            ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:37: Warning: The resource R.style.sdw_79351b appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:36: Warning: The resource R.style.sdw_79351b appears to be unused [UnusedResources]
     <style name="sdw_79351b">
            ~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:44: Warning: The resource R.style.text_15_ffffff_sdw appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:43: Warning: The resource R.style.text_15_ffffff_sdw appears to be unused [UnusedResources]
     <style name="text_15_ffffff_sdw" parent="@style/sdw_79351b">
            ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1434,15 +1458,6 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\bottom_sheet_avatar_options.x
 D:\androidcode\Sound-Meter\app\src\main\res\layout\bottom_sheet_avatar_options.xml:24: Warning: Hardcoded string "保存到手机", should use @string resource [HardcodedText]
         android:text="保存到手机"
         ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:91: Warning: Hardcoded string "-- Db", should use @string resource [HardcodedText]
-                android:text="-- Db"
-                ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:114: Warning: Hardcoded string "-- Db", should use @string resource [HardcodedText]
-                android:text="-- Db"
-                ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:137: Warning: Hardcoded string "-- Db", should use @string resource [HardcodedText]
-                android:text="-- Db"
-                ~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_preview.xml:78: Warning: Hardcoded string "不保存", should use @string resource [HardcodedText]
             android:text="不保存" />
             ~~~~~~~~~~~~~~~~~~
@@ -1541,4 +1556,4 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:63
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-137 errors, 229 warnings
+142 errors, 229 warnings

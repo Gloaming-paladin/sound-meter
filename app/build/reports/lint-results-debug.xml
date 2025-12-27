@@ -45,7 +45,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\java\com\bodekjan\soundmeter\MainActivity.java"
-            line="139"
+            line="136"
             column="9"/>
     </issue>
 
@@ -761,7 +761,7 @@
         errorLine2="                                      ~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="20"
+            line="19"
             column="39"/>
     </issue>
 
@@ -779,7 +779,7 @@
         errorLine2="                                      ~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="26"
+            line="25"
             column="39"/>
     </issue>
 
@@ -797,7 +797,7 @@
         errorLine2="                                      ~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="45"
+            line="44"
             column="39"/>
     </issue>
 
@@ -815,7 +815,7 @@
         errorLine2="                                      ~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="51"
+            line="50"
             column="39"/>
     </issue>
 
@@ -2504,6 +2504,70 @@
     <issue
         id="MissingTranslation"
         severity="Error"
+        message="&quot;decibel_camera_avg_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;decibel_camera_avg_label&quot;>平均:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="151"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Error"
+        message="&quot;decibel_camera_min_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;decibel_camera_min_label&quot;>最小:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="152"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Error"
+        message="&quot;decibel_camera_max_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;decibel_camera_max_label&quot;>最大:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="153"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Error"
+        message="&quot;decibel_camera_db_format&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;decibel_camera_db_format&quot;>%.1f dB&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="154"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Error"
         message="&quot;decibel_camera_location&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
         category="Correctness:Messages"
         priority="8"
@@ -2513,7 +2577,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="151"
+            line="155"
             column="13"/>
     </issue>
 
@@ -2529,7 +2593,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="152"
+            line="156"
             column="13"/>
     </issue>
 
@@ -2545,7 +2609,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="153"
+            line="157"
             column="13"/>
     </issue>
 
@@ -2561,7 +2625,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="154"
+            line="158"
             column="13"/>
     </issue>
 
@@ -2577,7 +2641,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="155"
+            line="159"
             column="13"/>
     </issue>
 
@@ -2593,7 +2657,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="156"
+            line="160"
             column="13"/>
     </issue>
 
@@ -2609,7 +2673,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="157"
+            line="161"
             column="13"/>
     </issue>
 
@@ -2625,7 +2689,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="158"
+            line="162"
             column="13"/>
     </issue>
 
@@ -2641,7 +2705,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="159"
+            line="163"
             column="13"/>
     </issue>
 
@@ -2657,7 +2721,7 @@
         errorLine2="            ~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="160"
+            line="164"
             column="13"/>
     </issue>
 
@@ -2673,7 +2737,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="161"
+            line="165"
             column="13"/>
     </issue>
 
@@ -2689,7 +2753,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="162"
+            line="166"
             column="13"/>
     </issue>
 
@@ -2705,7 +2769,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="163"
+            line="167"
             column="13"/>
     </issue>
 
@@ -2721,7 +2785,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="164"
+            line="168"
             column="13"/>
     </issue>
 
@@ -2737,7 +2801,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="165"
+            line="169"
             column="13"/>
     </issue>
 
@@ -2753,7 +2817,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="166"
+            line="170"
             column="13"/>
     </issue>
 
@@ -2769,7 +2833,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="167"
+            line="171"
             column="13"/>
     </issue>
 
@@ -2785,7 +2849,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="168"
+            line="172"
             column="13"/>
     </issue>
 
@@ -2801,7 +2865,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="169"
+            line="173"
             column="13"/>
     </issue>
 
@@ -2817,7 +2881,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="170"
+            line="174"
             column="13"/>
     </issue>
 
@@ -2833,7 +2897,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="171"
+            line="175"
             column="13"/>
     </issue>
 
@@ -2849,7 +2913,23 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="172"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Error"
+        message="&quot;decibel_meter_initial_value&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;decibel_meter_initial_value&quot;>-- dB&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="177"
             column="13"/>
     </issue>
 
@@ -4202,6 +4282,54 @@
     <issue
         id="UnusedResources"
         severity="Warning"
+        message="The resource `R.string.decibel_camera_min_label` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;decibel_camera_min_label&quot;>最小:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="152"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.decibel_camera_max_label` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;decibel_camera_max_label&quot;>最大:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="153"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.decibel_camera_db_format` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;decibel_camera_db_format&quot;>%.1f dB&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
+            line="154"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
         message="The resource `R.string.decibel_camera_location` appears to be unused"
         category="Performance"
         priority="3"
@@ -4211,7 +4339,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml"
-            line="151"
+            line="155"
             column="13"/>
     </issue>
 
@@ -4227,7 +4355,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="16"
+            line="15"
             column="12"/>
     </issue>
 
@@ -4243,7 +4371,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="37"
+            line="36"
             column="12"/>
     </issue>
 
@@ -4259,7 +4387,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml"
-            line="44"
+            line="43"
             column="12"/>
     </issue>
 
@@ -5563,54 +5691,6 @@
             file="D:\androidcode\Sound-Meter\app\src\main\res\layout\bottom_sheet_avatar_options.xml"
             line="24"
             column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;-- Db&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml"
-            line="91"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;-- Db&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml"
-            line="114"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;-- Db&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml"
-            line="137"
-            column="17"/>
     </issue>
 
     <issue

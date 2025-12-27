@@ -32,14 +32,6 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
     private final Fragment loginFragment = new LoginFragment();
     private Fragment activeFragment = decibelMeterFragment;
 
-
-    private final Fragment decibelMeterFragment = new DecibelMeterFragment();
-    private final Fragment audioAnalysisFragment = new AudioAnalysisFragment();
-    private final Fragment decibelCameraFragment = new DecibelCameraFragment();
-    private final Fragment profileFragment = new ProfileFragment();
-    private final Fragment loginFragment = new LoginFragment(); // 创建 LoginFragment 实例
-    private Fragment activeFragment = decibelMeterFragment;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,17 +46,10 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
             requestPermissions();
         }
 
-<<<<<<< HEAD
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, profileFragment, "4").hide(profileFragment).commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelCameraFragment, "3").hide(decibelCameraFragment).commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, audioAnalysisFragment, "2").hide(audioAnalysisFragment).commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, loginFragment, "5").hide(loginFragment).commit(); // 添加并隐藏 loginFragment
-=======
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, loginFragment, "5").hide(loginFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, profileFragment, "4").hide(profileFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelCameraFragment, "3").hide(decibelCameraFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, audioAnalysisFragment, "2").hide(audioAnalysisFragment).commit();
->>>>>>> fb927574d484da88caea343597c9cd7ff3c66095
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelMeterFragment, "1").commit();
 
         if (isLoggedIn()) {
@@ -102,11 +87,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
 
     public void showMainContent() {
         bottomNavigationView.setVisibility(View.VISIBLE);
-<<<<<<< HEAD
-        getSupportFragmentManager().beginTransaction().hide(loginFragment).show(decibelMeterFragment).commit();
-=======
         getSupportFragmentManager().beginTransaction().hide(activeFragment).show(decibelMeterFragment).commit();
->>>>>>> fb927574d484da88caea343597c9cd7ff3c66095
         activeFragment = decibelMeterFragment;
     }
 

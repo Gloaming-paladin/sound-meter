@@ -88,7 +88,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-- Db"
+                android:text="@string/decibel_meter_initial_value"
                 android:textSize="36dp"
                 android:id="@+id/minval"
                 android:textColor="#ffffff" />
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-- Db"
+                android:text="@string/decibel_meter_initial_value"
                 android:textSize="36dp"
                 android:id="@+id/maxval"
                 android:textColor="#ffffff" />
@@ -134,7 +134,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-- Db"
+                android:text="@string/decibel_meter_initial_value"
                 android:textSize="36dp"
                 android:id="@+id/avgval"
                 android:textColor="#ffffff" />

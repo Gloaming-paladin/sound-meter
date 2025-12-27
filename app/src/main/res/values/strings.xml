@@ -24,7 +24,8 @@
     <string name="profile_option_text">选项文本</string>
     <string name="profile_login_register">登录 / 注册</string>
     <string name="settings_title">设置页面</string>
-    <string name="about_description">这是一个噪音测量应用，可以实时监测环境噪音水平。</string>
+    <string name="about_description">这是一个功能强大的噪音测量应用，不仅可以实时监测环境噪音水平，还提供了音频分析、分贝相机等多种实用功能。</string>
+    <string name="about_developer">开发者：Bodekjan</string>
     <string name="about_version">Sound Meter v1.0</string>
     <string name="avatar_option_cancel">取消</string>
     <string name="avatar_option_save_to_phone">保存到手机</string>
@@ -148,6 +149,10 @@
     <string name="decibel_camera_avg_decibel">平均: %.1f dB</string>
     <string name="decibel_camera_min_decibel">最小: %.1f dB</string>
     <string name="decibel_camera_max_decibel">最大: %.1f dB</string>
+    <string name="decibel_camera_avg_label">平均:</string>
+    <string name="decibel_camera_min_label">最小:</string>
+    <string name="decibel_camera_max_label">最大:</string>
+    <string name="decibel_camera_db_format">%.1f dB</string>
     <string name="decibel_camera_location">位置信息</string>
     <string name="camera_not_ready">相机未准备好，请先授予权限。</string>
     <string name="photo_capture_failed">照片拍摄失败: %s</string>
@@ -170,4 +175,5 @@
     <string name="noise_data_save_success">噪音数据保存成功，ID: %d</string>
     <string name="noise_data_save_failed">噪音数据保存失败</string>
     <string name="toast_password_too_weak">密码太弱，请使用数字和字母的组合</string>
+    <string name="decibel_meter_initial_value">-- dB</string>
 </resources>

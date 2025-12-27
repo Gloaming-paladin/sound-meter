@@ -2002,12 +2002,17 @@
     <string name="db_min_format">Min: %.2f dB</string>
     <string name="db_real_time_format">%.2f dB</string>
     <string name="decibel_camera_avg_decibel">平均: %.1f dB</string>
+    <string name="decibel_camera_avg_label">平均:</string>
+    <string name="decibel_camera_db_format">%.1f dB</string>
     <string name="decibel_camera_location">位置信息</string>
     <string name="decibel_camera_max_decibel">最大: %.1f dB</string>
+    <string name="decibel_camera_max_label">最大:</string>
     <string name="decibel_camera_min_decibel">最小: %.1f dB</string>
+    <string name="decibel_camera_min_label">最小:</string>
     <string name="decibel_meter_0_db">0 dB</string>
     <string name="decibel_meter_avg">平均</string>
     <string name="decibel_meter_db_format">%.1f dB</string>
+    <string name="decibel_meter_initial_value">-- dB</string>
     <string name="decibel_meter_max">最大</string>
     <string name="decibel_meter_min">最小</string>
     <string name="dialog_avatar_change_avatar">更换头像</string>

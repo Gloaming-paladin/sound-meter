@@ -3523,6 +3523,7 @@ id special_effects_controller_view_tag
 id speed
 id splash_content
 id splash_icon
+id splash_title
 id spline
 id split_action_bar
 id spread
@@ -3930,12 +3931,17 @@ string db_max_format
 string db_min_format
 string db_real_time_format
 string decibel_camera_avg_decibel
+string decibel_camera_avg_label
+string decibel_camera_db_format
 string decibel_camera_location
 string decibel_camera_max_decibel
+string decibel_camera_max_label
 string decibel_camera_min_decibel
+string decibel_camera_min_label
 string decibel_meter_0_db
 string decibel_meter_avg
 string decibel_meter_db_format
+string decibel_meter_initial_value
 string decibel_meter_max
 string decibel_meter_min
 string dialog_avatar_change_avatar

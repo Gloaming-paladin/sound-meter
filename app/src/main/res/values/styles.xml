@@ -12,13 +12,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<<<<<<< HEAD
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@android:color/black</item>
-    </style>
-=======
-
->>>>>>> fb927574d484da88caea343597c9cd7ff3c66095
     <style name="AppBaseTheme" parent="android:Theme.Light"></style>
 
     <style name="text_18_ffffff">

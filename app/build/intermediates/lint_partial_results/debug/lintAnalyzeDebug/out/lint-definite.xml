@@ -670,10 +670,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
             line="92"
             column="17"
-            startOffset="3631"
+            startOffset="3661"
             endLine="92"
             endColumn="40"
-            endOffset="3654"/>
+            endOffset="3684"/>
     </incident>
 
     <incident
@@ -689,10 +689,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
             line="115"
             column="17"
-            startOffset="4503"
+            startOffset="4563"
             endLine="115"
             endColumn="40"
-            endOffset="4526"/>
+            endOffset="4586"/>
     </incident>
 
     <incident
@@ -708,10 +708,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
             line="138"
             column="17"
-            startOffset="5375"
+            startOffset="5465"
             endLine="138"
             endColumn="40"
-            endOffset="5398"/>
+            endOffset="5488"/>
     </incident>
 
     <incident
@@ -725,12 +725,12 @@
             priority="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
-            line="20"
+            line="19"
             column="39"
-            startOffset="736"
-            endLine="20"
+            startOffset="734"
+            endLine="19"
             endColumn="46"
-            endOffset="743"/>
+            endOffset="741"/>
     </incident>
 
     <incident
@@ -744,12 +744,12 @@
             priority="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
-            line="26"
+            line="25"
             column="39"
-            startOffset="948"
-            endLine="26"
+            startOffset="946"
+            endLine="25"
             endColumn="43"
-            endOffset="952"/>
+            endOffset="950"/>
     </incident>
 
     <incident
@@ -763,12 +763,12 @@
             priority="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
-            line="45"
+            line="44"
             column="39"
-            startOffset="1656"
-            endLine="45"
+            startOffset="1654"
+            endLine="44"
             endColumn="46"
-            endOffset="1663"/>
+            endOffset="1661"/>
     </incident>
 
     <incident
@@ -782,12 +782,12 @@
             priority="0"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
-            line="51"
+            line="50"
             column="39"
-            startOffset="1898"
-            endLine="51"
+            startOffset="1896"
+            endLine="50"
             endColumn="46"
-            endOffset="1905"/>
+            endOffset="1903"/>
     </incident>
 
     <incident
@@ -2679,7 +2679,7 @@
     <incident
         id="MissingTranslation"
         severity="error"
-        message="&quot;decibel_camera_location&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        message="&quot;decibel_camera_avg_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
         <fix-attribute
             description="Mark non-translatable"
             attribute="translatable"
@@ -2690,8 +2690,80 @@
             column="13"
             startOffset="8007"
             endLine="151"
+            endColumn="44"
+            endOffset="8038"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_min_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="152"
+            column="13"
+            startOffset="8065"
+            endLine="152"
+            endColumn="44"
+            endOffset="8096"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_max_label&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="153"
+            column="13"
+            startOffset="8123"
+            endLine="153"
+            endColumn="44"
+            endOffset="8154"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_db_format&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="154"
+            column="13"
+            startOffset="8181"
+            endLine="154"
+            endColumn="44"
+            endOffset="8212"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_location&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="155"
+            column="13"
+            startOffset="8243"
+            endLine="155"
             endColumn="43"
-            endOffset="8037"/>
+            endOffset="8273"/>
     </incident>
 
     <incident
@@ -2704,12 +2776,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="152"
+            line="156"
             column="13"
-            startOffset="8065"
-            endLine="152"
+            startOffset="8301"
+            endLine="156"
             endColumn="36"
-            endOffset="8088"/>
+            endOffset="8324"/>
     </incident>
 
     <incident
@@ -2722,12 +2794,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="153"
+            line="157"
             column="13"
-            startOffset="8126"
-            endLine="153"
+            startOffset="8362"
+            endLine="157"
             endColumn="40"
-            endOffset="8153"/>
+            endOffset="8389"/>
     </incident>
 
     <incident
@@ -2740,12 +2812,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="154"
+            line="158"
             column="13"
-            startOffset="8187"
-            endLine="154"
+            startOffset="8423"
+            endLine="158"
             endColumn="37"
-            endOffset="8211"/>
+            endOffset="8447"/>
     </incident>
 
     <incident
@@ -2758,12 +2830,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="155"
+            line="159"
             column="13"
-            startOffset="8241"
-            endLine="155"
+            startOffset="8477"
+            endLine="159"
             endColumn="37"
-            endOffset="8265"/>
+            endOffset="8501"/>
     </incident>
 
     <incident
@@ -2776,12 +2848,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="156"
+            line="160"
             column="13"
-            startOffset="8293"
-            endLine="156"
+            startOffset="8529"
+            endLine="160"
             endColumn="42"
-            endOffset="8322"/>
+            endOffset="8558"/>
     </incident>
 
     <incident
@@ -2794,12 +2866,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="157"
+            line="161"
             column="13"
-            startOffset="8356"
-            endLine="157"
+            startOffset="8592"
+            endLine="161"
             endColumn="32"
-            endOffset="8375"/>
+            endOffset="8611"/>
     </incident>
 
     <incident
@@ -2812,12 +2884,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="158"
+            line="162"
             column="13"
-            startOffset="8415"
-            endLine="158"
+            startOffset="8651"
+            endLine="162"
             endColumn="45"
-            endOffset="8447"/>
+            endOffset="8683"/>
     </incident>
 
     <incident
@@ -2830,12 +2902,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="159"
+            line="163"
             column="13"
-            startOffset="8485"
-            endLine="159"
+            startOffset="8721"
+            endLine="163"
             endColumn="43"
-            endOffset="8515"/>
+            endOffset="8751"/>
     </incident>
 
     <incident
@@ -2848,12 +2920,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="160"
+            line="164"
             column="13"
-            startOffset="8541"
-            endLine="160"
+            startOffset="8777"
+            endLine="164"
             endColumn="26"
-            endOffset="8554"/>
+            endOffset="8790"/>
     </incident>
 
     <incident
@@ -2866,12 +2938,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="161"
+            line="165"
             column="13"
-            startOffset="8580"
-            endLine="161"
+            startOffset="8816"
+            endLine="165"
             endColumn="40"
-            endOffset="8607"/>
+            endOffset="8843"/>
     </incident>
 
     <incident
@@ -2884,12 +2956,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="162"
+            line="166"
             column="13"
-            startOffset="8647"
-            endLine="162"
+            startOffset="8883"
+            endLine="166"
             endColumn="41"
-            endOffset="8675"/>
+            endOffset="8911"/>
     </incident>
 
     <incident
@@ -2902,12 +2974,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="163"
+            line="167"
             column="13"
-            startOffset="8705"
-            endLine="163"
+            startOffset="8941"
+            endLine="167"
             endColumn="35"
-            endOffset="8727"/>
+            endOffset="8963"/>
     </incident>
 
     <incident
@@ -2920,12 +2992,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="164"
+            line="168"
             column="13"
-            startOffset="8773"
-            endLine="164"
+            startOffset="9009"
+            endLine="168"
             endColumn="37"
-            endOffset="8797"/>
+            endOffset="9033"/>
     </incident>
 
     <incident
@@ -2938,12 +3010,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="165"
+            line="169"
             column="13"
-            startOffset="8823"
-            endLine="165"
+            startOffset="9059"
+            endLine="169"
             endColumn="37"
-            endOffset="8847"/>
+            endOffset="9083"/>
     </incident>
 
     <incident
@@ -2956,12 +3028,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="166"
+            line="170"
             column="13"
-            startOffset="8873"
-            endLine="166"
+            startOffset="9109"
+            endLine="170"
             endColumn="37"
-            endOffset="8897"/>
+            endOffset="9133"/>
     </incident>
 
     <incident
@@ -2974,12 +3046,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="167"
+            line="171"
             column="13"
-            startOffset="8923"
-            endLine="167"
+            startOffset="9159"
+            endLine="171"
             endColumn="43"
-            endOffset="8953"/>
+            endOffset="9189"/>
     </incident>
 
     <incident
@@ -2992,12 +3064,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="168"
+            line="172"
             column="13"
-            startOffset="8984"
-            endLine="168"
+            startOffset="9220"
+            endLine="172"
             endColumn="38"
-            endOffset="9009"/>
+            endOffset="9245"/>
     </incident>
 
     <incident
@@ -3010,12 +3082,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="169"
+            line="173"
             column="13"
-            startOffset="9037"
-            endLine="169"
+            startOffset="9273"
+            endLine="173"
             endColumn="51"
-            endOffset="9075"/>
+            endOffset="9311"/>
     </incident>
 
     <incident
@@ -3028,12 +3100,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="170"
+            line="174"
             column="13"
-            startOffset="9107"
-            endLine="170"
+            startOffset="9343"
+            endLine="174"
             endColumn="43"
-            endOffset="9137"/>
+            endOffset="9373"/>
     </incident>
 
     <incident
@@ -3046,12 +3118,12 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="171"
+            line="175"
             column="13"
-            startOffset="9176"
-            endLine="171"
+            startOffset="9412"
+            endLine="175"
             endColumn="42"
-            endOffset="9205"/>
+            endOffset="9441"/>
     </incident>
 
     <incident
@@ -3064,12 +3136,30 @@
             value="false"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
-            line="172"
+            line="176"
             column="13"
-            startOffset="9237"
-            endLine="172"
+            startOffset="9473"
+            endLine="176"
             endColumn="43"
-            endOffset="9267"/>
+            endOffset="9503"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_initial_value&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="177"
+            column="13"
+            startOffset="9543"
+            endLine="177"
+            endColumn="47"
+            endOffset="9577"/>
     </incident>
 
     <incident
@@ -3132,10 +3222,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
             line="7"
             column="6"
-            startOffset="247"
+            startOffset="253"
             endLine="7"
             endColumn="18"
-            endOffset="259"/>
+            endOffset="265"/>
     </incident>
 
     <incident
@@ -3251,10 +3341,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
             line="5"
             column="5"
-            startOffset="199"
+            startOffset="203"
             endLine="5"
             endColumn="45"
-            endOffset="239"/>
+            endOffset="243"/>
     </incident>
 
     <incident
@@ -3321,10 +3411,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
             line="7"
             column="6"
-            startOffset="247"
+            startOffset="253"
             endLine="7"
             endColumn="18"
-            endOffset="259"/>
+            endOffset="265"/>
     </incident>
 
     <incident
@@ -4295,10 +4385,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
             line="16"
             column="10"
-            startOffset="570"
+            startOffset="585"
             endLine="16"
             endColumn="19"
-            endOffset="579"/>
+            endOffset="594"/>
     </incident>
 
     <incident
@@ -4323,10 +4413,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
             line="67"
             column="10"
-            startOffset="2345"
+            startOffset="2433"
             endLine="67"
             endColumn="21"
-            endOffset="2356"/>
+            endOffset="2444"/>
     </incident>
 
     <incident
@@ -4351,10 +4441,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
             line="74"
             column="10"
-            startOffset="2614"
+            startOffset="2709"
             endLine="74"
             endColumn="21"
-            endOffset="2625"/>
+            endOffset="2720"/>
     </incident>
 
     <incident
@@ -4379,10 +4469,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
             line="84"
             column="10"
-            startOffset="2992"
+            startOffset="3097"
             endLine="84"
             endColumn="21"
-            endOffset="3003"/>
+            endOffset="3108"/>
     </incident>
 
     <incident
@@ -4887,48 +4977,6 @@
             endLine="24"
             endColumn="29"
             endOffset="849"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
-            line="91"
-            column="17"
-            startOffset="3593"
-            endLine="91"
-            endColumn="37"
-            endOffset="3613"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
-            line="114"
-            column="17"
-            startOffset="4465"
-            endLine="114"
-            endColumn="37"
-            endOffset="4485"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
-            line="137"
-            column="17"
-            startOffset="5337"
-            endLine="137"
-            endColumn="37"
-            endOffset="5357"/>
     </incident>
 
     <incident

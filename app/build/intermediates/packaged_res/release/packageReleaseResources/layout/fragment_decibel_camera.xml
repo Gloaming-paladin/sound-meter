@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
-            tools:text="平均分贝: 42dB" />
+            tools:text="@string/decibel_camera_avg_label" />
 
         <TextView
             android:id="@+id/min_decibel_text"

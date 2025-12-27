@@ -38,12 +38,12 @@
         <fix-data missing="android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION" requirement="|android.permission.ACCESS_COARSE_LOCATION,android.permission.ACCESS_FINE_LOCATION"/>
         <location
             file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MainActivity.java"
-            line="139"
+            line="136"
             column="9"
-            startOffset="5990"
-            endLine="139"
+            startOffset="5978"
+            endLine="136"
             endColumn="46"
-            endOffset="6027"/>
+            endOffset="6015"/>
     </incident>
 
     <incident
