@@ -56,7 +56,7 @@
 31-->[androidx.core:core:1.9.0] C:\Users\30208\.gradle\caches\8.10.2\transforms\e255476a4c42dff7e48fd3b51ad4a402\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 32
 33    <application
-33-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:5-43:19
+33-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:14:5-44:19
 34        android:allowBackup="true"
 34-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:15:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -72,7 +72,7 @@
 41        android:theme="@style/AppTheme" >
 41-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:19:9-40
 42        <activity
-42-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:9-28:20
+42-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:20:9-29:20
 43            android:name="com.bodekjan.soundmeter.SplashActivity"
 43-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:21:13-43
 44            android:exported="true"
@@ -80,47 +80,47 @@
 45            android:theme="@style/SplashTheme" >
 45-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:23:13-47
 46            <intent-filter>
-46-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:24:13-27:29
+46-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:24:13-28:29
 47                <action android:name="android.intent.action.MAIN" />
 47-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:17-69
 47-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:25:25-66
 48
 49                <category android:name="android.intent.category.LAUNCHER" />
-49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:17-77
-49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:26:27-74
+49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:27:17-77
+49-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:27:27-74
 50            </intent-filter>
 51        </activity>
 52        <activity
-52-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:9-32:20
+52-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:9-33:20
 53            android:name="com.bodekjan.soundmeter.MainActivity"
-53-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:29:19-47
+53-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:19-47
 54            android:configChanges="orientation|keyboardHidden"
-54-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:30:13-63
+54-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:31:13-63
 55            android:exported="false" >
-55-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:31:13-37
+55-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:32:13-37
 56        </activity>
 57        <activity
-57-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:9-78
+57-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:9-78
 58            android:name="com.bodekjan.soundmeter.HistoryActivity"
-58-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:19-50
+58-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:19-50
 59            android:exported="false" />
-59-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:33:51-75
+59-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:34:51-75
 60
 61        <provider
 62            android:name="androidx.core.content.FileProvider"
-62-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:35:13-62
+62-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:13-62
 63            android:authorities="com.bodekjan.soundmeter.provider"
-63-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:36:13-60
+63-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:13-60
 64            android:exported="false"
-64-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:37:13-37
+64-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:38:13-37
 65            android:grantUriPermissions="true" >
-65-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:38:13-47
+65-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:39:13-47
 66            <meta-data
-66-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:39:13-41:54
+66-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:40:13-42:54
 67                android:name="android.support.FILE_PROVIDER_PATHS"
-67-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:40:17-67
+67-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:41:17-67
 68                android:resource="@xml/file_paths" />
-68-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:41:17-51
+68-->D:\androidcode\Sound-Meter\app\src\main\AndroidManifest.xml:42:17-51
 69        </provider>
 70
 71        <service

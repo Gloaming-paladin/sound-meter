@@ -63,6 +63,16 @@ public class RegisterFragment extends Fragment {
 
         registerButton.setOnClickListener(v -> registerUser());
         loginLink.setOnClickListener(v -> goToLogin());
+
+        passwordStrengthFeedback.setOnClickListener(v -> showPasswordStrengthInfoDialog());
+    }
+
+    private void showPasswordStrengthInfoDialog() {
+        new android.app.AlertDialog.Builder(requireContext(), R.style.DarkDialog)
+                .setTitle(R.string.password_strength_info_title)
+                .setMessage(R.string.password_strength_info_message)
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
     }
 
     private void registerUser() {

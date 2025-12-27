@@ -127,6 +127,9 @@
     <string name="password_strength_medium">中</string>
     <string name="password_strength_strong">强</string>
 
+    <string name="password_strength_info_title">密码强度标准</string>
+    <string name="password_strength_info_message">弱：长度小于8位。\n\n中：包含字母、数字、符号中的两种。\n\n强：包含字母、数字和特殊符号的组合，且长度大于8位。</string>
+
     <!-- Bottom Navigation -->
     <string name="nav_decibel_meter">分贝仪</string>
     <string name="nav_audio_analysis">音频分析</string>
