@@ -19,12 +19,31 @@ import androidx.fragment.app.FragmentTransaction;
 import com.bodekjan.soundmeter.view.ProgressButton;
 
 public class LoginFragment extends Fragment {
+    private OnLoginSuccessListener mListener;
+
+    // 1. 定义接口
+    public interface OnLoginSuccessListener {
+        void onLoginSuccess();
+    }
+
     private EditText usernameEditText;
     private EditText passwordEditText;
     private ProgressButton loginButton;
     private TextView registerLink;
     private NoiseDatabaseHelper dbHelper;
     private SharedPreferences sharedPreferences;
+
+    // 2. 在 onAttach 中建立连接
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof OnLoginSuccessListener) {
+            mListener = (OnLoginSuccessListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnLoginSuccessListener");
+        }
+    }
 
     @Nullable
     @Override
@@ -60,16 +79,17 @@ public class LoginFragment extends Fragment {
             }
 
             if (dbHelper.checkUser(username, password)) {
-                // 保存登录状态
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("isLoggedIn", true);
                 editor.putString("username", username);
                 editor.apply();
 
                 Toast.makeText(requireContext(), R.string.toast_login_success, Toast.LENGTH_SHORT).show();
-                
-                // 导航到主界面 (这里假设 MainActivity 会处理这个逻辑)
-                ((MainActivity) requireActivity()).showMainContent();
+
+                loginButton.stopMorphAnimation(); // 1. 先停止动画
+                if (mListener != null) {
+                    mListener.onLoginSuccess(); // 2. 再通知 Activity
+                }
 
             } else {
                 Toast.makeText(requireContext(), R.string.toast_login_failed, Toast.LENGTH_SHORT).show();
@@ -82,5 +102,12 @@ public class LoginFragment extends Fragment {
         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, new RegisterFragment());
         transaction.commit();
+    }
+
+    // 4. 在 onDetach 中解除连接
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
     }
 }

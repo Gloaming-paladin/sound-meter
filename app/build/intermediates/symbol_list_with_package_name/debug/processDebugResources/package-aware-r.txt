@@ -3522,6 +3522,7 @@ id spacer
 id special_effects_controller_view_tag
 id speed
 id splash_icon
+id splash_title
 id spline
 id split_action_bar
 id spread

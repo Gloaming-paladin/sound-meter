@@ -200,10 +200,6 @@
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\menu\\bottom_navigation_menu.xml"
     },
     {
-        "merged": "com.bodekjan.soundmeter.app-debug-46:/layout_activity_register.xml.flat",
-        "source": "com.bodekjan.soundmeter.app-main-48:/layout/activity_register.xml"
-    },
-    {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\layout\\activity_register.xml"
     },
@@ -266,6 +262,10 @@
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable_dark_gradient_background.xml.flat",
         "source": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-main-48:\\drawable\\dark_gradient_background.xml"
+    },
+    {
+        "merged": "com.bodekjan.soundmeter.app-debug-46:/layout_activity_main.xml.flat",
+        "source": "com.bodekjan.soundmeter.app-main-48:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\30208\\.gradle\\daemon\\8.10.2\\com.bodekjan.soundmeter.app-debug-46:\\drawable_ic_lock.xml.flat",

@@ -153,6 +153,7 @@ id register_username
 id save_avatar_button
 id speed
 id splash_icon
+id splash_title
 id start_stop_spectrum_button
 id timestamp
 id title

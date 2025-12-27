@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/option_select_from_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从手机相册选择"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/option_save_to_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存到手机"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#F0F0F0" />
+
+    <TextView
+        android:id="@+id/option_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/avatar_option_cancel"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,5046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.8.2" type="incidents">
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelCameraFragment.java"
+            line="408"
+            column="37"
+            startOffset="17823"
+            endLine="408"
+            endColumn="65"
+            endOffset="17851"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
+            line="350"
+            column="86"
+            startOffset="12559"
+            endLine="350"
+            endColumn="97"
+            endOffset="12570"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/HistoryActivity.java"
+            line="237"
+            column="44"
+            startOffset="9134"
+            endLine="237"
+            endColumn="87"
+            endOffset="9177"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="34"
+            replacement="36"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="10"
+            column="9"
+            startOffset="227"
+            endLine="10"
+            endColumn="28"
+            endOffset="246"/>
+    </incident>
+
+    <incident
+        id="SimpleDateFormat"
+        severity="warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelMeterFragment.java"
+            line="296"
+            column="28"
+            startOffset="10240"
+            endLine="296"
+            endColumn="67"
+            endOffset="10279"/>
+    </incident>
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one of: OutputFormat.DEFAULT, OutputFormat.THREE_GPP, OutputFormat.MPEG_4, OutputFormat.AMR_NB, OutputFormat.AMR_WB, OutputFormat.AAC_ADTS, OutputFormat.MPEG_2_TS, OutputFormat.WEBM, OutputFormat.OGG">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MyMediaRecorder.java"
+            line="56"
+            column="44"
+            startOffset="1524"
+            endLine="56"
+            endColumn="75"
+            endOffset="1555"/>
+    </incident>
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one of: AudioEncoder.DEFAULT, AudioEncoder.AMR_NB, AudioEncoder.AMR_WB, AudioEncoder.AAC, AudioEncoder.HE_AAC, AudioEncoder.AAC_ELD, AudioEncoder.VORBIS, AudioEncoder.OPUS">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to AudioEncoder.DEFAULT"
+                replacement="android.media.MediaRecorder.AudioEncoder.DEFAULT"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.AMR_NB"
+                replacement="android.media.MediaRecorder.AudioEncoder.AMR_NB"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.AMR_WB"
+                replacement="android.media.MediaRecorder.AudioEncoder.AMR_WB"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.AAC"
+                replacement="android.media.MediaRecorder.AudioEncoder.AAC"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.HE_AAC"
+                replacement="android.media.MediaRecorder.AudioEncoder.HE_AAC"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.AAC_ELD"
+                replacement="android.media.MediaRecorder.AudioEncoder.AAC_ELD"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.VORBIS"
+                replacement="android.media.MediaRecorder.AudioEncoder.VORBIS"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to AudioEncoder.OPUS"
+                replacement="android.media.MediaRecorder.AudioEncoder.OPUS"
+                shortenNames="true"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/MyMediaRecorder.java"
+            line="57"
+            column="44"
+            startOffset="1601"
+            endLine="57"
+            endColumn="75"
+            endOffset="1632"/>
+    </incident>
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one or more of: MediaCodec.BUFFER_FLAG_SYNC_FRAME, MediaCodec.BUFFER_FLAG_KEY_FRAME, MediaCodec.BUFFER_FLAG_CODEC_CONFIG, MediaCodec.BUFFER_FLAG_END_OF_STREAM, MediaCodec.BUFFER_FLAG_PARTIAL_FRAME, MediaCodec.BUFFER_FLAG_DECODE_ONLY, but could be MediaExtractor.SAMPLE_FLAG_SYNC, MediaExtractor.SAMPLE_FLAG_ENCRYPTED, MediaExtractor.SAMPLE_FLAG_PARTIAL_FRAME">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_SYNC_FRAME"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_SYNC_FRAME"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_KEY_FRAME"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_KEY_FRAME"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_CODEC_CONFIG"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_CODEC_CONFIG"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_END_OF_STREAM"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_END_OF_STREAM"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_PARTIAL_FRAME"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_PARTIAL_FRAME"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to MediaCodec.BUFFER_FLAG_DECODE_ONLY"
+                replacement="android.media.MediaCodec.BUFFER_FLAG_DECODE_ONLY"
+                shortenNames="true"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/PreviewFragment.java"
+            line="297"
+            column="40"
+            startOffset="13165"
+            endLine="297"
+            endColumn="71"
+            endOffset="13196"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/InfoDialog.java"
+            line="14"
+            column="80"
+            startOffset="438"
+            endLine="14"
+            endColumn="84"
+            endOffset="442"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/ProfileFragment.java"
+            line="175"
+            column="106"
+            startOffset="7580"
+            endLine="175"
+            endColumn="110"
+            endOffset="7584"/>
+    </incident>
+
+    <incident
+        id="AppCompatCustomView"
+        severity="error"
+        message="This custom view should extend `androidx.appcompat.widget.AppCompatImageView` instead">
+        <fix-replace
+            description="Extend AppCompat widget instead"
+            family="Extend AppCompat widget instead"
+            robot="true"
+            independent="true"
+            replacement="androidx.appcompat.widget.AppCompatImageView"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/Speedometer.java"
+            line="17"
+            column="34"
+            startOffset="442"
+            endLine="17"
+            endColumn="43"
+            endOffset="451"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.4.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.4.0"
+            replacement="1.13.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="37"
+            column="20"
+            startOffset="906"
+            endLine="37"
+            endColumn="64"
+            endOffset="950"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.10.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.10.0"
+            replacement="1.13.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="38"
+            column="20"
+            startOffset="971"
+            endLine="38"
+            endColumn="65"
+            endOffset="1016"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.itextpdf:itext7-core than 7.1.15 is available: 7.2.5">
+        <fix-replace
+            description="Change to 7.2.5"
+            family="Update versions"
+            oldString="7.1.15"
+            replacement="7.2.5"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="1037"
+            endLine="39"
+            endColumn="53"
+            endOffset="1070"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.itextpdf:kernel than 7.1.15 is available: 7.2.5">
+        <fix-replace
+            description="Change to 7.2.5"
+            family="Update versions"
+            oldString="7.1.15"
+            replacement="7.2.5"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="40"
+            column="20"
+            startOffset="1091"
+            endLine="40"
+            endColumn="48"
+            endOffset="1119"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.itextpdf:layout than 7.1.15 is available: 7.2.5">
+        <fix-replace
+            description="Change to 7.2.5"
+            family="Update versions"
+            oldString="7.1.15"
+            replacement="7.2.5"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="41"
+            column="20"
+            startOffset="1140"
+            endLine="41"
+            endColumn="48"
+            endOffset="1168"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.itextpdf:io than 7.1.15 is available: 7.2.5">
+        <fix-replace
+            description="Change to 7.2.5"
+            family="Update versions"
+            oldString="7.1.15"
+            replacement="7.2.5"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="42"
+            column="20"
+            startOffset="1189"
+            endLine="42"
+            endColumn="44"
+            endOffset="1213"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.2"
+            replacement="1.4.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="43"
+            column="20"
+            startOffset="1234"
+            endLine="43"
+            endColumn="62"
+            endOffset="1276"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of junit:junit than 4.12 is available: 4.13.2">
+        <fix-replace
+            description="Change to 4.13.2"
+            family="Update versions"
+            oldString="4.12"
+            replacement="4.13.2"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="45"
+            column="24"
+            startOffset="1363"
+            endLine="45"
+            endColumn="42"
+            endOffset="1381"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.5.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.5.1"
+            replacement="1.7.1"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="46"
+            column="20"
+            startOffset="1402"
+            endLine="46"
+            endColumn="56"
+            endOffset="1438"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.3.0">
+        <fix-replace
+            description="Change to 21.3.0"
+            family="Update versions"
+            oldString="21.0.1"
+            replacement="21.3.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="20"
+            startOffset="1580"
+            endLine="50"
+            endColumn="74"
+            endOffset="1634"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.0 is available: 1.12.2">
+        <fix-replace
+            description="Change to 1.12.2"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.12.2"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="20"
+            startOffset="1655"
+            endLine="51"
+            endColumn="58"
+            endOffset="1693"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9">
+        <fix-replace
+            description="Change to 1.8.9"
+            family="Update versions"
+            oldString="1.6.2"
+            replacement="1.8.9"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="52"
+            column="20"
+            startOffset="1714"
+            endLine="52"
+            endColumn="58"
+            endOffset="1752"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="54"
+            column="31"
+            startOffset="1806"
+            endLine="54"
+            endColumn="62"
+            endOffset="1837"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="55"
+            column="31"
+            startOffset="1869"
+            endLine="55"
+            endColumn="57"
+            endOffset="1895"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.2"
+            replacement="1.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="56"
+            column="31"
+            startOffset="1927"
+            endLine="56"
+            endColumn="59"
+            endOffset="1955"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:rules than 1.5.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="57"
+            column="31"
+            startOffset="1987"
+            endLine="57"
+            endColumn="58"
+            endOffset="2014"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="58"
+            column="31"
+            startOffset="2046"
+            endLine="58"
+            endColumn="75"
+            endOffset="2090"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-core than 1.3.0 is available: 1.5.2">
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="60"
+            column="20"
+            startOffset="2146"
+            endLine="60"
+            endColumn="68"
+            endOffset="2194"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-camera2 than 1.3.0 is available: 1.5.2">
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="61"
+            column="20"
+            startOffset="2215"
+            endLine="61"
+            endColumn="71"
+            endOffset="2266"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.3.0 is available: 1.5.2">
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="62"
+            column="20"
+            startOffset="2287"
+            endLine="62"
+            endColumn="73"
+            endOffset="2340"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.camera:camera-view than 1.3.0 is available: 1.5.2">
+        <fix-replace
+            description="Change to 1.5.2"
+            family="Update versions"
+            oldString="1.3.0"
+            replacement="1.5.2"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="63"
+            column="20"
+            startOffset="2361"
+            endLine="63"
+            endColumn="55"
+            endOffset="2396"/>
+    </incident>
+
+    <incident
+        id="RestrictedApi"
+        severity="error"
+        message="CameraSelector.getLensFacing can only be called from within the same library group (referenced groupId=`androidx.camera` from groupId=`Sound Meter`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/DecibelCameraFragment.java"
+            line="374"
+            column="28"
+            startOffset="16565"
+            endLine="374"
+            endColumn="41"
+            endOffset="16578"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="92"
+            column="17"
+            startOffset="3631"
+            endLine="92"
+            endColumn="40"
+            endOffset="3654"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="115"
+            column="17"
+            startOffset="4503"
+            endLine="115"
+            endColumn="40"
+            endOffset="4526"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="138"
+            column="17"
+            startOffset="5375"
+            endLine="138"
+            endColumn="40"
+            endOffset="5398"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="20"
+            column="39"
+            startOffset="736"
+            endLine="20"
+            endColumn="46"
+            endOffset="743"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="26"
+            column="39"
+            startOffset="948"
+            endLine="26"
+            endColumn="43"
+            endOffset="952"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="45"
+            column="39"
+            startOffset="1656"
+            endLine="45"
+            endColumn="46"
+            endOffset="1663"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="51"
+            column="39"
+            startOffset="1898"
+            endLine="51"
+            endColumn="46"
+            endOffset="1905"/>
+    </incident>
+
+    <incident
+        id="PxUsage"
+        severity="warning"
+        message="Avoid using &quot;`px`&quot; as units; use &quot;`dp`&quot; instead">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_info.xml"
+            line="84"
+            column="13"
+            startOffset="3495"
+            endLine="84"
+            endColumn="42"
+            endOffset="3524"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;splash_title&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="23"
+            column="13"
+            startOffset="1112"
+            endLine="23"
+            endColumn="32"
+            endOffset="1131"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;profile_option_text&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="24"
+            column="13"
+            startOffset="1158"
+            endLine="24"
+            endColumn="39"
+            endOffset="1184"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;profile_login_register&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="25"
+            column="13"
+            startOffset="1212"
+            endLine="25"
+            endColumn="42"
+            endOffset="1241"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;settings_title&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="26"
+            column="13"
+            startOffset="1272"
+            endLine="26"
+            endColumn="34"
+            endOffset="1293"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;about_description&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="27"
+            column="13"
+            startOffset="1321"
+            endLine="27"
+            endColumn="37"
+            endOffset="1345"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;about_version&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="28"
+            column="13"
+            startOffset="1393"
+            endLine="28"
+            endColumn="33"
+            endOffset="1413"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;avatar_option_cancel&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="29"
+            column="13"
+            startOffset="1453"
+            endLine="29"
+            endColumn="40"
+            endOffset="1480"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;avatar_option_save_to_phone&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="30"
+            column="13"
+            startOffset="1506"
+            endLine="30"
+            endColumn="47"
+            endOffset="1540"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;avatar_option_select_from_album&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="31"
+            column="13"
+            startOffset="1569"
+            endLine="31"
+            endColumn="51"
+            endOffset="1607"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;login_register_link&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="32"
+            column="13"
+            startOffset="1638"
+            endLine="32"
+            endColumn="39"
+            endOffset="1664"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;login_button&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="33"
+            column="13"
+            startOffset="1698"
+            endLine="33"
+            endColumn="32"
+            endOffset="1717"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;register_login_link&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="34"
+            column="13"
+            startOffset="1743"
+            endLine="34"
+            endColumn="39"
+            endOffset="1769"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;register_button&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="35"
+            column="13"
+            startOffset="1800"
+            endLine="35"
+            endColumn="35"
+            endOffset="1822"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;register_confirm_password&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="36"
+            column="13"
+            startOffset="1848"
+            endLine="36"
+            endColumn="45"
+            endOffset="1880"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;register_password&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="37"
+            column="13"
+            startOffset="1908"
+            endLine="37"
+            endColumn="37"
+            endOffset="1932"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;register_username&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="38"
+            column="13"
+            startOffset="1958"
+            endLine="38"
+            endColumn="37"
+            endOffset="1982"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_start_recording&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="40"
+            column="13"
+            startOffset="2040"
+            endLine="40"
+            endColumn="39"
+            endOffset="2066"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_recording_failed&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="41"
+            column="13"
+            startOffset="2107"
+            endLine="41"
+            endColumn="40"
+            endOffset="2134"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;title_save_recording&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="42"
+            column="13"
+            startOffset="2174"
+            endLine="42"
+            endColumn="40"
+            endOffset="2201"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_save_recording_confirm&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="43"
+            column="13"
+            startOffset="2239"
+            endLine="43"
+            endColumn="46"
+            endOffset="2272"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_save&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="44"
+            column="13"
+            startOffset="2335"
+            endLine="44"
+            endColumn="28"
+            endOffset="2350"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;title_select_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="45"
+            column="13"
+            startOffset="2378"
+            endLine="45"
+            endColumn="39"
+            endOffset="2404"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_saved_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="46"
+            column="13"
+            startOffset="2446"
+            endLine="46"
+            endColumn="36"
+            endOffset="2469"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;title_permission_request&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="47"
+            column="13"
+            startOffset="2521"
+            endLine="47"
+            endColumn="44"
+            endOffset="2552"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_permission_needed&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="48"
+            column="13"
+            startOffset="2594"
+            endLine="48"
+            endColumn="41"
+            endOffset="2622"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_retry&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="49"
+            column="13"
+            startOffset="2720"
+            endLine="49"
+            endColumn="29"
+            endOffset="2736"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_cancel&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="50"
+            column="13"
+            startOffset="2765"
+            endLine="50"
+            endColumn="30"
+            endOffset="2782"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_permission_denied_forever&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="51"
+            column="13"
+            startOffset="2812"
+            endLine="51"
+            endColumn="49"
+            endOffset="2848"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_go_to_settings&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="52"
+            column="13"
+            startOffset="2979"
+            endLine="52"
+            endColumn="38"
+            endOffset="3004"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_location_success&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="53"
+            column="13"
+            startOffset="3036"
+            endLine="53"
+            endColumn="40"
+            endOffset="3063"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;chart_description&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="54"
+            column="13"
+            startOffset="3115"
+            endLine="54"
+            endColumn="37"
+            endOffset="3139"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;chart_label&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="55"
+            column="13"
+            startOffset="3188"
+            endLine="55"
+            endColumn="31"
+            endOffset="3206"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_no_history&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="58"
+            column="13"
+            startOffset="3275"
+            endLine="58"
+            endColumn="34"
+            endOffset="3296"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;title_clear_history&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="59"
+            column="13"
+            startOffset="3345"
+            endLine="59"
+            endColumn="39"
+            endOffset="3371"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_clear_history_confirm&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="60"
+            column="13"
+            startOffset="3408"
+            endLine="60"
+            endColumn="45"
+            endOffset="3440"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_confirm&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="61"
+            column="13"
+            startOffset="3512"
+            endLine="61"
+            endColumn="31"
+            endOffset="3530"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_history_cleared&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="62"
+            column="13"
+            startOffset="3561"
+            endLine="62"
+            endColumn="39"
+            endOffset="3587"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_location_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="63"
+            column="13"
+            startOffset="3626"
+            endLine="63"
+            endColumn="39"
+            endOffset="3652"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_logged_out&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="66"
+            column="13"
+            startOffset="3732"
+            endLine="66"
+            endColumn="34"
+            endOffset="3753"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_logged_in&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="67"
+            column="13"
+            startOffset="3787"
+            endLine="67"
+            endColumn="33"
+            endOffset="3807"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_logout&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="68"
+            column="13"
+            startOffset="3853"
+            endLine="68"
+            endColumn="30"
+            endOffset="3870"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;status_logged_in&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="69"
+            column="13"
+            startOffset="3900"
+            endLine="69"
+            endColumn="36"
+            endOffset="3923"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_login&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="70"
+            column="13"
+            startOffset="3956"
+            endLine="70"
+            endColumn="29"
+            endOffset="3972"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;status_logged_out&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="71"
+            column="13"
+            startOffset="4001"
+            endLine="71"
+            endColumn="37"
+            endOffset="4025"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_recording_permission_needed&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="74"
+            column="13"
+            startOffset="4100"
+            endLine="74"
+            endColumn="51"
+            endOffset="4138"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_csv_export_success&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="75"
+            column="13"
+            startOffset="4191"
+            endLine="75"
+            endColumn="42"
+            endOffset="4220"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_csv_export_failed&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="76"
+            column="13"
+            startOffset="4260"
+            endLine="76"
+            endColumn="41"
+            endOffset="4288"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_pdf_unavailable&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="77"
+            column="13"
+            startOffset="4333"
+            endLine="77"
+            endColumn="39"
+            endOffset="4359"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_share_in_development&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="78"
+            column="13"
+            startOffset="4447"
+            endLine="78"
+            endColumn="44"
+            endOffset="4478"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;msg_all_permissions_needed&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="79"
+            column="13"
+            startOffset="4536"
+            endLine="79"
+            endColumn="46"
+            endOffset="4569"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_start_spectrum&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="80"
+            column="13"
+            startOffset="4642"
+            endLine="80"
+            endColumn="38"
+            endOffset="4667"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_stop_spectrum&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="81"
+            column="13"
+            startOffset="4714"
+            endLine="81"
+            endColumn="37"
+            endOffset="4738"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_real_time_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="83"
+            column="13"
+            startOffset="4786"
+            endLine="83"
+            endColumn="39"
+            endOffset="4812"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_max_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="84"
+            column="13"
+            startOffset="4843"
+            endLine="84"
+            endColumn="33"
+            endOffset="4863"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_min_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="85"
+            column="13"
+            startOffset="4899"
+            endLine="85"
+            endColumn="33"
+            endOffset="4919"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_avg_format&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="86"
+            column="13"
+            startOffset="4955"
+            endLine="86"
+            endColumn="33"
+            endOffset="4975"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_initial_real_time&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="87"
+            column="13"
+            startOffset="5011"
+            endLine="87"
+            endColumn="40"
+            endOffset="5038"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_initial_max&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="88"
+            column="13"
+            startOffset="5067"
+            endLine="88"
+            endColumn="34"
+            endOffset="5088"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_initial_min&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="89"
+            column="13"
+            startOffset="5122"
+            endLine="89"
+            endColumn="34"
+            endOffset="5143"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;db_initial_avg&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="90"
+            column="13"
+            startOffset="5177"
+            endLine="90"
+            endColumn="34"
+            endOffset="5198"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;title_audio_analysis&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="92"
+            column="13"
+            startOffset="5234"
+            endLine="92"
+            endColumn="40"
+            endOffset="5261"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;label_thd&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="93"
+            column="13"
+            startOffset="5299"
+            endLine="93"
+            endColumn="29"
+            endOffset="5315"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;label_snr&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="94"
+            column="13"
+            startOffset="5346"
+            endLine="94"
+            endColumn="29"
+            endOffset="5362"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;label_centroid&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="95"
+            column="13"
+            startOffset="5393"
+            endLine="95"
+            endColumn="34"
+            endOffset="5414"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;label_bandwidth&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="96"
+            column="13"
+            startOffset="5453"
+            endLine="96"
+            endColumn="35"
+            endOffset="5475"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_export_csv&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="97"
+            column="13"
+            startOffset="5515"
+            endLine="97"
+            endColumn="34"
+            endOffset="5536"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_generate_pdf&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="98"
+            column="13"
+            startOffset="5570"
+            endLine="98"
+            endColumn="36"
+            endOffset="5593"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_share_report&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="99"
+            column="13"
+            startOffset="5629"
+            endLine="99"
+            endColumn="36"
+            endOffset="5652"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_register&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="100"
+            column="13"
+            startOffset="5688"
+            endLine="100"
+            endColumn="32"
+            endOffset="5707"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;saved_successfully&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="101"
+            column="13"
+            startOffset="5739"
+            endLine="101"
+            endColumn="38"
+            endOffset="5764"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;save_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="102"
+            column="13"
+            startOffset="5806"
+            endLine="102"
+            endColumn="31"
+            endOffset="5824"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;action_export&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="103"
+            column="13"
+            startOffset="5859"
+            endLine="103"
+            endColumn="33"
+            endOffset="5879"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;action_open_folder&quot; is not translated in &quot;fr&quot; (French)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="104"
+            column="13"
+            startOffset="5909"
+            endLine="104"
+            endColumn="38"
+            endOffset="5934"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;hint_username&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="107"
+            column="13"
+            startOffset="6002"
+            endLine="107"
+            endColumn="33"
+            endOffset="6022"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;hint_password&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="108"
+            column="13"
+            startOffset="6049"
+            endLine="108"
+            endColumn="33"
+            endOffset="6069"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_login_text&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="109"
+            column="13"
+            startOffset="6095"
+            endLine="109"
+            endColumn="34"
+            endOffset="6116"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;link_no_account&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="110"
+            column="13"
+            startOffset="6142"
+            endLine="110"
+            endColumn="35"
+            endOffset="6164"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;hint_confirm_password&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="111"
+            column="13"
+            startOffset="6198"
+            endLine="111"
+            endColumn="41"
+            endOffset="6226"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_register_text&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="112"
+            column="13"
+            startOffset="6254"
+            endLine="112"
+            endColumn="37"
+            endOffset="6278"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;link_already_have_account&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="113"
+            column="13"
+            startOffset="6304"
+            endLine="113"
+            endColumn="45"
+            endOffset="6336"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_fill_all_fields&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="116"
+            column="13"
+            startOffset="6398"
+            endLine="116"
+            endColumn="41"
+            endOffset="6426"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_login_success&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="117"
+            column="13"
+            startOffset="6459"
+            endLine="117"
+            endColumn="39"
+            endOffset="6485"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_login_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="118"
+            column="13"
+            startOffset="6514"
+            endLine="118"
+            endColumn="38"
+            endOffset="6539"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_register_fill_all_fields&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="120"
+            column="13"
+            startOffset="6573"
+            endLine="120"
+            endColumn="50"
+            endOffset="6610"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_password_mismatch&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="121"
+            column="13"
+            startOffset="6641"
+            endLine="121"
+            endColumn="43"
+            endOffset="6671"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_username_exists&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="122"
+            column="13"
+            startOffset="6705"
+            endLine="122"
+            endColumn="41"
+            endOffset="6733"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_register_success&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="123"
+            column="13"
+            startOffset="6763"
+            endLine="123"
+            endColumn="42"
+            endOffset="6792"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_register_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="124"
+            column="13"
+            startOffset="6821"
+            endLine="124"
+            endColumn="41"
+            endOffset="6849"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;password_strength_weak&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="126"
+            column="13"
+            startOffset="6885"
+            endLine="126"
+            endColumn="42"
+            endOffset="6914"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;password_strength_medium&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="127"
+            column="13"
+            startOffset="6939"
+            endLine="127"
+            endColumn="44"
+            endOffset="6970"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;password_strength_strong&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="128"
+            column="13"
+            startOffset="6995"
+            endLine="128"
+            endColumn="44"
+            endOffset="7026"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;password_strength_info_title&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="130"
+            column="13"
+            startOffset="7053"
+            endLine="130"
+            endColumn="48"
+            endOffset="7088"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;password_strength_info_message&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="131"
+            column="13"
+            startOffset="7118"
+            endLine="131"
+            endColumn="50"
+            endOffset="7155"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;nav_decibel_meter&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="134"
+            column="13"
+            startOffset="7273"
+            endLine="134"
+            endColumn="37"
+            endOffset="7297"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;nav_audio_analysis&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="135"
+            column="13"
+            startOffset="7324"
+            endLine="135"
+            endColumn="38"
+            endOffset="7349"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;nav_decibel_camera&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="136"
+            column="13"
+            startOffset="7377"
+            endLine="136"
+            endColumn="38"
+            endOffset="7402"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;nav_profile&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="137"
+            column="13"
+            startOffset="7430"
+            endLine="137"
+            endColumn="31"
+            endOffset="7448"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_refresh&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="140"
+            column="13"
+            startOffset="7498"
+            endLine="140"
+            endColumn="31"
+            endOffset="7516"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;btn_clear_all&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="141"
+            column="13"
+            startOffset="7542"
+            endLine="141"
+            endColumn="33"
+            endOffset="7562"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;dialog_avatar_save_to_local&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="144"
+            column="13"
+            startOffset="7632"
+            endLine="144"
+            endColumn="47"
+            endOffset="7666"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;dialog_avatar_change_avatar&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="145"
+            column="13"
+            startOffset="7697"
+            endLine="145"
+            endColumn="47"
+            endOffset="7731"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_avg_decibel&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="148"
+            column="13"
+            startOffset="7803"
+            endLine="148"
+            endColumn="46"
+            endOffset="7836"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_min_decibel&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="149"
+            column="13"
+            startOffset="7871"
+            endLine="149"
+            endColumn="46"
+            endOffset="7904"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_max_decibel&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="150"
+            column="13"
+            startOffset="7939"
+            endLine="150"
+            endColumn="46"
+            endOffset="7972"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_camera_location&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="151"
+            column="13"
+            startOffset="8007"
+            endLine="151"
+            endColumn="43"
+            endOffset="8037"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;camera_not_ready&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="152"
+            column="13"
+            startOffset="8065"
+            endLine="152"
+            endColumn="36"
+            endOffset="8088"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;photo_capture_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="153"
+            column="13"
+            startOffset="8126"
+            endLine="153"
+            endColumn="40"
+            endOffset="8153"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;image_save_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="154"
+            column="13"
+            startOffset="8187"
+            endLine="154"
+            endColumn="37"
+            endOffset="8211"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;recording_started&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="155"
+            column="13"
+            startOffset="8241"
+            endLine="155"
+            endColumn="37"
+            endOffset="8265"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;video_recording_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="156"
+            column="13"
+            startOffset="8293"
+            endLine="156"
+            endColumn="42"
+            endOffset="8322"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;mic_occupied&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="157"
+            column="13"
+            startOffset="8356"
+            endLine="157"
+            endColumn="32"
+            endOffset="8375"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;location_service_required&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="158"
+            column="13"
+            startOffset="8415"
+            endLine="158"
+            endColumn="45"
+            endOffset="8447"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;enable_location_service&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="159"
+            column="13"
+            startOffset="8485"
+            endLine="159"
+            endColumn="43"
+            endOffset="8515"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;cancel&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="160"
+            column="13"
+            startOffset="8541"
+            endLine="160"
+            endColumn="26"
+            endOffset="8554"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;location_unavailable&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="161"
+            column="13"
+            startOffset="8580"
+            endLine="161"
+            endColumn="40"
+            endOffset="8607"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;location_fetch_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="162"
+            column="13"
+            startOffset="8647"
+            endLine="162"
+            endColumn="41"
+            endOffset="8675"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;location_format&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="163"
+            column="13"
+            startOffset="8705"
+            endLine="163"
+            endColumn="35"
+            endOffset="8727"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_min&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="164"
+            column="13"
+            startOffset="8773"
+            endLine="164"
+            endColumn="37"
+            endOffset="8797"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_avg&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="165"
+            column="13"
+            startOffset="8823"
+            endLine="165"
+            endColumn="37"
+            endOffset="8847"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_max&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="166"
+            column="13"
+            startOffset="8873"
+            endLine="166"
+            endColumn="37"
+            endOffset="8897"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_db_format&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="167"
+            column="13"
+            startOffset="8923"
+            endLine="167"
+            endColumn="43"
+            endOffset="8953"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;decibel_meter_0_db&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="168"
+            column="13"
+            startOffset="8984"
+            endLine="168"
+            endColumn="38"
+            endOffset="9009"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;location_permission_not_granted&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="169"
+            column="13"
+            startOffset="9037"
+            endLine="169"
+            endColumn="51"
+            endOffset="9075"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;noise_data_save_success&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="170"
+            column="13"
+            startOffset="9107"
+            endLine="170"
+            endColumn="43"
+            endOffset="9137"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;noise_data_save_failed&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="171"
+            column="13"
+            startOffset="9176"
+            endLine="171"
+            endColumn="42"
+            endOffset="9205"/>
+    </incident>
+
+    <incident
+        id="MissingTranslation"
+        severity="error"
+        message="&quot;toast_password_too_weak&quot; is not translated in &quot;fr&quot; (French) or &quot;zh&quot; (Chinese)">
+        <fix-attribute
+            description="Mark non-translatable"
+            attribute="translatable"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="172"
+            column="13"
+            startOffset="9237"
+            endLine="172"
+            endColumn="43"
+            endOffset="9267"/>
+    </incident>
+
+    <incident
+        id="TrustAllX509TrustManager"
+        severity="warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.68/81da950604ff0b2652348cbd2b48fde46ced9867/bcpkix-jdk15on-1.68.jar"/>
+    </incident>
+
+    <incident
+        id="TrustAllX509TrustManager"
+        severity="warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.68/81da950604ff0b2652348cbd2b48fde46ced9867/bcpkix-jdk15on-1.68.jar"/>
+    </incident>
+
+    <incident
+        id="TrustAllX509TrustManager"
+        severity="warning"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.68/81da950604ff0b2652348cbd2b48fde46ced9867/bcpkix-jdk15on-1.68.jar"/>
+    </incident>
+
+    <incident
+        id="DrawAllocation"
+        severity="warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/SpectrumView.java"
+            line="91"
+            column="45"
+            startOffset="2518"
+            endLine="91"
+            endColumn="73"
+            endOffset="2546"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `FrameLayout`: `layout_centerInParent`">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="17"
+            column="13"
+            startOffset="694"
+            endLine="17"
+            endColumn="49"
+            endOffset="730"/>
+    </incident>
+
+    <incident
+        id="UseCompoundDrawables"
+        severity="warning"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="7"
+            column="6"
+            startOffset="247"
+            endLine="7"
+            endColumn="18"
+            endOffset="259"/>
+    </incident>
+
+    <incident
+        id="VectorPath"
+        severity="warning"
+        message="Very long vector path (870 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_settings.xml"
+            line="8"
+            column="25"
+            startOffset="261"
+            endLine="8"
+            endColumn="895"
+            endOffset="1131"/>
+    </incident>
+
+    <incident
+        id="DisableBaselineAlignment"
+        severity="warning"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance">
+        <fix-attribute
+            description="Set baselineAligned=&quot;false&quot;"
+            robot="true"
+            independent="true"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="baselineAligned"
+            value="false"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="66"
+            column="6"
+            startOffset="2631"
+            endLine="66"
+            endColumn="18"
+            endOffset="2643"/>
+    </incident>
+
+    <incident
+        id="NestedWeights"
+        severity="warning"
+        message="Nested weights are bad for performance">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="78"
+            column="13"
+            startOffset="3079"
+            endLine="78"
+            endColumn="38"
+            endOffset="3104"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg_page` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="6"
+            column="5"
+            startOffset="237"
+            endLine="6"
+            endColumn="43"
+            endOffset="275"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#2c3e50` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="6"
+            column="5"
+            startOffset="255"
+            endLine="6"
+            endColumn="33"
+            endOffset="283"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#2c3e50` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="6"
+            column="5"
+            startOffset="260"
+            endLine="6"
+            endColumn="33"
+            endOffset="288"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `#2c3e50` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="6"
+            column="5"
+            startOffset="255"
+            endLine="6"
+            endColumn="33"
+            endOffset="283"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/SplashTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="5"
+            column="5"
+            startOffset="199"
+            endLine="5"
+            endColumn="45"
+            endOffset="239"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/bottom_sheet_avatar_options.xml"
+            line="6"
+            column="5"
+            startOffset="232"
+            endLine="6"
+            endColumn="46"
+            endOffset="273"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg_page` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_audio_analysis.xml"
+            line="6"
+            column="5"
+            startOffset="237"
+            endLine="6"
+            endColumn="43"
+            endOffset="275"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/fullblack` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="7"
+            column="5"
+            startOffset="310"
+            endLine="7"
+            endColumn="42"
+            endOffset="347"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg_page` with a theme that also paints a background (inferred theme is `@style/AppTheme`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
+            line="5"
+            column="5"
+            startOffset="203"
+            endLine="5"
+            endColumn="43"
+            endOffset="241"/>
+    </incident>
+
+    <incident
+        id="UselessParent"
+        severity="warning"
+        message="This `LinearLayout` layout or its `RelativeLayout` parent is possibly unnecessary; transfer the `background` attribute to the other view">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="7"
+            column="6"
+            startOffset="247"
+            endLine="7"
+            endColumn="18"
+            endOffset="259"/>
+    </incident>
+
+    <incident
+        id="UselessParent"
+        severity="warning"
+        message="This `LinearLayout` layout or its `FrameLayout` parent is unnecessary; transfer the `background` attribute to the other view">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/dialog_info.xml"
+            line="9"
+            column="6"
+            startOffset="300"
+            endLine="9"
+            endColumn="18"
+            endOffset="312"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-zh/strings.xml"
+            line="73"
+            column="35"
+            startOffset="3548"
+            endLine="73"
+            endColumn="45"
+            endOffset="3558"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-zh/strings.xml"
+            line="74"
+            column="35"
+            startOffset="3602"
+            endLine="74"
+            endColumn="45"
+            endOffset="3612"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values-zh/strings.xml"
+            line="75"
+            column="35"
+            startOffset="3656"
+            endLine="75"
+            endColumn="45"
+            endOffset="3666"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="88"
+            column="35"
+            startOffset="5089"
+            endLine="88"
+            endColumn="45"
+            endOffset="5099"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="89"
+            column="35"
+            startOffset="5144"
+            endLine="89"
+            endColumn="45"
+            endOffset="5154"/>
+    </incident>
+
+    <incident
+        id="TypographyDashes"
+        severity="warning"
+        message="Replace &quot;--&quot; with an &quot;em dash&quot; character (—, &amp;#8212;) ?">
+        <fix-replace
+            description="Replace with —"
+            oldString="--"
+            replacement="—"
+            priority="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="90"
+            column="35"
+            startOffset="5199"
+            endLine="90"
+            endColumn="45"
+            endOffset="5209"/>
+    </incident>
+
+    <incident
+        id="IconNoDpi"
+        severity="warning"
+        message="The following images appear in both `-nodpi` and in a density folder: question.png, refresh.png">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xhdpi/refresh.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xhdpi/question.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-mdpi/refresh.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-mdpi/question.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-hdpi/refresh.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-hdpi/question.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `question.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/question.png: 24x25 dp (36x38 px), drawable-mdpi/question.png: 48x50 dp (48x50 px), drawable-xhdpi/question.png: 48x51 dp (96x101 px)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-hdpi/question.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-mdpi/question.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xhdpi/question.png"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `refresh.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/refresh.png: 24x25 dp (36x38 px), drawable-mdpi/refresh.png: 48x50 dp (48x50 px), drawable-xhdpi/refresh.png: 48x51 dp (96x101 px)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-hdpi/refresh.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-mdpi/refresh.png"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable-xhdpi/refresh.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/camera.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/camera.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/history_record.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/history_record.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/ic_audio_analysis.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_audio_analysis.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/ic_decibel.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_decibel.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/ic_location.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_location.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/ic_profile.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_profile.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/ic_stop.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_stop.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/log_out.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/log_out.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/pause.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/pause.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/play.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/play.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/record.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/record.png"/>
+    </incident>
+
+    <incident
+        id="IconMissingDensityFolder"
+        severity="warning"
+        message="Missing density variation folders in `src\main\res`: drawable-xxhdpi">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="312"
+                    endOffset="1320"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="503"
+                    endOffset="891"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="903"
+                    endOffset="1297"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="15"
+            column="10"
+            startOffset="504"
+            endLine="15"
+            endColumn="16"
+            endOffset="510"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="312"
+                    endOffset="1320"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="503"
+                    endOffset="891"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+                    startOffset="903"
+                    endOffset="1297"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="25"
+            column="10"
+            startOffset="904"
+            endLine="25"
+            endColumn="16"
+            endOffset="910"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2276"
+                    endOffset="3024"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2583"
+                    endOffset="2768"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2778"
+                    endOffset="3003"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+            line="74"
+            column="10"
+            startOffset="2584"
+            endLine="74"
+            endColumn="16"
+            endOffset="2590"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2276"
+                    endOffset="3024"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2583"
+                    endOffset="2768"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+                    startOffset="2778"
+                    endOffset="3003"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+            line="80"
+            column="10"
+            startOffset="2779"
+            endLine="80"
+            endColumn="16"
+            endOffset="2785"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="36"
+            column="14"
+            startOffset="1255"
+            endLine="36"
+            endColumn="22"
+            endOffset="1263"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="36"
+            column="14"
+            startOffset="1264"
+            endLine="36"
+            endColumn="22"
+            endOffset="1272"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="32"
+            column="14"
+            startOffset="1134"
+            endLine="32"
+            endColumn="22"
+            endOffset="1142"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            point="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="32"
+            column="14"
+            startOffset="1143"
+            endLine="32"
+            endColumn="22"
+            endOffset="1151"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="36"
+            column="14"
+            startOffset="1255"
+            endLine="36"
+            endColumn="22"
+            endOffset="1263"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="52"
+            column="18"
+            startOffset="1936"
+            endLine="52"
+            endColumn="26"
+            endOffset="1944"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="36"
+            column="14"
+            startOffset="1264"
+            endLine="36"
+            endColumn="22"
+            endOffset="1272"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="52"
+            column="18"
+            startOffset="1948"
+            endLine="52"
+            endColumn="26"
+            endOffset="1956"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="79"
+            column="18"
+            startOffset="3195"
+            endLine="79"
+            endColumn="26"
+            endOffset="3203"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="32"
+            column="14"
+            startOffset="1134"
+            endLine="32"
+            endColumn="22"
+            endOffset="1142"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="43"
+            column="14"
+            startOffset="1641"
+            endLine="43"
+            endColumn="22"
+            endOffset="1649"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="32"
+            column="14"
+            startOffset="1143"
+            endLine="32"
+            endColumn="22"
+            endOffset="1151"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="43"
+            column="14"
+            startOffset="1653"
+            endLine="43"
+            endColumn="22"
+            endOffset="1661"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                point="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="56"
+            column="14"
+            startOffset="2258"
+            endLine="56"
+            endColumn="22"
+            endOffset="2266"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="8"
+            column="6"
+            startOffset="291"
+            endLine="8"
+            endColumn="15"
+            endOffset="300"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="64"
+            column="18"
+            startOffset="2521"
+            endLine="64"
+            endColumn="27"
+            endOffset="2530"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="12"
+            column="6"
+            startOffset="431"
+            endLine="12"
+            endColumn="15"
+            endOffset="440"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="64"
+            column="18"
+            startOffset="2536"
+            endLine="64"
+            endColumn="27"
+            endOffset="2545"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="91"
+            column="18"
+            startOffset="3799"
+            endLine="91"
+            endColumn="27"
+            endOffset="3808"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="16"
+            column="10"
+            startOffset="570"
+            endLine="16"
+            endColumn="19"
+            endOffset="579"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
+            line="67"
+            column="10"
+            startOffset="2345"
+            endLine="67"
+            endColumn="21"
+            endOffset="2356"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
+            line="74"
+            column="10"
+            startOffset="2614"
+            endLine="74"
+            endColumn="21"
+            endOffset="2625"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_camera.xml"
+            line="84"
+            column="10"
+            startOffset="2992"
+            endLine="84"
+            endColumn="21"
+            endOffset="3003"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="24"
+            column="10"
+            startOffset="976"
+            endLine="24"
+            endColumn="21"
+            endOffset="987"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="36"
+            column="10"
+            startOffset="1472"
+            endLine="36"
+            endColumn="21"
+            endOffset="1483"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="45"
+            column="10"
+            startOffset="1817"
+            endLine="45"
+            endColumn="21"
+            endOffset="1828"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="55"
+            column="10"
+            startOffset="2216"
+            endLine="55"
+            endColumn="21"
+            endOffset="2227"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_login.xml"
+            line="8"
+            column="6"
+            startOffset="310"
+            endLine="8"
+            endColumn="15"
+            endOffset="319"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+            line="7"
+            column="6"
+            startOffset="253"
+            endLine="7"
+            endColumn="15"
+            endOffset="262"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
+            line="16"
+            column="10"
+            startOffset="558"
+            endLine="16"
+            endColumn="19"
+            endOffset="567"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_register.xml"
+            line="8"
+            column="6"
+            startOffset="310"
+            endLine="8"
+            endColumn="15"
+            endOffset="319"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/list_item_profile_option.xml"
+            line="10"
+            column="6"
+            startOffset="359"
+            endLine="10"
+            endColumn="15"
+            endOffset="368"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                point="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/list_item_profile_option.xml"
+            line="26"
+            column="6"
+            startOffset="891"
+            endLine="26"
+            endColumn="15"
+            endOffset="900"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/ProfileFragment.java"
+            line="148"
+            column="38"
+            startOffset="6321"
+            endLine="148"
+            endColumn="55"
+            endOffset="6338"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/RegisterActivity.java"
+            line="166"
+            column="46"
+            startOffset="7165"
+            endLine="166"
+            endColumn="52"
+            endOffset="7171"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/RegisterActivity.java"
+            line="170"
+            column="50"
+            startOffset="7335"
+            endLine="170"
+            endColumn="58"
+            endOffset="7343"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/RegisterActivity.java"
+            line="173"
+            column="50"
+            startOffset="7504"
+            endLine="173"
+            endColumn="58"
+            endOffset="7512"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/bodekjan/soundmeter/RegisterActivity.java"
+            line="176"
+            column="50"
+            startOffset="7657"
+            endLine="176"
+            endColumn="56"
+            endOffset="7663"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;刷新历史记录&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="23"
+            column="13"
+            startOffset="853"
+            endLine="23"
+            endColumn="48"
+            endOffset="888"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;清空所有历史数据&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_history.xml"
+            line="33"
+            column="13"
+            startOffset="1257"
+            endLine="33"
+            endColumn="50"
+            endOffset="1294"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="43"
+            column="17"
+            startOffset="1614"
+            endLine="43"
+            endColumn="40"
+            endOffset="1637"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Password&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="59"
+            column="21"
+            startOffset="2321"
+            endLine="59"
+            endColumn="44"
+            endOffset="2344"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Login&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="84"
+            column="9"
+            startOffset="3364"
+            endLine="84"
+            endColumn="29"
+            endOffset="3384"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="43"
+            column="17"
+            startOffset="1626"
+            endLine="43"
+            endColumn="40"
+            endOffset="1649"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Password&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="59"
+            column="21"
+            startOffset="2336"
+            endLine="59"
+            endColumn="44"
+            endOffset="2359"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Confirm Password&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="86"
+            column="21"
+            startOffset="3591"
+            endLine="86"
+            endColumn="52"
+            endOffset="3622"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Register&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="121"
+            column="9"
+            startOffset="5066"
+            endLine="121"
+            endColumn="32"
+            endOffset="5089"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;从手机相册选择&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/bottom_sheet_avatar_options.xml"
+            line="14"
+            column="9"
+            startOffset="499"
+            endLine="14"
+            endColumn="31"
+            endOffset="521"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;保存到手机&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/bottom_sheet_avatar_options.xml"
+            line="24"
+            column="9"
+            startOffset="829"
+            endLine="24"
+            endColumn="29"
+            endOffset="849"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="91"
+            column="17"
+            startOffset="3593"
+            endLine="91"
+            endColumn="37"
+            endOffset="3613"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="114"
+            column="17"
+            startOffset="4465"
+            endLine="114"
+            endColumn="37"
+            endOffset="4485"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;-- Db&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_decibel_meter.xml"
+            line="137"
+            column="17"
+            startOffset="5337"
+            endLine="137"
+            endColumn="37"
+            endOffset="5357"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;不保存&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+            line="78"
+            column="13"
+            startOffset="2747"
+            endLine="78"
+            endColumn="31"
+            endOffset="2765"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;保存&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/fragment_preview.xml"
+            line="85"
+            column="13"
+            startOffset="2983"
+            endLine="85"
+            endColumn="30"
+            endOffset="3000"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;85.20 dB&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="20"
+            column="13"
+            startOffset="704"
+            endLine="20"
+            endColumn="36"
+            endOffset="727"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;噪音分贝值&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="23"
+            column="13"
+            startOffset="816"
+            endLine="23"
+            endColumn="47"
+            endOffset="850"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;2023-05-15 10:30:25&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="29"
+            column="13"
+            startOffset="1028"
+            endLine="29"
+            endColumn="47"
+            endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;测量时间&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="32"
+            column="13"
+            startOffset="1154"
+            endLine="32"
+            endColumn="46"
+            endOffset="1187"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;位置: 39.9042, 116.4074&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="40"
+            column="9"
+            startOffset="1367"
+            endLine="40"
+            endColumn="45"
+            endOffset="1403"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;地理位置&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/item_history.xml"
+            line="43"
+            column="9"
+            startOffset="1486"
+            endLine="43"
+            endColumn="42"
+            endOffset="1519"/>
+    </incident>
+
+</incidents>

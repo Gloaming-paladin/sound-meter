@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_decibel_meter"
+        android:icon="@drawable/ic_decibel"
+        android:title="@string/nav_decibel_meter" />
+    <item
+        android:id="@+id/nav_audio_analysis"
+        android:icon="@drawable/ic_audio_analysis"
+        android:title="@string/nav_audio_analysis" />
+    <item
+        android:id="@+id/navigation_decibel_camera"
+        android:icon="@drawable/camera"
+        android:title="@string/nav_decibel_camera" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile" />
+</menu>
