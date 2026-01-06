@@ -17,7 +17,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginSuccessListener {
+public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginSuccessListener, LoginFragment.OnGoToRegisterListener, RegisterFragment.OnGoToLoginListener {
 
     private BottomNavigationView bottomNavigationView;
     private static final int PERMISSION_REQUEST_CODE = 100;
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
     private final Fragment decibelCameraFragment = new DecibelCameraFragment();
     private final Fragment profileFragment = new ProfileFragment();
     private final Fragment loginFragment = new LoginFragment();
+    private final Fragment registerFragment = new RegisterFragment();
     private Fragment activeFragment = decibelMeterFragment;
 
     @Override
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
         }
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, loginFragment, "5").hide(loginFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, registerFragment, "6").hide(registerFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, profileFragment, "4").hide(profileFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, decibelCameraFragment, "3").hide(decibelCameraFragment).commit();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, audioAnalysisFragment, "2").hide(audioAnalysisFragment).commit();
@@ -97,6 +99,12 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
         activeFragment = loginFragment;
     }
 
+    public void showRegister() {
+        bottomNavigationView.setVisibility(View.GONE);
+        getSupportFragmentManager().beginTransaction().hide(activeFragment).show(registerFragment).commit();
+        activeFragment = registerFragment;
+    }
+
     private boolean checkPermissions() {
         return ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED;
     }
@@ -145,9 +153,20 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
 
     @Override
     public void onLoginSuccess() {
+        ((ProfileFragment) profileFragment).updateUI();
         bottomNavigationView.setVisibility(View.VISIBLE);
         getSupportFragmentManager().beginTransaction().hide(loginFragment).show(profileFragment).commit();
         activeFragment = profileFragment;
         bottomNavigationView.setSelectedItemId(R.id.nav_profile);
+    }
+
+    @Override
+    public void onGoToRegister() {
+        showRegister();
+    }
+
+    @Override
+    public void onGoToLogin() {
+        showLogin();
     }
 }

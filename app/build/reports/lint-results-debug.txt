@@ -358,384 +358,387 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:26: Error: "setti
     <string name="settings_title">设置页面</string>
             ~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:27: Error: "about_description" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
-    <string name="about_description">这是一个噪音测量应用，可以实时监测环境噪音水平。</string>
+    <string name="about_description">这是一个功能强大的噪音测量应用，不仅可以实时监测环境噪音水平，还提供了音频分析、分贝相机等多种实用功能。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:28: Error: "about_version" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:28: Error: "about_developer" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+    <string name="about_developer">开发者：Bodekjan</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:29: Error: "about_version" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="about_version">Sound Meter v1.0</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:29: Error: "avatar_option_cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:30: Error: "avatar_option_cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="avatar_option_cancel">取消</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:30: Error: "avatar_option_save_to_phone" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:31: Error: "avatar_option_save_to_phone" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="avatar_option_save_to_phone">保存到手机</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:31: Error: "avatar_option_select_from_album" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:32: Error: "avatar_option_select_from_album" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="avatar_option_select_from_album">从手机相册选择</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:32: Error: "login_register_link" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:33: Error: "login_register_link" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="login_register_link">还没有帐户？创建一个</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:33: Error: "login_button" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:34: Error: "login_button" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="login_button">登录</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:34: Error: "register_login_link" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:35: Error: "register_login_link" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="register_login_link">已有帐户？登录</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:35: Error: "register_button" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:36: Error: "register_button" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="register_button">注册</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:36: Error: "register_confirm_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:37: Error: "register_confirm_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="register_confirm_password">确认密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:37: Error: "register_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:38: Error: "register_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="register_password">密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:38: Error: "register_username" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:39: Error: "register_username" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="register_username">用户名</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:40: Error: "msg_start_recording" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:41: Error: "msg_start_recording" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_start_recording">Recording started</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:41: Error: "msg_recording_failed" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:42: Error: "msg_recording_failed" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_recording_failed">Recording failed</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:42: Error: "title_save_recording" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:43: Error: "title_save_recording" is not translated in "fr" (French) [MissingTranslation]
     <string name="title_save_recording">Save Recording</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:43: Error: "msg_save_recording_confirm" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:44: Error: "msg_save_recording_confirm" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_save_recording_confirm">Do you want to save the recording file?</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:44: Error: "btn_save" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:45: Error: "btn_save" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_save">Save</string>
             ~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:45: Error: "title_select_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:46: Error: "title_select_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="title_select_format">Select File Format</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:46: Error: "msg_saved_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:47: Error: "msg_saved_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_saved_format">Recording saved as %s format</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:47: Error: "title_permission_request" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:48: Error: "title_permission_request" is not translated in "fr" (French) [MissingTranslation]
     <string name="title_permission_request">Permission Request</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:48: Error: "msg_permission_needed" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:49: Error: "msg_permission_needed" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_permission_needed">This app needs recording permission to function properly. Please grant it.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:49: Error: "btn_retry" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:50: Error: "btn_retry" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_retry">Retry</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:50: Error: "btn_cancel" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:51: Error: "btn_cancel" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_cancel">Cancel</string>
             ~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:51: Error: "msg_permission_denied_forever" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:52: Error: "msg_permission_denied_forever" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_permission_denied_forever">You have denied recording permission and selected "Don't ask again". Please enable it manually in Settings.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:52: Error: "btn_go_to_settings" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:53: Error: "btn_go_to_settings" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_go_to_settings">Settings</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:53: Error: "msg_location_success" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:54: Error: "msg_location_success" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_location_success">Location: Lat %1$s, Lon %2$s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:54: Error: "chart_description" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:55: Error: "chart_description" is not translated in "fr" (French) [MissingTranslation]
     <string name="chart_description">Decibel Measurement Chart</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:55: Error: "chart_label" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:56: Error: "chart_label" is not translated in "fr" (French) [MissingTranslation]
     <string name="chart_label">Decibel Value</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:58: Error: "msg_no_history" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:59: Error: "msg_no_history" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_no_history">No history data available</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:59: Error: "title_clear_history" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Error: "title_clear_history" is not translated in "fr" (French) [MissingTranslation]
     <string name="title_clear_history">Clear History</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Error: "msg_clear_history_confirm" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:61: Error: "msg_clear_history_confirm" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_clear_history_confirm">Are you sure you want to clear all history data?</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:61: Error: "btn_confirm" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Error: "btn_confirm" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_confirm">Confirm</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Error: "msg_history_cleared" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:63: Error: "msg_history_cleared" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_history_cleared">History cleared</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:63: Error: "msg_location_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:64: Error: "msg_location_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_location_format">Location: %1$.4f, %2$.4f</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:66: Error: "msg_logged_out" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:67: Error: "msg_logged_out" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_logged_out">Logged out</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:67: Error: "msg_logged_in" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:68: Error: "msg_logged_in" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_logged_in">Logged in successfully</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:68: Error: "btn_logout" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:69: Error: "btn_logout" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_logout">Logout</string>
             ~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:69: Error: "status_logged_in" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Error: "status_logged_in" is not translated in "fr" (French) [MissingTranslation]
     <string name="status_logged_in">Logged In</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Error: "btn_login" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Error: "btn_login" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_login">Login</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Error: "status_logged_out" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:72: Error: "status_logged_out" is not translated in "fr" (French) [MissingTranslation]
     <string name="status_logged_out">Not Logged In</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:74: Error: "msg_recording_permission_needed" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:75: Error: "msg_recording_permission_needed" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_recording_permission_needed">Recording permission required</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:75: Error: "msg_csv_export_success" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:76: Error: "msg_csv_export_success" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_csv_export_success">CSV Exported: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:76: Error: "msg_csv_export_failed" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:77: Error: "msg_csv_export_failed" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_csv_export_failed">CSV Export Failed: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:77: Error: "msg_pdf_unavailable" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:78: Error: "msg_pdf_unavailable" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_pdf_unavailable">PDF feature requires additional libraries, currently unavailable</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:78: Error: "msg_share_in_development" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:79: Error: "msg_share_in_development" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_share_in_development">Share feature is under development</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:79: Error: "msg_all_permissions_needed" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:80: Error: "msg_all_permissions_needed" is not translated in "fr" (French) [MissingTranslation]
     <string name="msg_all_permissions_needed">All permissions are required for normal operation</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:80: Error: "btn_start_spectrum" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:81: Error: "btn_start_spectrum" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_start_spectrum">Start Spectrum Analysis</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:81: Error: "btn_stop_spectrum" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:82: Error: "btn_stop_spectrum" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_stop_spectrum">Stop Spectrum Analysis</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:83: Error: "db_real_time_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:84: Error: "db_real_time_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_real_time_format">%.2f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:84: Error: "db_max_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:85: Error: "db_max_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_max_format">Max: %.2f dB</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:85: Error: "db_min_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:86: Error: "db_min_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_min_format">Min: %.2f dB</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:86: Error: "db_avg_format" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:87: Error: "db_avg_format" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_avg_format">Avg: %.2f dB</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:87: Error: "db_initial_real_time" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:88: Error: "db_initial_real_time" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_initial_real_time">-- dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:88: Error: "db_initial_max" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:89: Error: "db_initial_max" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_initial_max">Max: -- dB</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:89: Error: "db_initial_min" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:90: Error: "db_initial_min" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_initial_min">Min: -- dB</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:90: Error: "db_initial_avg" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:91: Error: "db_initial_avg" is not translated in "fr" (French) [MissingTranslation]
     <string name="db_initial_avg">Avg: -- dB</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:92: Error: "title_audio_analysis" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:93: Error: "title_audio_analysis" is not translated in "fr" (French) [MissingTranslation]
     <string name="title_audio_analysis">Audio Analysis</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:93: Error: "label_thd" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:94: Error: "label_thd" is not translated in "fr" (French) [MissingTranslation]
     <string name="label_thd">THD: %s</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:94: Error: "label_snr" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:95: Error: "label_snr" is not translated in "fr" (French) [MissingTranslation]
     <string name="label_snr">SNR: %s</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:95: Error: "label_centroid" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:96: Error: "label_centroid" is not translated in "fr" (French) [MissingTranslation]
     <string name="label_centroid">Centroid: %s Hz</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:96: Error: "label_bandwidth" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:97: Error: "label_bandwidth" is not translated in "fr" (French) [MissingTranslation]
     <string name="label_bandwidth">Bandwidth: %s Hz</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:97: Error: "btn_export_csv" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:98: Error: "btn_export_csv" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_export_csv">Export CSV</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:98: Error: "btn_generate_pdf" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:99: Error: "btn_generate_pdf" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_generate_pdf">Generate PDF</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:99: Error: "btn_share_report" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:100: Error: "btn_share_report" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_share_report">Share Report</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:100: Error: "btn_register" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:101: Error: "btn_register" is not translated in "fr" (French) [MissingTranslation]
     <string name="btn_register">Register</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:101: Error: "saved_successfully" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:102: Error: "saved_successfully" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="saved_successfully">Saved successfully</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:102: Error: "save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:103: Error: "save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="save_failed">Save failed</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:103: Error: "action_export" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:104: Error: "action_export" is not translated in "fr" (French) [MissingTranslation]
     <string name="action_export">Export</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:104: Error: "action_open_folder" is not translated in "fr" (French) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:105: Error: "action_open_folder" is not translated in "fr" (French) [MissingTranslation]
     <string name="action_open_folder">Open Folder</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:107: Error: "hint_username" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:108: Error: "hint_username" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="hint_username">用户名</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:108: Error: "hint_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:109: Error: "hint_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="hint_password">密码</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:109: Error: "btn_login_text" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:110: Error: "btn_login_text" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="btn_login_text">登录</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:110: Error: "link_no_account" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:111: Error: "link_no_account" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="link_no_account">还没有账户？创建一个</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:111: Error: "hint_confirm_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:112: Error: "hint_confirm_password" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="hint_confirm_password">确认密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:112: Error: "btn_register_text" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:113: Error: "btn_register_text" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="btn_register_text">注册</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:113: Error: "link_already_have_account" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:114: Error: "link_already_have_account" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="link_already_have_account">已有账户？登录</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:116: Error: "toast_fill_all_fields" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:117: Error: "toast_fill_all_fields" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_fill_all_fields">请输入用户名和密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:117: Error: "toast_login_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:118: Error: "toast_login_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_login_success">登录成功！</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:118: Error: "toast_login_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:119: Error: "toast_login_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_login_failed">用户名或密码错误</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:120: Error: "toast_register_fill_all_fields" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:121: Error: "toast_register_fill_all_fields" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_register_fill_all_fields">请填写所有字段</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:121: Error: "toast_password_mismatch" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:122: Error: "toast_password_mismatch" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_password_mismatch">两次输入的密码不一致</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:122: Error: "toast_username_exists" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:123: Error: "toast_username_exists" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_username_exists">用户名已存在</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:123: Error: "toast_register_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:124: Error: "toast_register_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_register_success">注册成功！</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:124: Error: "toast_register_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:125: Error: "toast_register_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_register_failed">注册失败，请稍后重试</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:126: Error: "password_strength_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:127: Error: "password_strength_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="password_strength_weak">弱</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:127: Error: "password_strength_medium" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:128: Error: "password_strength_medium" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="password_strength_medium">中</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:128: Error: "password_strength_strong" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:129: Error: "password_strength_strong" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="password_strength_strong">强</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:130: Error: "password_strength_info_title" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:131: Error: "password_strength_info_title" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="password_strength_info_title">密码强度标准</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:131: Error: "password_strength_info_message" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:132: Error: "password_strength_info_message" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="password_strength_info_message">弱：长度小于8位。\n\n中：包含字母、数字、符号中的两种。\n\n强：包含字母、数字和特殊符号的组合，且长度大于8位。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:134: Error: "nav_decibel_meter" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:135: Error: "nav_decibel_meter" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="nav_decibel_meter">分贝仪</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:135: Error: "nav_audio_analysis" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:136: Error: "nav_audio_analysis" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="nav_audio_analysis">音频分析</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:136: Error: "nav_decibel_camera" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:137: Error: "nav_decibel_camera" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="nav_decibel_camera">分贝相机</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:137: Error: "nav_profile" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:138: Error: "nav_profile" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="nav_profile">我的</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:140: Error: "btn_refresh" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:141: Error: "btn_refresh" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="btn_refresh">刷新</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:141: Error: "btn_clear_all" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:142: Error: "btn_clear_all" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="btn_clear_all">清空历史</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:144: Error: "dialog_avatar_save_to_local" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:145: Error: "dialog_avatar_save_to_local" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="dialog_avatar_save_to_local">保存头像到本地</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:145: Error: "dialog_avatar_change_avatar" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:146: Error: "dialog_avatar_change_avatar" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="dialog_avatar_change_avatar">更换头像</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:148: Error: "decibel_camera_avg_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:149: Error: "decibel_camera_avg_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_avg_decibel">平均: %.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:149: Error: "decibel_camera_min_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:150: Error: "decibel_camera_min_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_min_decibel">最小: %.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:150: Error: "decibel_camera_max_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:151: Error: "decibel_camera_max_decibel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_max_decibel">最大: %.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:151: Error: "decibel_camera_avg_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Error: "decibel_camera_avg_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_avg_label">平均:</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Error: "decibel_camera_min_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Error: "decibel_camera_min_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_min_label">最小:</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Error: "decibel_camera_max_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Error: "decibel_camera_max_label" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_max_label">最大:</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Error: "decibel_camera_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Error: "decibel_camera_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_db_format">%.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Error: "decibel_camera_location" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:156: Error: "decibel_camera_location" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_camera_location">位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:156: Error: "camera_not_ready" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:157: Error: "camera_not_ready" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="camera_not_ready">相机未准备好，请先授予权限。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:157: Error: "photo_capture_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:158: Error: "photo_capture_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="photo_capture_failed">照片拍摄失败: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:158: Error: "image_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:159: Error: "image_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="image_save_failed">图片保存失败</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:159: Error: "recording_started" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:160: Error: "recording_started" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="recording_started">录制开始</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:160: Error: "video_recording_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:161: Error: "video_recording_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="video_recording_failed">视频录制失败: %d</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:161: Error: "mic_occupied" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:162: Error: "mic_occupied" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="mic_occupied">麦克风可能被占用，无法启动分贝计</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:162: Error: "location_service_required" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:163: Error: "location_service_required" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_service_required">请开启定位服务以获取位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:163: Error: "enable_location_service" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:164: Error: "enable_location_service" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="enable_location_service">开启</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:164: Error: "cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:165: Error: "cancel" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="cancel">取消</string>
             ~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:165: Error: "location_unavailable" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:166: Error: "location_unavailable" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_unavailable">纬度: N/A, 经度: N/A</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:166: Error: "location_fetch_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:167: Error: "location_fetch_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_fetch_failed">无法获取位置</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:167: Error: "location_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:168: Error: "location_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_format">纬度: %1$.2f, 经度: %2$.2f</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:168: Error: "decibel_meter_min" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:169: Error: "decibel_meter_min" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_min">最小</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:169: Error: "decibel_meter_avg" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:170: Error: "decibel_meter_avg" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_avg">平均</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:170: Error: "decibel_meter_max" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:171: Error: "decibel_meter_max" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_max">最大</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:171: Error: "decibel_meter_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:172: Error: "decibel_meter_db_format" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_db_format">%.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:172: Error: "decibel_meter_0_db" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:173: Error: "decibel_meter_0_db" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_0_db">0 dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:173: Error: "location_permission_not_granted" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:174: Error: "location_permission_not_granted" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="location_permission_not_granted">未授予位置权限。</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:174: Error: "noise_data_save_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:175: Error: "noise_data_save_success" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="noise_data_save_success">噪音数据保存成功，ID: %d</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:175: Error: "noise_data_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:176: Error: "noise_data_save_failed" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="noise_data_save_failed">噪音数据保存失败</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:176: Error: "toast_password_too_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:177: Error: "toast_password_too_weak" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="toast_password_too_weak">密码太弱，请使用数字和字母的组合</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:177: Error: "decibel_meter_initial_value" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:178: Error: "decibel_meter_initial_value" is not translated in "fr" (French) or "zh" (Chinese) [MissingTranslation]
     <string name="decibel_meter_initial_value">-- dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -984,115 +987,115 @@ D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:13: Warning: The 
 D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:14: Warning: The resource R.string.activity_curlabel appears to be unused [UnusedResources]
  <string name="activity_curlabel">Real Time</string>
          ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:30: Warning: The resource R.string.avatar_option_save_to_phone appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:31: Warning: The resource R.string.avatar_option_save_to_phone appears to be unused [UnusedResources]
     <string name="avatar_option_save_to_phone">保存到手机</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:31: Warning: The resource R.string.avatar_option_select_from_album appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:32: Warning: The resource R.string.avatar_option_select_from_album appears to be unused [UnusedResources]
     <string name="avatar_option_select_from_album">从手机相册选择</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:33: Warning: The resource R.string.login_button appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:34: Warning: The resource R.string.login_button appears to be unused [UnusedResources]
     <string name="login_button">登录</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:35: Warning: The resource R.string.register_button appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:36: Warning: The resource R.string.register_button appears to be unused [UnusedResources]
     <string name="register_button">注册</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:36: Warning: The resource R.string.register_confirm_password appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.register_confirm_password appears to be unused [UnusedResources]
     <string name="register_confirm_password">确认密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.register_password appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.register_password appears to be unused [UnusedResources]
     <string name="register_password">密码</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.register_username appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:39: Warning: The resource R.string.register_username appears to be unused [UnusedResources]
     <string name="register_username">用户名</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:58: Warning: The resource R.string.msg_no_history appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:59: Warning: The resource R.string.msg_no_history appears to be unused [UnusedResources]
     <string name="msg_no_history">No history data available</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:59: Warning: The resource R.string.title_clear_history appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Warning: The resource R.string.title_clear_history appears to be unused [UnusedResources]
     <string name="title_clear_history">Clear History</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:60: Warning: The resource R.string.msg_clear_history_confirm appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.msg_clear_history_confirm appears to be unused [UnusedResources]
     <string name="msg_clear_history_confirm">Are you sure you want to clear all history data?</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:61: Warning: The resource R.string.btn_confirm appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.btn_confirm appears to be unused [UnusedResources]
     <string name="btn_confirm">Confirm</string>
             ~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:62: Warning: The resource R.string.msg_history_cleared appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:63: Warning: The resource R.string.msg_history_cleared appears to be unused [UnusedResources]
     <string name="msg_history_cleared">History cleared</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:66: Warning: The resource R.string.msg_logged_out appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:67: Warning: The resource R.string.msg_logged_out appears to be unused [UnusedResources]
     <string name="msg_logged_out">Logged out</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:67: Warning: The resource R.string.msg_logged_in appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:68: Warning: The resource R.string.msg_logged_in appears to be unused [UnusedResources]
     <string name="msg_logged_in">Logged in successfully</string>
             ~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:68: Warning: The resource R.string.btn_logout appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:69: Warning: The resource R.string.btn_logout appears to be unused [UnusedResources]
     <string name="btn_logout">Logout</string>
             ~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:69: Warning: The resource R.string.status_logged_in appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Warning: The resource R.string.status_logged_in appears to be unused [UnusedResources]
     <string name="status_logged_in">Logged In</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:70: Warning: The resource R.string.btn_login appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.btn_login appears to be unused [UnusedResources]
     <string name="btn_login">Login</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:71: Warning: The resource R.string.status_logged_out appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:72: Warning: The resource R.string.status_logged_out appears to be unused [UnusedResources]
     <string name="status_logged_out">Not Logged In</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:74: Warning: The resource R.string.msg_recording_permission_needed appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:75: Warning: The resource R.string.msg_recording_permission_needed appears to be unused [UnusedResources]
     <string name="msg_recording_permission_needed">Recording permission required</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:75: Warning: The resource R.string.msg_csv_export_success appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:76: Warning: The resource R.string.msg_csv_export_success appears to be unused [UnusedResources]
     <string name="msg_csv_export_success">CSV Exported: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:76: Warning: The resource R.string.msg_csv_export_failed appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:77: Warning: The resource R.string.msg_csv_export_failed appears to be unused [UnusedResources]
     <string name="msg_csv_export_failed">CSV Export Failed: %s</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:77: Warning: The resource R.string.msg_pdf_unavailable appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:78: Warning: The resource R.string.msg_pdf_unavailable appears to be unused [UnusedResources]
     <string name="msg_pdf_unavailable">PDF feature requires additional libraries, currently unavailable</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:78: Warning: The resource R.string.msg_share_in_development appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:79: Warning: The resource R.string.msg_share_in_development appears to be unused [UnusedResources]
     <string name="msg_share_in_development">Share feature is under development</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:93: Warning: The resource R.string.label_thd appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:94: Warning: The resource R.string.label_thd appears to be unused [UnusedResources]
     <string name="label_thd">THD: %s</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:94: Warning: The resource R.string.label_snr appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:95: Warning: The resource R.string.label_snr appears to be unused [UnusedResources]
     <string name="label_snr">SNR: %s</string>
             ~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:95: Warning: The resource R.string.label_centroid appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:96: Warning: The resource R.string.label_centroid appears to be unused [UnusedResources]
     <string name="label_centroid">Centroid: %s Hz</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:96: Warning: The resource R.string.label_bandwidth appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:97: Warning: The resource R.string.label_bandwidth appears to be unused [UnusedResources]
     <string name="label_bandwidth">Bandwidth: %s Hz</string>
             ~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:97: Warning: The resource R.string.btn_export_csv appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:98: Warning: The resource R.string.btn_export_csv appears to be unused [UnusedResources]
     <string name="btn_export_csv">Export CSV</string>
             ~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:98: Warning: The resource R.string.btn_generate_pdf appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:99: Warning: The resource R.string.btn_generate_pdf appears to be unused [UnusedResources]
     <string name="btn_generate_pdf">Generate PDF</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:99: Warning: The resource R.string.btn_share_report appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:100: Warning: The resource R.string.btn_share_report appears to be unused [UnusedResources]
     <string name="btn_share_report">Share Report</string>
             ~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:100: Warning: The resource R.string.btn_register appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:101: Warning: The resource R.string.btn_register appears to be unused [UnusedResources]
     <string name="btn_register">Register</string>
             ~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:144: Warning: The resource R.string.dialog_avatar_save_to_local appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:145: Warning: The resource R.string.dialog_avatar_save_to_local appears to be unused [UnusedResources]
     <string name="dialog_avatar_save_to_local">保存头像到本地</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:145: Warning: The resource R.string.dialog_avatar_change_avatar appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:146: Warning: The resource R.string.dialog_avatar_change_avatar appears to be unused [UnusedResources]
     <string name="dialog_avatar_change_avatar">更换头像</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:152: Warning: The resource R.string.decibel_camera_min_label appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Warning: The resource R.string.decibel_camera_min_label appears to be unused [UnusedResources]
     <string name="decibel_camera_min_label">最小:</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:153: Warning: The resource R.string.decibel_camera_max_label appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Warning: The resource R.string.decibel_camera_max_label appears to be unused [UnusedResources]
     <string name="decibel_camera_max_label">最大:</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:154: Warning: The resource R.string.decibel_camera_db_format appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Warning: The resource R.string.decibel_camera_db_format appears to be unused [UnusedResources]
     <string name="decibel_camera_db_format">%.1f dB</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:155: Warning: The resource R.string.decibel_camera_location appears to be unused [UnusedResources]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:156: Warning: The resource R.string.decibel_camera_location appears to be unused [UnusedResources]
     <string name="decibel_camera_location">位置信息</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\androidcode\Sound-Meter\app\src\main\res\values\styles.xml:15: Warning: The resource R.style.AppBaseTheme appears to be unused [UnusedResources]
@@ -1141,13 +1144,13 @@ D:\androidcode\Sound-Meter\app\src\main\res\values-zh\strings.xml:74: Warning: R
 D:\androidcode\Sound-Meter\app\src\main\res\values-zh\strings.xml:75: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
     <string name="db_initial_avg">平均值: -- dB</string>
                                   ~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:88: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:89: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
     <string name="db_initial_max">Max: -- dB</string>
                                   ~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:89: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:90: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
     <string name="db_initial_min">Min: -- dB</string>
                                   ~~~~~~~~~~
-D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:90: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
+D:\androidcode\Sound-Meter\app\src\main\res\values\strings.xml:91: Warning: Replace "--" with an "em dash" character (—, &#8212;) ? [TypographyDashes]
     <string name="db_initial_avg">Avg: -- dB</string>
                                   ~~~~~~~~~~
 
@@ -1556,4 +1559,4 @@ D:\androidcode\Sound-Meter\app\src\main\res\layout\fragment_decibel_meter.xml:63
    the left bitmask. Therefore, you can use gravity="start" rather than
    gravity="left|start".)
 
-142 errors, 229 warnings
+143 errors, 229 warnings

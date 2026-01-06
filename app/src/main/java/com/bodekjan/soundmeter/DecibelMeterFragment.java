@@ -102,9 +102,9 @@ public class DecibelMeterFragment extends Fragment {
                     return;
                 }
                 speedometer.refresh();
-                minVal.setText(getString(R.string.decibel_meter_db_format, World.minDB));
-                avgVal.setText(getString(R.string.decibel_meter_db_format, (World.minDB + World.maxDB) / 2));
-                maxVal.setText(getString(R.string.decibel_meter_db_format, World.maxDB));
+                minVal.setText(df1.format(World.minDB));
+                avgVal.setText(df1.format((World.minDB + World.maxDB) / 2));
+                maxVal.setText(df1.format(World.maxDB));
                 updateData(World.dbCount, 0);
 
                 // 存储当前测量数据到数据库
@@ -207,6 +207,9 @@ public class DecibelMeterFragment extends Fragment {
             return;
         }
         
+        // 自动获取位置信息
+        requestLocation();
+
         // 重置统计数据以便新的一次测量
         World.minDB = 100;
         World.maxDB = 0;
@@ -249,9 +252,9 @@ public class DecibelMeterFragment extends Fragment {
 
         // 更新UI
         speedometer.refresh();
-        minVal.setText(getString(R.string.decibel_meter_0_db));
-        maxVal.setText(getString(R.string.decibel_meter_0_db));
-        avgVal.setText(getString(R.string.decibel_meter_0_db));
+        minVal.setText("0");
+        maxVal.setText("0");
+        avgVal.setText("0");
 
         // 停止测量线程
         stopMeasurement();

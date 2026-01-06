@@ -815,10 +815,10 @@
             file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/ic_settings.xml"
             line="7"
             column="26"
-            startOffset="215"
+            startOffset="221"
             endLine="7"
             endColumn="46"
-            endOffset="235"/>
+            endOffset="241"/>
         <map>
             <entry
                 name="containsFillType"

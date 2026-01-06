@@ -35,33 +35,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginTop="8dp"
         android:gravity="center">
 
         <TextView
             android:id="@+id/max_db_text"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/db_initial_max"
             android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/min_db_text"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/db_initial_min"
             android:textColor="@android:color/white" />
 
         <TextView
             android:id="@+id/avg_db_text"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:text="@string/db_initial_avg"
             android:textColor="@android:color/white" />

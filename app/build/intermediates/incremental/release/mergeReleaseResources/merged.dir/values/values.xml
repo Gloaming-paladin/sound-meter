@@ -1924,7 +1924,8 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="about_description">这是一个噪音测量应用，可以实时监测环境噪音水平。</string>
+    <string name="about_description">这是一个功能强大的噪音测量应用，不仅可以实时监测环境噪音水平，还提供了音频分析、分贝相机等多种实用功能。</string>
+    <string name="about_developer">开发者：Bodekjan</string>
     <string name="about_version">Sound Meter v1.0</string>
     <string name="action_export">Export</string>
     <string name="action_open_folder">Open Folder</string>

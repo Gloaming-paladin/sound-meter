@@ -183,6 +183,7 @@ menu bottom_navigation_menu
 menu history_menu
 mipmap ic_launcher
 string about_description
+string about_developer
 string about_version
 string action_export
 string action_open_folder

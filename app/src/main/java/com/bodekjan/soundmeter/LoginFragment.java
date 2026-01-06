@@ -20,10 +20,15 @@ import com.bodekjan.soundmeter.view.ProgressButton;
 
 public class LoginFragment extends Fragment {
     private OnLoginSuccessListener mListener;
+    private OnGoToRegisterListener mRegisterListener;
 
     // 1. 定义接口
     public interface OnLoginSuccessListener {
         void onLoginSuccess();
+    }
+
+    public interface OnGoToRegisterListener {
+        void onGoToRegister();
     }
 
     private EditText usernameEditText;
@@ -42,6 +47,12 @@ public class LoginFragment extends Fragment {
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnLoginSuccessListener");
+        }
+        if (context instanceof OnGoToRegisterListener) {
+            mRegisterListener = (OnGoToRegisterListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnGoToRegisterListener");
         }
     }
 
@@ -82,7 +93,7 @@ public class LoginFragment extends Fragment {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("isLoggedIn", true);
                 editor.putString("username", username);
-                editor.apply();
+                editor.commit();
 
                 Toast.makeText(requireContext(), R.string.toast_login_success, Toast.LENGTH_SHORT).show();
 
@@ -99,9 +110,9 @@ public class LoginFragment extends Fragment {
     }
 
     private void goToRegister() {
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, new RegisterFragment());
-        transaction.commit();
+        if (mRegisterListener != null) {
+            mRegisterListener.onGoToRegister();
+        }
     }
 
     // 4. 在 onDetach 中解除连接
@@ -109,5 +120,6 @@ public class LoginFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        mRegisterListener = null;
     }
 }

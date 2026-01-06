@@ -22,6 +22,12 @@ import android.view.animation.AnimationUtils;
 import com.bodekjan.soundmeter.view.ProgressButton;
 
 public class RegisterFragment extends Fragment {
+    private OnGoToLoginListener mListener;
+
+    public interface OnGoToLoginListener {
+        void onGoToLogin();
+    }
+
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
@@ -29,6 +35,17 @@ public class RegisterFragment extends Fragment {
     private TextView loginLink;
     private TextView passwordStrengthFeedback;
     private NoiseDatabaseHelper dbHelper;
+
+    @Override
+    public void onAttach(@NonNull android.content.Context context) {
+        super.onAttach(context);
+        if (context instanceof OnGoToLoginListener) {
+            mListener = (OnGoToLoginListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnGoToLoginListener");
+        }
+    }
 
     @Nullable
     @Override
@@ -148,8 +165,14 @@ public class RegisterFragment extends Fragment {
     }
 
     private void goToLogin() {
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, new LoginFragment());
-        transaction.commit();
+        if (mListener != null) {
+            mListener.onGoToLogin();
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
     }
 }

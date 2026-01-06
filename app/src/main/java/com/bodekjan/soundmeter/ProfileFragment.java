@@ -39,6 +39,9 @@ import java.util.List;
 
 public class ProfileFragment extends Fragment implements ProfileOptionAdapter.OnOptionClickListener {
 
+    private RegisterFragment.OnGoToLoginListener mLoginListener;
+    private LoginFragment.OnGoToRegisterListener mRegisterListener;
+
     private ImageView avatarImageView;
     private TextView usernameTextView;
     private RecyclerView recyclerView;
@@ -51,6 +54,29 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
     private ActivityResultLauncher<String> pickImageLauncher;
     private ActivityResultLauncher<String> requestReadPermissionLauncher;
     private ActivityResultLauncher<String> requestWritePermissionLauncher;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof RegisterFragment.OnGoToLoginListener) {
+            mLoginListener = (RegisterFragment.OnGoToLoginListener) context;
+        } else {
+            throw new RuntimeException(context.toString() + " must implement OnGoToLoginListener");
+        }
+        if (context instanceof LoginFragment.OnGoToRegisterListener) {
+            mRegisterListener = (LoginFragment.OnGoToRegisterListener) context;
+        } else {
+            throw new RuntimeException(context.toString() + " must implement OnGoToRegisterListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mLoginListener = null;
+        mRegisterListener = null;
+    }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -125,6 +151,12 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
         updateUI();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private void initializeViews(View view) {
         avatarImageView = view.findViewById(R.id.avatar_image);
         usernameTextView = view.findViewById(R.id.username_text);
@@ -141,7 +173,7 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
         });
     }
 
-    private void updateUI() {
+    public void updateUI() {
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
         if (isLoggedIn) {
             String username = sharedPreferences.getString("username", "User");
@@ -305,10 +337,10 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
     public void onOptionClick(ProfileOption option) {
         switch (option.getAction()) {
             case LOGIN:
-                goToLogin();
+                if (mLoginListener != null) mLoginListener.onGoToLogin();
                 break;
             case REGISTER:
-                goToRegister();
+                if (mRegisterListener != null) mRegisterListener.onGoToRegister();
                 break;
             case LOGOUT:
                 handleLogout();
@@ -323,20 +355,6 @@ public class ProfileFragment extends Fragment implements ProfileOptionAdapter.On
                 goToAbout();
                 break;
         }
-    }
-
-    private void goToLogin() {
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, new LoginFragment());
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }
-
-    private void goToRegister() {
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, new RegisterFragment());
-        transaction.addToBackStack(null);
-        transaction.commit();
     }
 
     private void goToSettings() {
